@@ -1,15 +1,21 @@
-﻿namespace Infrastructure.States
+﻿using Services;
+using Services.Factory;
+
+namespace Infrastructure.States
 {
     public class PlayModeState : IState
     {
-        public PlayModeState(StateMachine stateMachine)
+        private readonly AllServices _allServices;
+
+        public PlayModeState(StateMachine stateMachine, AllServices services)
         {
-            
+            _allServices = services;
         }
 
         public void Enter()
         {
-           
+            IGameFactory gameFactory = _allServices.GetSingle<IGameFactory>();
+            gameFactory.CreateSpawners();
         }
 
         public void Exit()

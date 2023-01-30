@@ -59,16 +59,17 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActor/IteractableObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/States/GameOverState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/States/MainMenuState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/States/PlayModeState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActor/Fruit.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActor/Spawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/GameFactory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/GameFactory/IGameFactory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Services/Factory/GameFactory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Game.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/States/StateMachine.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Services/Factory/IGameFactory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/States/BootstrapState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StaticData/SpawnerConfiguration.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/States/PlayModeState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Services/Factory/IGameFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Services/Factory/GameFactory.cs" />
       </list>
     </option>
   </component>

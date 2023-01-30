@@ -6,6 +6,8 @@ namespace Services.Factory
     {
         private const string SpawnerPath = "Spawner";
         private const string InteractableObjectPath = "InteractableObject";
+
+        private int _spawnersCount = 3;
         
         public GameObject CreateSpawner(Transform position)
         {
@@ -17,6 +19,11 @@ namespace Services.Factory
         {
             var interactableObject = Resources.Load<GameObject>(InteractableObjectPath);
             return Object.Instantiate(interactableObject);
+        }
+
+        public void CreateSpawners()
+        {
+                
         }
     }
 }
