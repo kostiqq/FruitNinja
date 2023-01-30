@@ -8,6 +8,10 @@
       <e p="Assets" t="Include">
         <e p="Scenes" t="Include" />
         <e p="Scripts" t="Include">
+          <e p="GameActor" t="Include">
+            <e p="IInteract.cs" t="Include" />
+            <e p="IteractableObject.cs" t="Include" />
+          </e>
           <e p="Infrastructure" t="Include">
             <e p="Bootstrapper.cs" t="Include" />
             <e p="Game.cs" t="Include" />
@@ -20,6 +24,11 @@
               <e p="StateMachine.cs" t="Include" />
             </e>
           </e>
+          <e p="Services" t="Include">
+            <e p="AllServices.cs" t="Include" />
+            <e p="IService.cs" t="Include" />
+          </e>
+          <e p="StaticData" t="Include" />
         </e>
       </e>
       <e p="FruitNinja.sln" t="IncludeFlat" />

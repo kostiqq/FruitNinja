@@ -13,9 +13,9 @@ namespace Infrastructure.States
             _states = new Dictionary<Type, IState>()
             {
                 [typeof(BootstrapState)] = new BootstrapState(this),
-                [typeof(MainMenuState)] = new MainMenuState(),
-                [typeof(PlayModeState)] = new PlayModeState(),
-                [typeof(GameOverState)] = new GameOverState()
+                [typeof(MainMenuState)] = new MainMenuState(this),
+                [typeof(PlayModeState)] = new PlayModeState(this),
+                [typeof(GameOverState)] = new GameOverState(this)
             };
         }
         

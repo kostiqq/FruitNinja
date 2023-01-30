@@ -2,14 +2,19 @@
 {
     public class PlayModeState : IState
     {
+        public PlayModeState(StateMachine stateMachine)
+        {
+            
+        }
+
         public void Enter()
         {
-            throw new System.NotImplementedException();
+           
         }
 
         public void Exit()
         {
-            throw new System.NotImplementedException();
+            
         }
     }
 }

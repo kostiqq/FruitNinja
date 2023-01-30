@@ -11,11 +11,12 @@
         public void Enter()
         {
             RegisterServices();
+            _stateMachine.Enter<MainMenuState>();
         }
 
         private void RegisterServices()
         {
-            throw new System.NotImplementedException();
+            
         }
 
         public void Exit()

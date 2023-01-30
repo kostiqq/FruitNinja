@@ -2,14 +2,22 @@
 {
     public class MainMenuState : IState
     {
+        private StateMachine _stateMachine;
+
+        public MainMenuState(StateMachine stateMachine)
+        {
+            _stateMachine = stateMachine;
+        }
+        
         public void Enter()
         {
-            throw new System.NotImplementedException();
+            //todo spawn UI;
+            _stateMachine.Enter<PlayModeState>();
         }
 
         public void Exit()
         {
-            throw new System.NotImplementedException();
+            
         }
     }
 }
