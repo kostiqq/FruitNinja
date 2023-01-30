@@ -29,8 +29,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/Factory/IGameFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Infrastructure/States/IState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Infrastructure/Game.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/Factory/GameFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/AllServices.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/IService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActor/IteractableObject.cs" root0="FORCE_HIGHLIGHTING" />
@@ -39,6 +41,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActor/Fruit.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActor/IInteract.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Infrastructure/States/MainMenuState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActor/Spawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Infrastructure/States/PlayModeState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Infrastructure/States/GameOverState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Infrastructure/Bootstrapper.cs" root0="FORCE_HIGHLIGHTING" />
@@ -49,18 +52,23 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/IState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/StateMachine.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/States/IState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Game.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Bootstrapper.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/States/BootstrappState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/IService.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/AllServices.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActor/IteractableObject.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/States/BootstrapState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/States/StateMachine.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/States/GameOverState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/States/MainMenuState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/States/PlayModeState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActor/Fruit.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameActor/Spawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Services/GameFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Services/GameFactory/IGameFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Services/Factory/GameFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Game.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/States/StateMachine.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Services/Factory/IGameFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/States/BootstrapState.cs" />
       </list>
     </option>
   </component>
@@ -109,9 +117,9 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="634" y="131" key="RiderGenerateDialog" timestamp="1675101474482">
+    <state x="634" y="131" key="RiderGenerateDialog" timestamp="1675103708252">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="634" y="131" key="RiderGenerateDialog/0.0.1600.860@0.0.1600.860" timestamp="1675101474482" />
+    <state x="634" y="131" key="RiderGenerateDialog/0.0.1600.860@0.0.1600.860" timestamp="1675103708252" />
   </component>
 </project>

@@ -6,12 +6,14 @@
     <e p="D:\Projects\FruitNinja\FruitNinja" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Resources" t="Include" />
         <e p="Scenes" t="Include" />
         <e p="Scripts" t="Include">
           <e p="GameActor" t="Include">
             <e p="Fruit.cs" t="Include" />
             <e p="IInteract.cs" t="Include" />
             <e p="IteractableObject.cs" t="Include" />
+            <e p="Spawner.cs" t="Include" />
           </e>
           <e p="Infrastructure" t="Include">
             <e p="Bootstrapper.cs" t="Include" />
@@ -27,6 +29,10 @@
           </e>
           <e p="Services" t="Include">
             <e p="AllServices.cs" t="Include" />
+            <e p="Factory" t="Include">
+              <e p="GameFactory.cs" t="Include" />
+              <e p="IGameFactory.cs" t="Include" />
+            </e>
             <e p="IService.cs" t="Include" />
           </e>
           <e p="StaticData" t="Include" />
