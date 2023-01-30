@@ -10,6 +10,7 @@ namespace Infrastructure
         
         public Game()
         {
+            _allServices = AllServices.Container;
             StateMachine = new StateMachine(_allServices);
         }
     }

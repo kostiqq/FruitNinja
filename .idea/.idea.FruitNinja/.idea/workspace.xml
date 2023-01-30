@@ -63,12 +63,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActor/Spawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/GameFactory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/GameFactory/IGameFactory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Game.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/States/StateMachine.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/States/BootstrapState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StaticData/SpawnerConfiguration.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/States/PlayModeState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/Factory/IGameFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/States/StateMachine.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Services/Camera/ICameraService.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Services/Camera/CameraService.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Services/Boardbound/CameraService.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Services/Boardbound/ICameraService.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/States/BootstrapState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Game.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/Factory/GameFactory.cs" />
       </list>
     </option>

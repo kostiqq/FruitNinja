@@ -15,7 +15,7 @@ namespace Infrastructure.States
             {
                 [typeof(BootstrapState)] = new BootstrapState(this, allServices),
                 [typeof(MainMenuState)] = new MainMenuState(this),
-                [typeof(PlayModeState)] = new PlayModeState(this),
+                [typeof(PlayModeState)] = new PlayModeState(this, allServices),
                 [typeof(GameOverState)] = new GameOverState(this)
             };
         }
