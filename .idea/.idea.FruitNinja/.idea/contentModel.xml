@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\kqq\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\kqq\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_FruitNinja.-1309338196.00" t="ExcludeRecursive" />
+    <e p="D:\Projects\FruitNinja\FruitNinja" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Scenes" t="Include" />
+        <e p="Scripts" t="Include">
+          <e p="Infrastructure" t="Include">
+            <e p="Bootstrapper.cs" t="Include" />
+            <e p="Game.cs" t="Include" />
+            <e p="States" t="Include">
+              <e p="BootstrapState.cs" t="Include" />
+              <e p="GameOverState.cs" t="Include" />
+              <e p="IState.cs" t="Include" />
+              <e p="MainMenuState.cs" t="Include" />
+              <e p="PlayModeState.cs" t="Include" />
+              <e p="StateMachine.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="FruitNinja.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\Bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
