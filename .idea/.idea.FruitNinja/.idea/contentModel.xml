@@ -9,6 +9,7 @@
         <e p="Scenes" t="Include" />
         <e p="Scripts" t="Include">
           <e p="GameActor" t="Include">
+            <e p="Fruit.cs" t="Include" />
             <e p="IInteract.cs" t="Include" />
             <e p="IteractableObject.cs" t="Include" />
           </e>
@@ -30,6 +31,7 @@
           </e>
           <e p="StaticData" t="Include" />
         </e>
+        <e p="Sprites" t="Include" />
       </e>
       <e p="FruitNinja.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />
