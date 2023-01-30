@@ -1,6 +1,6 @@
 ﻿namespace GameActor
 {
-    public class Fruit : IteractableObject
+    public class Fruit : InteractableObject
     {
         
     }

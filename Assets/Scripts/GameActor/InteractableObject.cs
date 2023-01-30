@@ -2,7 +2,7 @@
 
 namespace GameActor
 {
-    public abstract class IteractableObject : MonoBehaviour, IInteract
+    public class InteractableObject : MonoBehaviour, IInteract
     {
         public void Interact()
         {
