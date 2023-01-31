@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using GameActor;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
@@ -8,12 +7,12 @@ namespace Services.Factory
 {
     public class InteractableObjectsPool
     {
-        public InteractableObject Prefab;
+        public GameObject Prefab;
         public Transform Container { get; }
 
-        private List<InteractableObject> pool;
+        private List<GameObject> pool;
 
-        public InteractableObjectsPool(InteractableObject prefab, int count, Transform container)
+        public InteractableObjectsPool(GameObject prefab, int count, Transform container)
         {
             Prefab = prefab;
             Container = container;
@@ -23,22 +22,22 @@ namespace Services.Factory
 
         private void CreatePool(int count)
         {
-            pool = new List<InteractableObject>();
+            pool = new List<GameObject>();
             
             for (int i = 0; i < count; i++)
                 pool.Add(CreateObject());
         }
 
-        private InteractableObject CreateObject(bool isActiveByDefault = false)
+        private GameObject CreateObject(bool isActiveByDefault = false)
         {
             var createdObject = Object.Instantiate(Prefab, Container);
             createdObject.gameObject.SetActive(isActiveByDefault);
             return createdObject;
         }
 
-        public bool HasFreeElement(out InteractableObject element)
+        public bool HasFreeElement(out GameObject element)
         {
-            foreach (InteractableObject interactableObject in pool)
+            foreach (GameObject interactableObject in pool)
             {
                 if (!interactableObject.gameObject.activeInHierarchy)
                 {
@@ -52,7 +51,7 @@ namespace Services.Factory
             return false;
         }
 
-        public InteractableObject GetFreeElement()
+        public GameObject GetFreeElement()
         {
             if (HasFreeElement(out var interactableObject))
                 return interactableObject;

@@ -35,26 +35,17 @@ namespace Services.Factory
             _spawners = new List<Spawner>();
             var spawnerPrefab = Resources.Load<GameObject>(SpawnerPath); 
             
-            GameObject spawnersParent = new GameObject("Spawners");
-            _spawners.Add(InstantiatePrefab(spawnerPrefab, rightPoint, spawnersParent.transform).GetComponent<Spawner>());
-            _spawners.Add(InstantiatePrefab(spawnerPrefab, botPoint, spawnersParent.transform).GetComponent<Spawner>());
-            _spawners.Add(InstantiatePrefab(spawnerPrefab, leftPoint, spawnersParent.transform).GetComponent<Spawner>());
+            GameObject spawnerControllerParent = new GameObject("SpawnerController");
+            SpawnerController controller = spawnerControllerParent.AddComponent<SpawnerController>();
+            
+            //todo rework this spawn with scriptable object preset
+            _spawners.Add(InstantiatePrefab(spawnerPrefab, rightPoint, spawnerControllerParent.transform).GetComponent<Spawner>());
+            _spawners.Add(InstantiatePrefab(spawnerPrefab, botPoint, spawnerControllerParent.transform).GetComponent<Spawner>());
+            _spawners.Add(InstantiatePrefab(spawnerPrefab, leftPoint, spawnerControllerParent.transform).GetComponent<Spawner>());
 
-            InitializeSpawners();
-            CreateInteractableObjectPool();
+            controller.Construct(_spawners, LoadInteractableObject());
         }
-
-        private void CreateInteractableObjectPool()
-        {
-            GameObject interactableObjects = new GameObject("InteractableObjects");
-            _interactableObjectsPool = new InteractableObjectsPool(LoadInteractableObject().GetComponent<InteractableObject>(), 50, interactableObjects.transform);
-        }
-
-        private void InitializeSpawners()
-        {
-            foreach (Spawner spawner in _spawners)
-                spawner.Initialize(this as IGameFactory);
-        }
+        
 
         private GameObject InstantiatePrefab(GameObject objectToSpawn, Vector2 position, Transform parent = null) =>
             Object.Instantiate(objectToSpawn, rightPoint, Quaternion.identity, parent.transform);
