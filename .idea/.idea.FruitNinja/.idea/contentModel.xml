@@ -9,6 +9,9 @@
         <e p="Resources" t="Include" />
         <e p="Scenes" t="Include" />
         <e p="Scripts" t="Include">
+          <e p="Data" t="Include">
+            <e p="ZoneData.cs" t="Include" />
+          </e>
           <e p="GameActor" t="Include">
             <e p="Fruit.cs" t="Include" />
             <e p="IInteract.cs" t="Include" />

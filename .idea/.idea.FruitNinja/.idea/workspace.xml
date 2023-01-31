@@ -20,11 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="24b67b54-75fa-4580-865a-237b9a2d8147" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameActor/SpawnerController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameActor/SpawnerController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Data.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Data/ZoneData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Data/ZoneData.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameActor/Spawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameActor/Spawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameActor/SpawnerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameActor/SpawnerController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/Factory/GameFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Factory/GameFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/Factory/InteractableObjectsPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Factory/InteractableObjectsPool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StaticData/SpawnerSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StaticData/SpawnerSettings.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +47,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/Factory/GameFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StaticData/SpawnerSettings.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/AllServices.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data/ZoneData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/IService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActor/InteractableObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Infrastructure/States/StateMachine.cs" root0="FORCE_HIGHLIGHTING" />
@@ -80,14 +85,15 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/Boardbound/ICameraService.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/States/BootstrapState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Game.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameActor/Spawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/Factory/InteractableObjectsPoll.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/Factory/IGameFactory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActor/InteractableObject.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StaticData/SpawnerSettings.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/Factory/InteractableObjectsPool.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameActor/SpawnerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/Factory/GameFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StaticData/SpawnerSettings.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Data/ZoneData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameActor/SpawnerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameActor/Spawner.cs" />
       </list>
     </option>
   </component>

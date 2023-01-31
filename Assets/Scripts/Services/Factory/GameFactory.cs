@@ -48,7 +48,7 @@ namespace Services.Factory
         
 
         private GameObject InstantiatePrefab(GameObject objectToSpawn, Vector2 position, Transform parent = null) =>
-            Object.Instantiate(objectToSpawn, rightPoint, Quaternion.identity, parent.transform);
+            Object.Instantiate(objectToSpawn, position, Quaternion.identity, parent.transform);
         
         private void CalculateScreenBounds()
         {
