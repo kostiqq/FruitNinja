@@ -31,6 +31,9 @@
               <e p="StateMachine.cs" t="Include" />
             </e>
           </e>
+          <e p="Physics" t="Include">
+            <e p="Physic.cs" t="Include" />
+          </e>
           <e p="Services" t="Include">
             <e p="AllServices.cs" t="Include" />
             <e p="Factory" t="Include">
