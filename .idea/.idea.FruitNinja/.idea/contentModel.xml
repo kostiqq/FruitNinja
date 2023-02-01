@@ -6,18 +6,24 @@
     <e p="D:\Projects\FruitNinja\FruitNinja" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Graphics" t="Include">
+          <e p="Sprites" t="Include" />
+        </e>
         <e p="Resources" t="Include" />
         <e p="Scenes" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Data" t="Include">
             <e p="ZoneData.cs" t="Include" />
           </e>
-          <e p="GameActor" t="Include">
-            <e p="Fruit.cs" t="Include" />
-            <e p="IInteract.cs" t="Include" />
-            <e p="InteractableObject.cs" t="Include" />
+          <e p="GameActors" t="Include">
+            <e p="InteractableObjects" t="Include">
+              <e p="Fruit.cs" t="Include" />
+              <e p="IInteract.cs" t="Include" />
+              <e p="InteractableObject.cs" t="Include" />
+            </e>
             <e p="Spawner.cs" t="Include" />
             <e p="SpawnerController.cs" t="Include" />
+            <e p="SpawnZone.cs" t="Include" />
           </e>
           <e p="Infrastructure" t="Include">
             <e p="Bootstrapper.cs" t="Include" />
@@ -46,8 +52,10 @@
           <e p="StaticData" t="Include">
             <e p="SpawnerSettings.cs" t="Include" />
           </e>
+          <e p="Utils" t="Include">
+            <e p="BackgroundScaler.cs" t="Include" />
+          </e>
         </e>
-        <e p="Sprites" t="Include" />
       </e>
       <e p="FruitNinja.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />
