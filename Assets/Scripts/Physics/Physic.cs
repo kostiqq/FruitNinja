@@ -4,8 +4,8 @@ namespace Physics
 {
     public class Physic : MonoBehaviour
     {
-        private const float _gravity = -0.2f;
-        private const float _speedScaler = 1f;
+        private const float _gravity = -0.1f;
+        private const float _speedScaler = 1.2f;
         
         private Vector3 _velocity;
         private Vector3 _nextPoint;
@@ -22,7 +22,7 @@ namespace Physics
     
         private void Update()
         {
-            transform.position += Vector3.Lerp(transform.position, _nextPoint, Time.deltaTime);
+            transform.position = Vector3.Lerp(transform.position, _nextPoint, Time.deltaTime);
             _nextPoint = GetNextPoint();
         }
 
