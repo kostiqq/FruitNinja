@@ -20,6 +20,7 @@
               <e p="Fruit.cs" t="Include" />
               <e p="IInteract.cs" t="Include" />
               <e p="InteractableObject.cs" t="Include" />
+              <e p="Visability.cs" t="Include" />
             </e>
             <e p="Spawner" t="Include">
               <e p="SpawnerController.cs" t="Include" />

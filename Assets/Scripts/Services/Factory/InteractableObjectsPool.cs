@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using GameActor;
+using GameActors.InteractableObjects;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
@@ -8,37 +8,37 @@ namespace Services.Factory
 {
     public class InteractableObjectsPool
     {
-        public InteractableObject Prefab;
-        public Transform Container { get; }
+        private InteractableObject _prefab;
+        private Transform _container;
 
-        private List<InteractableObject> pool;
+        private List<InteractableObject> _pool;
 
         public InteractableObjectsPool(InteractableObject prefab, int count, Transform container)
         {
-            Prefab = prefab;
-            Container = container;
+            _prefab = prefab;
+            _container = container;
             
             CreatePool(count);
         }
 
         private void CreatePool(int count)
         {
-            pool = new List<InteractableObject>();
+            _pool = new List<InteractableObject>();
             
             for (int i = 0; i < count; i++)
-                pool.Add(CreateObject());
+                _pool.Add(CreateObject());
         }
 
         private InteractableObject CreateObject(bool isActiveByDefault = false)
         {
-            var createdObject = Object.Instantiate(Prefab, Container);
+            var createdObject = Object.Instantiate(_prefab, _container);
             createdObject.gameObject.SetActive(isActiveByDefault);
             return createdObject;
         }
-
+        
         public bool HasFreeElement(out InteractableObject element)
         {
-            foreach (InteractableObject interactableObject in pool)
+            foreach (InteractableObject interactableObject in _pool)
             {
                 if (!interactableObject.gameObject.activeInHierarchy)
                 {

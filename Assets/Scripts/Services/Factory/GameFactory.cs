@@ -1,4 +1,6 @@
 ﻿using GameActor;
+using GameActors.InteractableObjects;
+using GameActors.Spawner;
 using UnityEngine;
 
 namespace Services.Factory

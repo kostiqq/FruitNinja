@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using GameActors.Spawner;
+using GameActors.InteractableObjects;
 using Infrastructure;
 using Services.Factory;
 using StaticData;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace GameActor
+namespace GameActors.Spawner
 {
     public class SpawnerController : MonoBehaviour
     {

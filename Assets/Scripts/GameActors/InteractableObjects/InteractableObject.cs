@@ -1,12 +1,15 @@
-﻿using UnityEngine;
+﻿using GameActor;
+using Physics;
+using UnityEngine;
 
-namespace GameActor
+namespace GameActors.InteractableObjects
 {
     [RequireComponent(typeof(Physic))]
     public class InteractableObject : MonoBehaviour, IInteract
     {
-        private Physic _physicComponent;
-        
+        [SerializeField] private Physic _physicComponent;
+
+        private Vector3 _spawnPos;
         public void Interact()
         {
             
@@ -14,12 +17,19 @@ namespace GameActor
         
         private void Awake()
         {
-            _physicComponent = GetComponent<Physic>();
+            _spawnPos = transform.position;
         }
 
-        public void StartMove(Vector3 point)
+        public void StartMove(Vector3 direction, float force)
         {
-            _physicComponent.SetPointWhereToFly(point);
+            _physicComponent.AddForce(direction, force);
         }
+
+        public void HideObject()
+        {
+           gameObject.SetActive(false);
+           transform.position = _spawnPos;
+        }
+
     }
 }

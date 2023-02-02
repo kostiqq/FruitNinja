@@ -1,4 +1,4 @@
-﻿namespace GameActor
+﻿namespace GameActors.InteractableObjects
 {
     public class Fruit : InteractableObject
     {
