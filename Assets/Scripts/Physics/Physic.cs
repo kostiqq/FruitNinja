@@ -29,7 +29,7 @@ public class Physic : MonoBehaviour
     
     public void SetPointWhereToFly(Vector3 pointPosition)
     {
-        pointPosition = new Vector3(0, 4, 0);
+        pointPosition = Vector3.forward;
         Vector2 _moveDirection = pointPosition - transform.position;
 
         float impulseX = Random.Range(1, 2);

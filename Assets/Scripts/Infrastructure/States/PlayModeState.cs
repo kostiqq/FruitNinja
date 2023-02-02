@@ -15,7 +15,7 @@ namespace Infrastructure.States
         public void Enter()
         {
             IGameFactory gameFactory = _allServices.GetSingle<IGameFactory>();
-            gameFactory.CreateSpawners();
+            gameFactory.CreateSpawnerController();
         }
 
         public void Exit()

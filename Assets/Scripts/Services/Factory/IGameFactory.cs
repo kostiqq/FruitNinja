@@ -5,7 +5,7 @@ namespace Services.Factory
 {
     public interface IGameFactory : IService
     {
-        public GameObject LoadInteractableObject();
-        void CreateSpawners();
+        public InteractableObject LoadInteractableObject();
+        void CreateSpawnerController();
     }
 }

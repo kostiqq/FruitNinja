@@ -21,9 +21,12 @@
               <e p="IInteract.cs" t="Include" />
               <e p="InteractableObject.cs" t="Include" />
             </e>
-            <e p="Spawner.cs" t="Include" />
-            <e p="SpawnerController.cs" t="Include" />
-            <e p="SpawnZone.cs" t="Include" />
+            <e p="Spawner" t="Include">
+              <e p="SpawnerController.cs" t="Include" />
+              <e p="SpawnerParameters.cs" t="Include" />
+              <e p="SpawnerPosition.cs" t="Include" />
+              <e p="SpawnZone.cs" t="Include" />
+            </e>
           </e>
           <e p="Infrastructure" t="Include">
             <e p="Bootstrapper.cs" t="Include" />
@@ -50,7 +53,9 @@
             <e p="IService.cs" t="Include" />
           </e>
           <e p="StaticData" t="Include">
-            <e p="SpawnerSettings.cs" t="Include" />
+            <e p="ScriptableObjects" t="Include">
+              <e p="SpawnerSettings.cs" t="Include" />
+            </e>
           </e>
           <e p="Utils" t="Include">
             <e p="BackgroundScaler.cs" t="Include" />
