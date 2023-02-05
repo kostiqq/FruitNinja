@@ -64,7 +64,7 @@
           </e>
           <e p="Utils" t="Include">
             <e p="BackgroundScaler.cs" t="Include" />
-            <e p="CameraPoints.cs" t="Include" />
+            <e p="ScreenPoints.cs" t="Include" />
           </e>
         </e>
       </e>
