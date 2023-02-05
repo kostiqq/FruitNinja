@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxRotationAngle: 45
-  sizeParameter: 0.1
+  sizeParameter: 0.2
   rigidObject: {fileID: -8679824364002854750}
 --- !u!114 &5134886658125104827
 MonoBehaviour:
