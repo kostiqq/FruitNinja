@@ -17,7 +17,6 @@ public class BackgroundScaler : MonoBehaviour
         
         float cameraHeight = _mainCamera.orthographicSize * 2;
         Vector2 cameraSize = new Vector2(_mainCamera.aspect * cameraHeight, cameraHeight);
-
         Vector2 scale = backgroundTransform.localScale;
         
         scale.x *= cameraSize.x / spriteSize.x;

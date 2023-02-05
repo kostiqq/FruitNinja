@@ -1,12 +1,9 @@
-﻿using GameActor;
-using GameActors.InteractableObjects;
-using UnityEngine;
+﻿using GameActors.InteractableObjects;
 
 namespace Services.Factory
 {
     public interface IGameFactory : IService
     {
         public InteractableObject LoadInteractableObject();
-        void CreateSpawnerController();
     }
 }

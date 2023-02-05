@@ -1,5 +1,4 @@
-﻿using GameActor;
-using GameActors.InteractableObjects;
+﻿using GameActors.InteractableObjects;
 using GameActors.Spawner;
 using UnityEngine;
 
@@ -13,13 +12,5 @@ namespace Services.Factory
 
         public InteractableObject LoadInteractableObject()=> 
             Resources.Load<InteractableObject>(InteractableObjectPath);
-
-        public void CreateSpawnerController()
-        {
-            GameObject spawnerControllerParent = new GameObject("SpawnerController");
-            SpawnerController controller = spawnerControllerParent.AddComponent<SpawnerController>();
-            
-            controller.Construct(LoadInteractableObject());
-        }
     }
 }

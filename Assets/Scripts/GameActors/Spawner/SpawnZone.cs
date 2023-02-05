@@ -1,5 +1,3 @@
-using GameActors.InteractableObjects;
-using Services.Factory;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -7,57 +5,85 @@ namespace GameActors.Spawner
 {
    public class SpawnZone : MonoBehaviour
    {
-      private const float MaxForce = 6;
-      private const float MinForce = 5f;
-      
-      private Color _gizmosColor;
-      private InteractableObjectsPool _pool;
-      private Transform _leftPoint;
-      private Transform _rightPoint;
-      private Camera _mainCamera;
+     [field: SerializeField, Range(0f, 1f)] public float SpawnProbability { get; private set; } = 0.5f;
+    
+    [Header("Points")]
+    [SerializeField] private Transform firstPoint;
+    [SerializeField] private Transform secondPoint;
 
-      private void Awake()
-      {
-         _mainCamera = Camera.main;
-         _gizmosColor = Random.ColorHSV();
-      }
+    [Header("Angles")]
+    [SerializeField] private bool mirrorAngles;
+    [SerializeField, Range(-90f, 90f)] private float minAngleOffset;
+    [SerializeField, Range(-90f, 90f)] private float maxAngleOffset;
 
-      public void Initialize(Vector2 leftPoint, Vector2 rightPoint, InteractableObjectsPool pool)
-      {
-         _leftPoint = new GameObject("Left Point").transform;
-         _leftPoint.SetParent(transform);
-         _leftPoint.position = leftPoint;
-      
-         _rightPoint = new GameObject("Right Point").transform;
-         _rightPoint.SetParent(transform);
-         _rightPoint.position = rightPoint;
-         _pool = pool;
-      }
-   
-      public void SpawnWave()
-      {
-         InteractableObject spawnedObject = _pool.GetFreeElement();
-         var point = GetPointAtSegment(_rightPoint, _leftPoint, Random.Range(0, 1f));
-      
-         spawnedObject.transform.position = point;
-         var targetPosition =
-            _mainCamera.ScreenToWorldPoint(new Vector3(_mainCamera.pixelWidth / 2, _mainCamera.pixelHeight * 1.5f));
-         var throwVector = targetPosition - spawnedObject.transform.position;
+    [Header("Gizmos")]
+    [SerializeField] private Color color = Color.clear;
+    [SerializeField] private float drawPointRadius = 0.1f;
 
-         spawnedObject.StartMove(throwVector, Random.Range(MinForce,MaxForce));
-      }
-   
-      private Vector3 GetPointAtSegment(Transform firstPoint, Transform secondPoint, float length)
-      {
-         Vector3 pointPosition = (1 - length) * firstPoint.position + length * secondPoint.position;
-      
-         return pointPosition;
-      }
+    public Vector3 NormalVectorWithRandomAngleOffset =>
+        Vector3.Lerp(NormalVectorWithMinAngleOffset, NormalVectorWithMaxAngleOffset, Random.value);
+    
+    private Vector3 NormalVector =>
+        Vector3.Cross(secondPoint.position - firstPoint.position, RHSVector);
+    private Vector3 RHSVector => mirrorAngles ? Vector3.back : Vector3.forward;
+    
+    private Vector3 NormalVectorWithMinAngleOffset =>
+        Quaternion.AngleAxis(minAngleOffset, AxisVector) * NormalVector;
+    private Vector3 NormalVectorWithMaxAngleOffset =>
+        Quaternion.AngleAxis(maxAngleOffset, AxisVector) * NormalVector;
+    private Vector3 AxisVector => mirrorAngles ? Vector3.forward : Vector3.back;
 
-      private void OnDrawGizmos()
-      {
-         Gizmos.color = _gizmosColor;
-         Gizmos.DrawLine(_leftPoint.position, _rightPoint.position);
-      }
+    public Vector3 GetPointAtSegment()
+    {
+        float length = Random.Range(0, 1f);
+        return (1 - length) * firstPoint.position + length * secondPoint.position;
+    }
+    
+    // TODO Move to editor script.
+    #region Editor
+    [ContextMenu(nameof(OnValidate))]
+    private void OnValidate()
+    {
+        firstPoint = firstPoint == null
+            ? CreateChildTransform("FirstPoint")
+            : firstPoint;
+        secondPoint = secondPoint == null
+            ? CreateChildTransform("SecondPoint")
+            : secondPoint;
+        
+        color = color == Color.clear
+            ? Random.ColorHSV()
+            : color;
+
+        if (minAngleOffset > maxAngleOffset)
+        {
+            maxAngleOffset = minAngleOffset;
+        }
+    }
+
+    private Transform CreateChildTransform(string name)
+    {
+        var point = new GameObject(name).transform;
+        point.parent = transform;
+        return point;
+    }
+
+    private void OnDrawGizmos()
+    {
+        var firstPosition = firstPoint.position;
+        var secondPosition = secondPoint.position;
+        
+        Gizmos.color = color;
+        
+        Gizmos.DrawSphere(firstPosition, drawPointRadius);
+        Gizmos.DrawLine(firstPosition, secondPosition);
+        Gizmos.DrawSphere(secondPosition, drawPointRadius);
+
+        var centerPosition = (firstPosition + secondPosition) / 2;
+        //transform.position = centerPosition;
+        Gizmos.DrawRay(centerPosition, NormalVectorWithMinAngleOffset);
+        Gizmos.DrawRay(centerPosition, NormalVectorWithMaxAngleOffset);
+    }
+    #endregion
    }
 }

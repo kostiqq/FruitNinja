@@ -1,9 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using GameActors.InteractableObjects;
-using Infrastructure;
 using Services.Factory;
-using StaticData;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -11,101 +9,92 @@ namespace GameActors.Spawner
 {
     public class SpawnerController : MonoBehaviour
     {
-        private const int PoolCapacity = 50;
-        private const float PointOffset = 1.5f;
+        private const int PoolCapacity = 15;
+
+        [SerializeField] private GameComplicator complicator;
+        [SerializeField] private List<SpawnZone> spawnZones;
+        [SerializeField] private InteractableObject prefab;
         
-        private SpawnerSettings _spawnerSettings;
-        private List<SpawnZone> _spawnZones;
         private InteractableObjectsPool _pool;
-        private Camera _mainCamera;
-        private Coroutine _spawnCoroutine;
-
-        private Vector2 leftBotCamera;
-        private Vector2 rightTopCamera;
         
-        public void Construct(InteractableObject loadInteractableObject)
-        {
-            _mainCamera = Camera.main;
-            CalculateScreenBounds();
-            
-            _pool = new InteractableObjectsPool(loadInteractableObject, PoolCapacity, new GameObject("ObjectPool").transform);
-            _spawnerSettings = Bootstrapper.Instance.GetSpawnerSettings;
-            _spawnZones = new List<SpawnZone>();
-
-            foreach (var SpawnerParameters in _spawnerSettings.Spawners)
-                CreateSpawner(SpawnerParameters);
-            
-            _spawnCoroutine = StartCoroutine(Spawn());
-        }
-
-        private void CreateSpawner(SpawnerParameters spawnerParameters)
-        {
-            GameObject spawnerObject = new GameObject($"{spawnerParameters.Position} Spawner");
-            spawnerObject.transform.SetParent(transform);
-            spawnerObject.transform.position = CalculateSpawnerPosition(spawnerParameters, out Vector2 leftBound, out Vector2 rightBound);
-            
-            SpawnZone spawnerComponent = spawnerObject.AddComponent<SpawnZone>();
-            spawnerComponent.Initialize(leftBound, rightBound, _pool);
-            _spawnZones.Add(spawnerComponent);
-        }
-
-        //todo refactor this
-        private Vector3 CalculateSpawnerPosition(SpawnerParameters spawnerParameters, out Vector2 leftBound, out Vector2 rightBound)
-        {
-            leftBound = Vector2.zero;
-            rightBound = Vector2.zero;
-            
-            switch (spawnerParameters.Position)
-            {
-                case SpawnerPosition.Bottom:
-                    leftBound = new Vector2(GetPointInGame(leftBotCamera.x,rightTopCamera.x, leftBotCamera.x, spawnerParameters.LeftPoint), leftBotCamera.y - PointOffset);
-                    rightBound = new Vector2(GetPointInGame(leftBotCamera.x,rightTopCamera.x, leftBotCamera.x,spawnerParameters.RightPoint), leftBotCamera.y - PointOffset);
-                    return new Vector3((leftBound.x + rightBound.x)/2, leftBotCamera.y,0);
-                case SpawnerPosition.Left:
-                    leftBound = new Vector2(leftBotCamera.x - PointOffset, GetPointInGame(leftBotCamera.y, rightTopCamera.y ,leftBotCamera.y , spawnerParameters.LeftPoint));
-                    rightBound = new Vector2(leftBotCamera.x - PointOffset, GetPointInGame(leftBotCamera.y, rightTopCamera.y, leftBotCamera.y , spawnerParameters.RightPoint));
-                    return new Vector3(leftBotCamera.x,(leftBound.y + rightBound.y)/2,0);
-                case SpawnerPosition.LeftAngle:
-                    leftBound = new Vector2(leftBotCamera.x - PointOffset, GetPointInGame(leftBotCamera.y, rightTopCamera.y, leftBotCamera.y, spawnerParameters.LeftPoint));
-                    rightBound = new Vector2(GetPointInGame(leftBotCamera.x,rightTopCamera.x, leftBotCamera.x, spawnerParameters.RightPoint), leftBotCamera.y - PointOffset);
-                    return new Vector3(leftBotCamera.x,0,0);
-                case SpawnerPosition.Right:
-                    leftBound = new Vector2(rightTopCamera.x + PointOffset, GetPointInGame(leftBotCamera.y, rightTopCamera.y, leftBotCamera.y, spawnerParameters.LeftPoint));
-                    rightBound = new Vector2(rightTopCamera.x + PointOffset,GetPointInGame(leftBotCamera.y, rightTopCamera.y, leftBotCamera.y, spawnerParameters.RightPoint));
-                    return new Vector3(rightTopCamera.x,(leftBound.y + rightBound.y)/2,0);
-                case SpawnerPosition.RightAngle:
-                    leftBound = new Vector2(rightTopCamera.x - PointOffset, GetPointInGame(leftBotCamera.y,rightTopCamera.y, leftBotCamera.y, spawnerParameters.LeftPoint));
-                    rightBound = new Vector2(rightTopCamera.x - (rightTopCamera.x - leftBotCamera.x) * spawnerParameters.RightPoint, leftBotCamera.y - PointOffset);
-                    return new Vector3(rightTopCamera.x,leftBotCamera.y,0);
-                default:
-                    Debug.LogError($"Incorrect spawner position on screen {spawnerParameters.Position}");
-                    return Vector3.zero;
-            }
-        }
-
-        private float GetPointInGame(float startPoint, float x, float y, float precent)=> 
-            startPoint + (x - y) * precent;
+        private float _waveCooldown;
+        private float _cooldownBetweenFruitsSpawn;
+        private int _minFruitCount;
+        private int _maxFruitCount;
         
+        public void Start()
+        {
+            InitializeObjectPool();
+            InitializeComplexitySettings();
+            StartCoroutine(SpawnCycle());
+        }
 
-        private IEnumerator Spawn()
+        private void InitializeObjectPool()
+        {
+            var poolParent = new GameObject("Pool").transform;
+            poolParent.transform.SetParent(transform);
+            _pool = new InteractableObjectsPool(prefab, PoolCapacity, poolParent);
+        }
+
+        private void InitializeComplexitySettings()
+        {
+            _minFruitCount = complicator.complexityConfig.MinFruitsCount;
+            _maxFruitCount = complicator.complexityConfig.MaxFruitsCount;
+
+            _waveCooldown = complicator.complexityConfig.TimeBetweenWaves;
+            _cooldownBetweenFruitsSpawn = complicator.complexityConfig.TimeBetweenFruitSpawn;
+        }
+        
+        private IEnumerator SpawnCycle()
         {
             while (true)
             {
-                SpawnObjects();
-                yield return new WaitForSeconds(3f);
+                StartCoroutine(SpawnWave());
+                yield return new WaitForSeconds(_waveCooldown -  (-1+complicator.CurrentWaveComplexityCoefficient) );     
             }
         }
 
-        private void SpawnObjects()
+        private IEnumerator SpawnWave()
         {
-            int RandomSpawnIndex = Random.Range(0, _spawnZones.Count);
-            _spawnZones[RandomSpawnIndex].SpawnWave();
+            int objectsCount = GetRandomFruitCount();
+            SpawnZone selectedSpawnZone = GetRandomSpawnZone();
+            for(int i = 0; i < objectsCount; i++)
+            {
+                Vector2 spawnPoint = selectedSpawnZone.GetPointAtSegment();
+
+                InteractableObject spawnedObject = _pool.GetFreeElement();
+                spawnedObject.transform.position = spawnPoint;
+                
+                spawnedObject.StartMoving(selectedSpawnZone.NormalVectorWithRandomAngleOffset);
+                yield return new WaitForSeconds(_cooldownBetweenFruitsSpawn);
+            }
         }
         
-        private void CalculateScreenBounds()
+        private int GetRandomFruitCount()
         {
-            leftBotCamera = _mainCamera.ViewportToWorldPoint(new Vector3(0, 0, _mainCamera.nearClipPlane));
-            rightTopCamera = _mainCamera.ViewportToWorldPoint(new Vector3(1f, 1f, _mainCamera.nearClipPlane));
+            int complexityCoef = complicator.CurrentObjectComplexityCoefficient;
+            return Random.Range(_minFruitCount + complexityCoef, _maxFruitCount + complexityCoef);
         }
+        
+        private SpawnZone GetRandomSpawnZone()
+        {
+            float totalSpawnProbability = 0f;
+            
+            foreach (var spawnZone in spawnZones)
+                totalSpawnProbability += spawnZone.SpawnProbability;
+
+            float passedSpawnProbability = 0;
+            float targetSpawnProbability = Random.Range(0f, totalSpawnProbability);
+            
+            foreach (var spawnZone in spawnZones)
+            {
+                passedSpawnProbability += spawnZone.SpawnProbability;
+                if (passedSpawnProbability >= targetSpawnProbability)
+                    return spawnZone;
+            }
+
+            return null;
+        }
+     
     }
 }
