@@ -14,7 +14,7 @@ namespace GameActors.InteractableObjects
 
         private void OnDrawGizmos()
         {
-            Gizmos.DrawSphere(transform.position, Radius);
+            Gizmos.DrawWireSphere(transform.position, Radius);
         }
     }
 }
