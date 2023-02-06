@@ -11,6 +11,8 @@ namespace GameActors.InteractableObjects
         public event Action OnClean;
         
         [SerializeField] private SpriteRenderer spriteRenderer;
+        [SerializeField] private ParticleSystem cutEffect;
+        [SerializeField] private ParticleSystemRenderer particleSystemRenderer;
         public Sprite GetSprite => spriteRenderer.sprite;
 
         private void OnValidate()
@@ -18,8 +20,9 @@ namespace GameActors.InteractableObjects
             spriteRenderer ??= GetComponent<SpriteRenderer>();
         }
         
-        public void Initialize(Sprite rendererSprite)
+        public void Initialize(Sprite rendererSprite, Texture particleTexture)
         {
+            particleSystemRenderer.material.mainTexture = particleTexture;
             spriteRenderer.sprite = rendererSprite;
             spriteRenderer.sortingOrder = ObjectLayer;
             OnInitialized?.Invoke();
@@ -29,6 +32,12 @@ namespace GameActors.InteractableObjects
         {
             spriteRenderer.sprite = null;
             OnClean?.Invoke();
+        }
+
+        public void PlayEffect()
+        {
+            cutEffect.transform.parent = null;
+            cutEffect.Play();
         }
     }
 }

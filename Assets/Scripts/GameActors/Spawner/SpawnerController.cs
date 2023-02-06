@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using GameActors.InteractableObjects;
+using Services;
 using Services.Factory;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -16,6 +17,7 @@ namespace GameActors.Spawner
         [SerializeField] private InteractableObject prefab;
         
         private InteractableObjectsPool _pool;
+        private FruitBuilder _fruitBuilder;
         
         private float _waveCooldown;
         private float _cooldownBetweenFruitsSpawn;
@@ -24,6 +26,7 @@ namespace GameActors.Spawner
         
         public void Start()
         {
+            _fruitBuilder = new FruitBuilder(AllServices.Container.GetSingle<IGameFactory>());    
             InitializeObjectPool();
             InitializeComplexitySettings();
             StartCoroutine(SpawnCycle());
@@ -63,6 +66,7 @@ namespace GameActors.Spawner
                 Vector2 spawnPoint = selectedSpawnZone.GetPointAtSegment();
 
                 InteractableObject spawnedObject = _pool.GetFreeElement();
+                _fruitBuilder.GetRandomFruit(spawnedObject);
                 spawnedObject.transform.position = spawnPoint;
                 
                 spawnedObject.StartMoving(selectedSpawnZone.NormalVectorWithRandomAngleOffset);

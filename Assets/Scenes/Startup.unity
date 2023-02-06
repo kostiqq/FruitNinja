@@ -671,7 +671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 541d8405ffdd4954aa51df725596fb05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _inputHandler: {fileID: 0}
+  _inputHandler: {fileID: 424514937}
   _colliderObjects: []
 --- !u!1001 &1083092985
 PrefabInstance:

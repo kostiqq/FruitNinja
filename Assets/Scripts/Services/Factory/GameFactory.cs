@@ -1,5 +1,7 @@
-﻿using GameActors.InteractableObjects;
-
+﻿using System.Collections.Generic;
+using System.Linq;
+using GameActors.InteractableObjects;
+using StaticData;
 using UnityEngine;
 
 namespace Services.Factory
@@ -8,6 +10,7 @@ namespace Services.Factory
     {
         private const string InteractableObjectPath = "InteractableObject";
         private const string InputTrailPath = "InputTrail";
+        private const string FruitConfigsPath = "Configs/FruitConfigs";
         
         private InteractableObjectsPool _interactableObjectsPool;
 
@@ -19,6 +22,8 @@ namespace Services.Factory
             var trail = Resources.Load<GameObject>(InputTrailPath);
             return Object.Instantiate(trail);
         }
-            
+
+        public FruitConfig[] LoadFruitConfigs()=>
+            Resources.LoadAll<FruitConfig>(FruitConfigsPath);
     }
 }

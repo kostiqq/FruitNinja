@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 052490a6f19f4ae2b3340f5963246551, type: 3}
+  m_Name: Mango
+  m_EditorClassIdentifier: 
+  FruitSprite: {fileID: 21300000, guid: c0b138220b2ca48919746b7a0df04811, type: 3}
+  FruitEffectSprite: {fileID: 2800000, guid: 2dae970273d3b314cbd20cc9efda2bdd, type: 3}
