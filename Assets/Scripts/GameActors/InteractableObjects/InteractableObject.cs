@@ -6,6 +6,7 @@ namespace GameActors.InteractableObjects
 {
     [RequireComponent(typeof(Physic))]
     [RequireComponent(typeof(Renderer))]
+    [RequireComponent(typeof(ColliderComponent))]
     public class InteractableObject : MonoBehaviour, IInteract
     {
         [SerializeField] private Physic physicComponent;
