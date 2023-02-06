@@ -3,17 +3,19 @@ using UnityEngine;
 
 public class InputTrail : MonoBehaviour
 {
-    public InputHandler _inputHandler;
+    private InputHandler _inputHandler;
     private GameObject _trail;
     
     public void Construct(InputHandler inputHandler, GameObject trail)
     {
         _trail = trail;
         _inputHandler = inputHandler;
+        Initialize();
     }
     
-    private void Start()
+    private void Initialize()
     {
+        _trail.transform.SetParent(transform);
         HideTrail();
         _inputHandler.OnSwipe += MoveTrail;
         _inputHandler.OnGetTouch += ShowTrail;

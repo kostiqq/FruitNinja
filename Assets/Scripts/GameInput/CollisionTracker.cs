@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using GameActors.InteractableObjects;
-using GameInput;
 using UnityEngine;
 
 namespace GameInput
@@ -8,8 +7,7 @@ namespace GameInput
     public class CollisionTracker : MonoBehaviour
     {
         public InputHandler _inputHandler;
-        
-        
+
         public List<ColliderComponent> _colliderObjects = new List<ColliderComponent>();
 
         private void Start()

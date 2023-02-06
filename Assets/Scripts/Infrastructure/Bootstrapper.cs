@@ -10,12 +10,10 @@ namespace Infrastructure
 
         public static Bootstrapper Instance;
 
-        private void Start()
+        private void Awake()
         {
             _game = new Game();
             _game.StateMachine.Enter<BootstrapState>();
         }
-
-
     }
 }

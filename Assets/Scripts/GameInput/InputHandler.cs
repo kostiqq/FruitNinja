@@ -1,8 +1,11 @@
 using System;
+using Services;
+using Services.Factory;
 using UnityEngine;
 
 namespace GameInput
 {
+    [RequireComponent(typeof(InputTrail))]
     public class InputHandler : MonoBehaviour
     {
         public event Action<Vector3> OnSwipe;
@@ -18,6 +21,9 @@ namespace GameInput
         private Vector3 _startTouchPos;
         private Vector3 _screenOffset;
 
+        private InputTrail _trail;
+        private IGameFactory _gameFactory;
+        
         private enum InputState
         {
             Empty,
@@ -25,11 +31,17 @@ namespace GameInput
             Swipe
         }
 
-        public void Start()
+        private void OnValidate()
         {
-            _screenOffset = new Vector3(0, 0, -_mainCamera.transform.position.z);
+            _trail = GetComponent<InputTrail>();
         }
 
+        public void Start()
+        {
+            _gameFactory = AllServices.Container.GetSingle<IGameFactory>();
+            _trail.Construct(this, _gameFactory.LoadInputTrail());
+            _screenOffset = new Vector3(0, 0, -_mainCamera.transform.position.z);
+        }
 
         private void AwaitSwipe()
         {
