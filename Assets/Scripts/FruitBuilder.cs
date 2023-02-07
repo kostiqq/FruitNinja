@@ -1,28 +1,18 @@
-﻿using GameActors.InteractableObjects;
-using Services.Factory;
-using StaticData;
+﻿using StaticData;
 using UnityEngine;
 
 public class FruitBuilder
 {
-    private IGameFactory _gameFactory;
-
     private FruitConfig[] _fruitConfig;
     
-    public FruitBuilder(IGameFactory gameFactory)
+    public FruitBuilder(FruitConfig[] configs)
     {
-        _gameFactory = gameFactory;
-        Initialize();
+        _fruitConfig = configs;
     }
 
-    private void Initialize()
-    {
-        _fruitConfig = _gameFactory.LoadFruitConfigs();
-    }
-
-    public void GetRandomFruit(InteractableObject emptyObject)
+    public FruitConfig GetRandomConfig()
     {
         int configIndex = Random.Range(0, _fruitConfig.Length);
-        emptyObject.BuildFruit(_fruitConfig[configIndex]);
+        return _fruitConfig[configIndex];
     }
 }

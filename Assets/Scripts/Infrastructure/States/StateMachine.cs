@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Services;
+using Services.ServiceLocator;
 
 namespace Infrastructure.States
 {
@@ -9,13 +10,13 @@ namespace Infrastructure.States
         private readonly Dictionary<Type, IState> _states;
         private IState _activeState;
 
-        public StateMachine(AllServices allServices)
+        public StateMachine(ServiceLocator<IService> allServices)
         {
             _states = new Dictionary<Type, IState>()
             {
                 [typeof(BootstrapState)] = new BootstrapState(this, allServices),
                 [typeof(MainMenuState)] = new MainMenuState(this),
-                [typeof(PlayModeState)] = new PlayModeState(this, allServices),
+                [typeof(PlayModeState)] = new PlayModeState(this),
                 [typeof(GameOverState)] = new GameOverState(this)
             };
         }

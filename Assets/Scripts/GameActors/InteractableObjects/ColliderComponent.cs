@@ -20,7 +20,6 @@ namespace GameActors.InteractableObjects
         public void CollisionEnter()
         {
             IsEnabled = false;
-            Debug.LogError("ALO");
             OnColliderEnter?.Invoke();
         }
 

@@ -1,29 +1,24 @@
 using System;
-using Services;
-using Services.Factory;
+using StaticData;
 using UnityEngine;
 
 namespace GameInput
 {
-    [RequireComponent(typeof(InputTrail))]
     public class InputHandler : MonoBehaviour
     {
+        private float _minSwipeDistance = 20;
+        private int _mouseButtonIndex = 0;
+
+        private Camera _gameCamera;
+        private InputState _inputState;
+        private Vector3 _startTouchPos;
+        private Vector3 _screenOffset;
+        private Vector3 _previousPos;
+
         public event Action<Vector3> OnSwipe;
         public event Action<Vector3> OnGetTouch;
         public event Action OnTouchFinish;
 
-        [SerializeField] private float _minSwipeDistance = 20;
-        [SerializeField] private Camera _mainCamera;
-
-        private const int MouseButtonIndex = 0;
-
-        private InputState _inputState;
-        private Vector3 _startTouchPos;
-        private Vector3 _screenOffset;
-
-        private InputTrail _trail;
-        private IGameFactory _gameFactory;
-        
         private enum InputState
         {
             Empty,
@@ -31,17 +26,16 @@ namespace GameInput
             Swipe
         }
 
-        private void OnValidate()
+        public void Construct(InputConfig configsHandlerInputConfig, Camera gameCamera)
         {
-            _trail = GetComponent<InputTrail>();
+            _minSwipeDistance = configsHandlerInputConfig.minDistance;
+            _mouseButtonIndex = configsHandlerInputConfig.MouseButtonIndex;
+            _gameCamera = gameCamera;
+            _screenOffset = new Vector3(0, 0, -_gameCamera.transform.position.z);
         }
 
-        public void Start()
-        {
-            _gameFactory = AllServices.Container.GetSingle<IGameFactory>();
-            _trail.Construct(this, _gameFactory.LoadInputTrail());
-            _screenOffset = new Vector3(0, 0, -_mainCamera.transform.position.z);
-        }
+        public Vector3 InputVector() =>
+            _previousPos - _gameCamera.ScreenToWorldPoint(Input.mousePosition);
 
         private void AwaitSwipe()
         {
@@ -51,43 +45,40 @@ namespace GameInput
 
         private void SendSwipeEvent()
         {
-            OnSwipe?.Invoke(_mainCamera.ScreenToWorldPoint(Input.mousePosition + _screenOffset));
+            OnSwipe?.Invoke(_gameCamera.ScreenToWorldPoint(Input.mousePosition + _screenOffset));
         }
 
         public void Update()
         {
-            if (Input.GetMouseButtonDown(MouseButtonIndex))
+            if (Input.GetMouseButtonDown(_mouseButtonIndex))
             {
+                _previousPos = _gameCamera.ScreenToWorldPoint(Input.mousePosition);
                 _inputState = InputState.Touch;
                 _startTouchPos = Input.mousePosition;
-                OnGetTouch?.Invoke(_mainCamera.ScreenToWorldPoint(Input.mousePosition + _screenOffset));
+                OnGetTouch?.Invoke(_gameCamera.ScreenToWorldPoint(Input.mousePosition + _screenOffset));
             }
-            else
+            else if (Input.GetMouseButton(_mouseButtonIndex))
             {
-                if (Input.GetMouseButton(MouseButtonIndex))
+                switch (_inputState)
                 {
-                    switch (_inputState)
-                    {
-                        case InputState.Empty:
-                            break;
-                        case InputState.Touch:
-                            AwaitSwipe();
-                            break;
-                        case InputState.Swipe:
-                            SendSwipeEvent();
-                            break;
-                        default:
-                            throw new ArgumentOutOfRangeException();
-                    }
+                    case InputState.Empty:
+                        break;
+                    case InputState.Touch:
+                        AwaitSwipe();
+                        break;
+                    case InputState.Swipe:
+                        SendSwipeEvent();
+                        break;
+                    default:
+                        throw new ArgumentOutOfRangeException();
                 }
-                else
-                {
-                    if (Input.GetMouseButtonUp(MouseButtonIndex))
-                    {
-                        OnTouchFinish?.Invoke();
-                        _inputState = InputState.Empty;
-                    }
-                }
+
+                _previousPos = Input.mousePosition;
+            }
+            else if (Input.GetMouseButtonUp(_mouseButtonIndex))
+            {
+                OnTouchFinish?.Invoke();
+                _inputState = InputState.Empty;
             }
         }
     }

@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using GameActors.InteractableObjects;
-using Services;
 using Services.Factory;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -10,12 +9,9 @@ namespace GameActors.Spawner
 {
     public class SpawnerController : MonoBehaviour
     {
-        private const int PoolCapacity = 15;
-
-        [SerializeField] private GameComplicator complicator;
+        private GameComplicator _complicator;
         [SerializeField] private List<SpawnZone> spawnZones;
-        [SerializeField] private InteractableObject prefab;
-        
+
         private InteractableObjectsPool _pool;
         private FruitBuilder _fruitBuilder;
         
@@ -23,29 +19,33 @@ namespace GameActors.Spawner
         private float _cooldownBetweenFruitsSpawn;
         private int _minFruitCount;
         private int _maxFruitCount;
-        
-        public void Start()
+
+        public static SpawnerController Instance;
+
+        private void Awake()
         {
-            _fruitBuilder = new FruitBuilder(AllServices.Container.GetSingle<IGameFactory>());    
-            InitializeObjectPool();
+            if (Instance == null)
+                Instance = this;
+            else
+                Destroy(gameObject);
+        }
+        
+        public void Construct(GameComplicator gameComplicator, InteractableObjectsPool pool, FruitBuilder fruitBuilder)
+        {
+            _complicator = gameComplicator;
+            _pool = pool;
+            _fruitBuilder = fruitBuilder;
             InitializeComplexitySettings();
             StartCoroutine(SpawnCycle());
         }
 
-        private void InitializeObjectPool()
-        {
-            var poolParent = new GameObject("Pool").transform;
-            poolParent.transform.SetParent(transform);
-            _pool = new InteractableObjectsPool(prefab, PoolCapacity, poolParent);
-        }
-
         private void InitializeComplexitySettings()
         {
-            _minFruitCount = complicator.complexityConfig.MinFruitsCount;
-            _maxFruitCount = complicator.complexityConfig.MaxFruitsCount;
+            _minFruitCount = _complicator.complexityConfig.MinFruitsCount;
+            _maxFruitCount = _complicator.complexityConfig.MaxFruitsCount;
 
-            _waveCooldown = complicator.complexityConfig.TimeBetweenWaves;
-            _cooldownBetweenFruitsSpawn = complicator.complexityConfig.TimeBetweenFruitSpawn;
+            _waveCooldown = _complicator.complexityConfig.TimeBetweenWaves;
+            _cooldownBetweenFruitsSpawn = _complicator.complexityConfig.TimeBetweenFruitSpawn;
         }
         
         private IEnumerator SpawnCycle()
@@ -53,7 +53,7 @@ namespace GameActors.Spawner
             while (true)
             {
                 StartCoroutine(SpawnWave());
-                yield return new WaitForSeconds(_waveCooldown -  (-1+complicator.CurrentWaveComplexityCoefficient) );     
+                yield return new WaitForSeconds(_waveCooldown -  (-1+_complicator.CurrentWaveComplexityCoefficient) );     
             }
         }
 
@@ -66,9 +66,8 @@ namespace GameActors.Spawner
                 Vector2 spawnPoint = selectedSpawnZone.GetPointAtSegment();
 
                 InteractableObject spawnedObject = _pool.GetFreeElement();
-                _fruitBuilder.GetRandomFruit(spawnedObject);
+                spawnedObject.BuildFruit(_fruitBuilder.GetRandomConfig());
                 spawnedObject.transform.position = spawnPoint;
-                
                 spawnedObject.StartMoving(selectedSpawnZone.NormalVectorWithRandomAngleOffset);
                 yield return new WaitForSeconds(_cooldownBetweenFruitsSpawn);
             }
@@ -76,7 +75,7 @@ namespace GameActors.Spawner
         
         private int GetRandomFruitCount()
         {
-            int complexityCoef = complicator.CurrentObjectComplexityCoefficient;
+            int complexityCoef = _complicator.CurrentObjectComplexityCoefficient;
             return Random.Range(_minFruitCount + complexityCoef, _maxFruitCount + complexityCoef);
         }
         
@@ -99,6 +98,5 @@ namespace GameActors.Spawner
 
             return null;
         }
-     
     }
 }

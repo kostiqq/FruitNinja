@@ -1,22 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using GameActors.InteractableObjects;
 using UnityEngine;
-using Object = UnityEngine.Object;
 
 namespace Services.Factory
 {
     public class InteractableObjectsPool
     {
-        private InteractableObject _prefab;
         private Transform _container;
         private Sprite[] _objectSprites;
-
+        private GameFactory _gameFactory;
+        
         private List<InteractableObject> _pool;
 
-        public InteractableObjectsPool(InteractableObject prefab, int count, Transform container)
+        public InteractableObjectsPool(GameFactory factory, int count, Transform container)
         {
-            _prefab = prefab;
+            _gameFactory = factory;
             _container = container;
             CreatePool(count);
         }
@@ -26,16 +24,9 @@ namespace Services.Factory
             _pool = new List<InteractableObject>();
             
             for (int i = 0; i < count; i++)
-                _pool.Add(CreateObject());
+                _pool.Add(_gameFactory.LoadInteractableObject(_container));
         }
 
-        private InteractableObject CreateObject(bool isActiveByDefault = false)
-        {
-            var createdObject = Object.Instantiate(_prefab, _container);
-            createdObject.gameObject.SetActive(isActiveByDefault);
-            return createdObject;
-        }
-        
         public bool HasFreeElement(out InteractableObject element)
         {
             foreach (InteractableObject interactableObject in _pool)
@@ -58,8 +49,12 @@ namespace Services.Factory
             {
                 return interactableObject;
             }
-            
-            throw new Exception("There is no free element in InteractableObject pool");
+            else
+            {
+                var newObject = _gameFactory.LoadInteractableObject(_container);
+                _pool.Add(newObject);
+                return newObject;
+            }
         }
     }
 }

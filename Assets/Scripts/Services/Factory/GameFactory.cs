@@ -1,29 +1,38 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System;
 using GameActors.InteractableObjects;
-using StaticData;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace Services.Factory
 {
-    public class GameFactory : IGameFactory
+    public class GameFactory : IService
     {
         private const string InteractableObjectPath = "InteractableObject";
         private const string InputTrailPath = "InputTrail";
-        private const string FruitConfigsPath = "Configs/FruitConfigs";
-        
+        private const string SlicePath = "Slice";
+
         private InteractableObjectsPool _interactableObjectsPool;
+        public Action<InteractableObject> OnInteractableObjectCreate;
 
-        public InteractableObject LoadInteractableObject()=> 
-            Resources.Load<InteractableObject>(InteractableObjectPath);
-
+        public InteractableObject LoadInteractableObject(Transform container)
+        {
+           var resource = Resources.Load<InteractableObject>(InteractableObjectPath);
+           var interactableObject = Object.Instantiate(resource, container);
+           OnInteractableObjectCreate?.Invoke(interactableObject);
+           return interactableObject;
+        } 
+        
         public GameObject LoadInputTrail()
         {
             var trail = Resources.Load<GameObject>(InputTrailPath);
             return Object.Instantiate(trail);
         }
 
-        public FruitConfig[] LoadFruitConfigs()=>
-            Resources.LoadAll<FruitConfig>(FruitConfigsPath);
+        public Slice CreateSlice()
+        {
+            var resource = Resources.Load<Slice>(SlicePath);
+            return Object.Instantiate(resource);
+        }
+            
     }
 }

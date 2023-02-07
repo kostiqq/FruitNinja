@@ -15,13 +15,14 @@ public class GameComplicator : MonoBehaviour
     private float _timeSinceWaveComplexityGrowth;
     private float _timeSinceObjectComplexityGrowth;
         
-    private void Awake()
+    public void Construct(GameComplexity complexityConfig)
     {
+        this.complexityConfig = complexityConfig;
         _timeBetweenComplexityGrowth = complexityConfig.ComplexityCoefIncreaseTime;
         _complexityCoefficientGrowth = complexityConfig.ComplexityCoef;
         _timeBetweenObjectComplexityGrowth = complexityConfig.fruitComplexityGrowthTime;
     }
-        
+
     private void Update()
     {
         _timeSinceWaveComplexityGrowth += Time.deltaTime;
@@ -45,4 +46,6 @@ public class GameComplicator : MonoBehaviour
 
     private void IncreaseObjectComplexity() =>
         CurrentObjectComplexityCoefficient++;
+
+
 }

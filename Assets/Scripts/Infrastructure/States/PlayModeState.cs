@@ -1,19 +1,17 @@
-﻿using Services;
-using Services.Factory;
-
-namespace Infrastructure.States
+﻿namespace Infrastructure.States
 {
     public class PlayModeState : IState
     {
-        private readonly AllServices _allServices;
-
-        public PlayModeState(StateMachine stateMachine, AllServices services)
+        private readonly StateMachine _stateMachine;
+        
+        public PlayModeState(StateMachine stateMachine)
         {
-            _allServices = services;
+            _stateMachine = stateMachine;
         }
 
         public void Enter()
         {
+            
         }
 
         public void Exit()
