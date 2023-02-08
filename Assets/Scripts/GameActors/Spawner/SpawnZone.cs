@@ -15,7 +15,9 @@ namespace GameActors.Spawner
         [SerializeField] private Transform secondPoint;
         [SerializeField] [Range(-90f, 90f)] private float maxAngleOffset;
         [SerializeField] [Range(-90f, 90f)] private float minAngleOffset;
+        [SerializeField] private Vector2 positionOnScreen;
 
+        public Vector2 GetPositionOnScreen => positionOnScreen;
         [Header("Angles")] 
         [SerializeField] private bool mirrorAngles;
         
@@ -45,27 +47,6 @@ namespace GameActors.Spawner
             return (1 - length) * firstPoint.position + length * secondPoint.position;
         }
 
-        private void Start()
-        {
-            AdaptFromDefaultToCurrentScreen();
-        }
-
-        public void AdaptFromDefaultToCurrentScreen()
-        {
-            AdaptTransformFromDefaultToCurrentScreen(firstPoint);
-            AdaptTransformFromDefaultToCurrentScreen(secondPoint);
-        }
-
-        private void AdaptTransformFromDefaultToCurrentScreen(Transform adaptTransform)
-        {
-            var currentPosition = adaptTransform.position;
-            currentPosition.x *=
-                ScreenPoints.LeftBottomWorldPosition.x / ScreenPoints.ConfigurableLeftBottomWorldPosition.x;
-            currentPosition.y *=
-                ScreenPoints.LeftBottomWorldPosition.y / ScreenPoints.ConfigurableLeftBottomWorldPosition.y;
-            adaptTransform.position = currentPosition;
-        }
-        
         // TODO Move to editor script.
 
         #region Editor
@@ -84,6 +65,7 @@ namespace GameActors.Spawner
                 ? Random.ColorHSV()
                 : color;
 
+            
             if (minAngleOffset > maxAngleOffset) maxAngleOffset = minAngleOffset;
         }
 
@@ -106,7 +88,6 @@ namespace GameActors.Spawner
             Gizmos.DrawSphere(secondPosition, drawPointRadius);
 
             var centerPosition = (firstPosition + secondPosition) / 2;
-            //transform.position = centerPosition;
             Gizmos.DrawRay(centerPosition, NormalVectorWithMinAngleOffset);
             Gizmos.DrawRay(centerPosition, NormalVectorWithMaxAngleOffset);
         }

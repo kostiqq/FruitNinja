@@ -21,18 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="24b67b54-75fa-4580-865a-237b9a2d8147" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/InteractableObject.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/InteractableObject.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Slice.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Slice.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SpawnZone.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SpawnZone.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Startup.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Startup.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Effects.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Effects.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Fruit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Fruit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/Factory/GameFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Factory/GameFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/StalinistOne-Regular SDF.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/StalinistOne-Regular SDF.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameActors/Spawner/SpawnZone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameActors/Spawner/SpawnZone.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameActors/Spawner/SpawnerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameActors/Spawner/SpawnerController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +44,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameComplicator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ProgressConfig.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/Factory/GameFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/PlayZone.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Slice.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/Progress/ProgressService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/ServiceLocator/IServiceLocator.cs" root0="FORCE_HIGHLIGHTING" />
@@ -93,7 +87,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/Spawner/SpawnerType.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/Spawner/SpawnerPosition.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StaticData/ScriptableObjects/SpawnerSettings.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/Spawner/SpawnerParameters.cs" />
@@ -117,7 +110,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/FruitBuilder.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/Factory/InteractableObjectsPool.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameComplicator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/Spawner/SpawnerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameInput/InputHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/CutterService/CutterService.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Physics/Physic.cs" />
@@ -139,11 +131,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Data/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/Progress/ProgressService.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Bootstrapper.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/Spawner/SpawnZone.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/InteractableObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/Factory/GameFactory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Effects.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Fruit.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/PlayZone.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/Spawner/SpawnerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/Spawner/SpawnZone.cs" />
       </list>
     </option>
   </component>

@@ -30,9 +30,14 @@
           <e p="Effects" t="Include" />
           <e p="Fruits" t="Include" />
           <e p="Sprites" t="Include" />
+          <e p="UI" t="Include">
+            <e p="GameView" t="Include" />
+          </e>
         </e>
         <e p="Materials" t="Include" />
-        <e p="Prefabs" t="Include" />
+        <e p="Prefabs" t="Include">
+          <e p="UI" t="Include" />
+        </e>
         <e p="Resources" t="Include" />
         <e p="Scenes" t="Include" />
         <e p="Scripts" t="Include">
@@ -56,6 +61,7 @@
               <e p="InteractableObject.cs" t="Include" />
               <e p="Slice.cs" t="Include" />
             </e>
+            <e p="PlayZone.cs" t="Include" />
             <e p="Spawner" t="Include">
               <e p="SpawnerController.cs" t="Include" />
               <e p="SpawnZone.cs" t="Include" />
