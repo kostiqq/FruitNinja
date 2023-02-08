@@ -3,14 +3,14 @@ using UnityEngine;
 
 public class FruitBuilder
 {
-    private FruitConfig[] _fruitConfig;
+    private InteractableObjectConfig[] _fruitConfig;
     
-    public FruitBuilder(FruitConfig[] configs)
+    public FruitBuilder(InteractableObjectConfig[] configs)
     {
         _fruitConfig = configs;
     }
 
-    public FruitConfig GetRandomConfig()
+    public InteractableObjectConfig GetRandomConfig()
     {
         int configIndex = Random.Range(0, _fruitConfig.Length);
         return _fruitConfig[configIndex];

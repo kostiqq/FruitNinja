@@ -20,8 +20,9 @@ namespace Services.Factory
            var interactableObject = Object.Instantiate(resource, container);
            OnInteractableObjectCreate?.Invoke(interactableObject);
            return interactableObject;
-        } 
-        
+        }
+
+
         public GameObject LoadInputTrail()
         {
             var trail = Resources.Load<GameObject>(InputTrailPath);

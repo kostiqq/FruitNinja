@@ -11,11 +11,9 @@ namespace GameActors.InteractableObjects
         public event Action OnClean;
         
         [SerializeField] private SpriteRenderer spriteRenderer;
-        [SerializeField] private ParticleSystem cutEffectPrefab;
         private Sprite _fruitSprite;
         public Sprite GetFruitSprite => _fruitSprite;
-        private ParticleSystem _cutParticle;
-        
+
         public Sprite GetSprite => spriteRenderer.sprite;
 
         private void OnValidate()
@@ -23,31 +21,18 @@ namespace GameActors.InteractableObjects
             spriteRenderer ??= GetComponent<SpriteRenderer>();
         }
         
-        public void Initialize(Sprite rendererSprite, Texture particleTexture)
+        public void Initialize(Sprite rendererSprite, bool isHaveShadow)
         {
-            _cutParticle = Instantiate(cutEffectPrefab, transform);
-            _cutParticle.GetComponent<ParticleSystemRenderer>().material.mainTexture = particleTexture;
             SetSprite(rendererSprite);
             spriteRenderer.sprite = rendererSprite;
             spriteRenderer.sortingOrder = ObjectLayer;
             OnInitialized?.Invoke();
         }
 
-        public void Clear()
-        {
-            //spriteRenderer.sprite = null;
+        public void Clear()=>
             OnClean?.Invoke();
-        }
-
-        public void PlayEffect()
-        {
-            _cutParticle.transform.parent = null;
-            _cutParticle.Play();
-        }
-
-        public void SetSprite(Sprite sprite)
-        {
+        
+        public void SetSprite(Sprite sprite)=>
             spriteRenderer.sprite = sprite;
-        }
     }
 }

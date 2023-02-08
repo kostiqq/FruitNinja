@@ -17,7 +17,7 @@ namespace Services.CutterService
         {
            colliderObject.TryGetComponent(out InteractableObject fruit);
            
-           var currentSpriteRect = fruit.GetFruitSprite.rect;
+           var currentSpriteRect = fruit.GetSprite.rect;
             
            var leftPart = CreatePart(fruit,
                new Rect(currentSpriteRect.x, currentSpriteRect.y, currentSpriteRect.width / 2, currentSpriteRect.height),
@@ -37,7 +37,7 @@ namespace Services.CutterService
            part.transform.position = block.transform.position;
            part.transform.localScale = block.transform.localScale;
 
-           part.SetSprite(Sprite.Create(block.GetFruitSprite.texture, textureRect, texturePivot));
+           part.SetSprite(Sprite.Create(block.GetSprite.texture, textureRect, texturePivot));
 
            return part;
        }

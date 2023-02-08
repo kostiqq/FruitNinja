@@ -1,46 +1,34 @@
 ﻿using Physics;
-using Services.CutterService;
 using StaticData;
 using UnityEngine;
 
 namespace GameActors.InteractableObjects
 {
-    [RequireComponent(typeof(Physic))]
-    [RequireComponent(typeof(Renderer))]
-    [RequireComponent(typeof(ColliderComponent))]
-    public class InteractableObject : MonoBehaviour
+    public abstract class InteractableObject : MonoBehaviour
     {
-        [SerializeField] private Physic physicComponent;
-        [SerializeField] private Renderer renderer;
-        [SerializeField] private ColliderComponent collider;
+        [SerializeField] protected Renderer renderer;
+        [SerializeField] protected ColliderComponent collider;
+        [SerializeField] protected Physic physicComponent;
         
-        private CutterService _cutter;
-        
-        private Vector3 _spawnPos;
-
-        private void OnValidate()
-        {
-            physicComponent = GetComponent<Physic>();
-            renderer = GetComponent<Renderer>();
-            collider = GetComponent<ColliderComponent>();
-        }
-
-        public Sprite GetFruitSprite =>
+        public Sprite GetSprite =>
             renderer.GetSprite;
 
         public Vector2 GetVelocity =>
             physicComponent.Velocity;
-
-        private void Interact()
+        
+        public virtual void Construct(InteractableObjectConfig objectConfig)
         {
-            renderer.PlayEffect();
-            gameObject.SetActive(false);
+            renderer.Initialize(objectConfig.FruitSprite, objectConfig.FruitEffectSprite, objectConfig.isHaveShadow);
+            collider.Enable();
         }
 
-        private void Awake()
+        protected virtual void Interact()
+        {
+        }
+
+        protected void Awake()
         {
             collider.OnColliderEnter += Interact;
-            _spawnPos = transform.position;
         }
 
         public void HideObject()
@@ -49,10 +37,9 @@ namespace GameActors.InteractableObjects
            ClearState();
         }
 
-        private void ClearState()
+        protected virtual void ClearState()
         {
             var objectTransform = transform;
-            //objectTransform.position = _spawnPos;
             objectTransform.localScale = Vector3.one;
             objectTransform.rotation = Quaternion.identity;
             renderer.Clear();
@@ -61,11 +48,6 @@ namespace GameActors.InteractableObjects
 
         public void StartMoving(Vector3 normalVectorWithRandomAngleOffset)=>
             physicComponent.AddForce(normalVectorWithRandomAngleOffset);
-
-        public void BuildFruit(FruitConfig fruitConfig)
-        {
-            renderer.Initialize(fruitConfig.FruitSprite, fruitConfig.FruitEffectSprite);
-            collider.Initialize();
-        }
+        
     }
 }

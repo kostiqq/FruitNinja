@@ -12,10 +12,8 @@ namespace GameActors.InteractableObjects
 
         public Action OnColliderEnter;
 
-        public void Initialize()
-        {
+        public void Enable()=>
             IsEnabled = true;
-        }
         
         public void CollisionEnter()
         {

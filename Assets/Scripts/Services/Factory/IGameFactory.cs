@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using GameActors.InteractableObjects;
+﻿using GameActors.InteractableObjects;
 using StaticData;
 using UnityEngine;
 
@@ -9,6 +8,6 @@ namespace Services.Factory
     {
         public InteractableObject LoadInteractableObject();
         GameObject LoadInputTrail();
-        FruitConfig[] LoadFruitConfigs();
+        InteractableObjectConfig[] LoadFruitConfigs();
     }
 }

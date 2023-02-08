@@ -50,7 +50,7 @@ namespace Infrastructure
 
             SpawnerController.Instance.Construct(complicator, objectsPool, fruitBuilder);
             
-
+            
         }
     }
 }
