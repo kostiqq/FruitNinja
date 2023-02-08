@@ -20,8 +20,8 @@ namespace GameActors.InteractableObjects
             CreateCutParticle();
             _cutParticle.Play();
             
-            var pointsEffect = CreatePointsLabel(points);
-            pointsEffect.Play();
+            /*var pointsEffect = CreatePointsLabel(points);
+            pointsEffect.Play();*/
         }
         
         private void CreateCutParticle()

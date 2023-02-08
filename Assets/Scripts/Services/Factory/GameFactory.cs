@@ -9,7 +9,7 @@ namespace Services.Factory
 {
     public class GameFactory : IService
     {
-        private const string InteractableObjectPath = "InteractableObject";
+        private const string InteractableObjectPath = "Fruit";
         private const string InputTrailPath = "InputTrail";
         private const string SlicePath = "Slice";
 

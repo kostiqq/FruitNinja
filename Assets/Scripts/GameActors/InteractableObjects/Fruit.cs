@@ -44,8 +44,8 @@ namespace GameActors.InteractableObjects
         {
             effects.PlayEffects(_points);
             gameObject.SetActive(false);
+            ClearState();
         }
-
-
+        
     }
 }

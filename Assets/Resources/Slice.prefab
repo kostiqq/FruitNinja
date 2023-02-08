@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 3111503014100442076}
   - component: {fileID: 3111503014100442079}
   - component: {fileID: -8679824364002854750}
-  - component: {fileID: 5134886658125104827}
   - component: {fileID: -3681775291350523403}
+  - component: {fileID: 5134886658125104827}
   m_Layer: 0
   m_Name: Slice
   m_TagString: Untagged
@@ -97,20 +97,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ad9891ca68cf64eb156d30313e3e7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5134886658125104827
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3111503014100442078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66fe8f553cd943ca9af9bf5bbbcdd4b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 3111503014100442079}
-  cutEffectPrefab: {fileID: 8777025799003076331, guid: c34b407fc2eacd14d987e706164e4c62, type: 3}
 --- !u!114 &-3681775291350523403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,3 +111,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _physicComponent: {fileID: -8679824364002854750}
   _renderer: {fileID: 5134886658125104827}
+--- !u!114 &5134886658125104827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3111503014100442078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12f46d177dae42a48222d5305d45821f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 3111503014100442079}
