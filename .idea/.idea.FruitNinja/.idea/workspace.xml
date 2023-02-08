@@ -22,10 +22,48 @@
     <list default="true" id="24b67b54-75fa-4580-865a-237b9a2d8147" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SpawnZone.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SpawnZone.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DOTween/Modules/DOTweenModuleEPOOutline.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DOTween/Modules/DOTweenModuleEPOOutline.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DOTween/Modules/DOTweenModuleSprite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DOTween/Modules/DOTweenModuleSprite.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DOTween/Modules/DOTweenModuleUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DOTween/Modules/DOTweenModuleUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DOTween/Modules/DOTweenModuleUnityVersion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DOTween/Modules/DOTweenModuleUnityVersion.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/FruitConfigs/Coconut.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/FruitConfigs/Coconut.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/FruitConfigs/Figs.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/FruitConfigs/Figs.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/FruitConfigs/Lemon.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/FruitConfigs/Lemon.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/FruitConfigs/Mango.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/FruitConfigs/Mango.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/FruitConfigs/Papaya.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/FruitConfigs/Papaya.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/FruitConfigs/Pear.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/FruitConfigs/Pear.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/FruitConfigs/Pomegranate.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/FruitConfigs/Pomegranate.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/FruitConfigs/Watermelon.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/FruitConfigs/Watermelon.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Heart.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Heart.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Startup.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Startup.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Score.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Score.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Animator2d.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Animator2d.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Effects.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Effects.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/PointerIncreaser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/PointerIncreaser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Renderer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Renderer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Shadow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Shadow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Fruit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Fruit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/InteractableObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/InteractableObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Slice.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Slice.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameActors/Spawner/SpawnZone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameActors/Spawner/SpawnZone.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameActors/Spawner/SpawnerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameActors/Spawner/SpawnerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Bootstrapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Bootstrapper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/States/BootstrapState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/States/BootstrapState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Physics.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Physics/Physic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Physic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Physics/Physic.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Physic.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/CollisionTracker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/CollisionTracker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/Factory/GameFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Factory/GameFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/Progress/ProgressService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Progress/ProgressService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/GameView/GameView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/GameView/GameView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/GameView/HealthView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/GameView/HealthView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/GameView/ScoreView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/GameView/ScoreView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/BackgroundScaler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/ScreenPoints.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/ScreenPoints.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,18 +74,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/Spawner/SpawnerController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/GameComplexity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Infrastructure/States/IState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Infrastructure/ProjectConfig.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/InteractableObjectConfig.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameComplicator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ProgressConfig.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/Factory/GameFactory.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/PlayZone.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Slice.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/Progress/ProgressService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/ServiceLocator/IServiceLocator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Fruit.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Infrastructure/States/BootstrapState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/InteractableObject.cs" root0="FORCE_HIGHLIGHTING" />
@@ -55,45 +86,47 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data/Player.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Infrastructure/States/MainMenuState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Infrastructure/States/PlayModeState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Physics/Physic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Infrastructure/States/GameOverState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Infrastructure/Bootstrapper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FruitBuilder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/Factory/IGameFactory.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/BackgroundScaler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/CollisionTracker.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameInput/InputHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/GameView/ScoreText.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/SortingOrderDecreaser.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/ServiceLocator/ServiceLocator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/InputConfig.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/Spawner/SpawnZone.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/Spawner/SpawnerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/GameComplexity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/InteractableObjectConfig.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameComplicator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ProgressConfig.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/PlayZone.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/ServiceLocator/IServiceLocator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Physic.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Infrastructure/Bootstrapper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Visability.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/Factory/InteractableObjectsPool.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Shadow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Infrastructure/Game.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Renderer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameInput/InputTrail.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameInput/InputHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/PointerIncreaser.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Effects.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/SortingOrderDecreaser.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/CutterService/CutterService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/ColliderComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/AllServices.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Animator2d.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/IService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/GameView/ScoreView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/GameView/HealthView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/FruitPoints.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/GameView/GameView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Infrastructure/States/StateMachine.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/ScreenPoints.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/ServiceLocator/ServiceLocator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/InputConfig.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/Spawner/SpawnZone.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/Spawner/SpawnerPosition.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StaticData/ScriptableObjects/SpawnerSettings.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/Spawner/SpawnerParameters.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StaticData/StaticDataService.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/Spawner/Spawner.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Visability.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/GameComplexity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Animator2d.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Shadow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Utils/BackgroundScaler.cs" />
@@ -110,10 +143,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/FruitBuilder.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/Factory/InteractableObjectsPool.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameComplicator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameInput/InputHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/CutterService/CutterService.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Physics/Physic.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Slice.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Utils/SortingOrderDecreaser.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/CollisionTracker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/ColliderComponent.cs" />
@@ -123,21 +154,30 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Effects.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/FruitPoints.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/ProgressService/ProgressService.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/PointerIncreaser.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/PlayerConfig.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/ProjectConfig.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ProgressConfig.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Data/Score.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Data/Player.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Services/Progress/ProgressService.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Bootstrapper.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/InteractableObject.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Services/Factory/GameFactory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Effects.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Fruit.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/PlayZone.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/InteractableObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameInput/InputHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Effects.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/Spawner/SpawnerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/Spawner/SpawnZone.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Physic.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Fruit.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/GameView/GameView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/GameView/HealthView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Bootstrapper.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Services/Factory/GameFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Data/Score.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/GameView/ScoreView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Slice.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/GameView/ScoreText.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Services/Progress/ProgressService.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/PointerIncreaser.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Renderer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Shadow.cs" />
       </list>
     </option>
   </component>

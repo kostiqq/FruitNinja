@@ -1,4 +1,4 @@
-﻿using Physics;
+﻿using GameActors.InteractableObjects.Components;
 using StaticData;
 using UnityEngine;
 
@@ -46,8 +46,8 @@ namespace GameActors.InteractableObjects
             physicComponent.Clear();
         }
 
-        public void StartMoving(Vector3 normalVectorWithRandomAngleOffset)=>
-            physicComponent.AddForce(normalVectorWithRandomAngleOffset);
+        public void StartMoving(Vector3 direction, float force)=>
+            physicComponent.AddForce(direction, force);
         
     }
 }

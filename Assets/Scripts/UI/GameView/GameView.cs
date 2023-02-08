@@ -1,18 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
+using Services.Progress;
 using UnityEngine;
 
 public class GameView : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   [SerializeField] private HealthView health;
+   [SerializeField] private ScoreView score;
+   public void Construct(ProgressService progress)
+   {
+      score.Construct(progress);
+      health.Construct(progress);
+   }
 }

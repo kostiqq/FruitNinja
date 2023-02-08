@@ -1,4 +1,4 @@
-using Physics;
+using GameActors.InteractableObjects.Components;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -27,10 +27,8 @@ namespace GameActors.InteractableObjects
 
         private void Start()
         {
-            if(Random.value > 0.5f)
-                StartRotateAnimation();
-            if(Random.value < 0.5f)
-                StartSizeAnimation();
+            StartRotateAnimation();
+            StartSizeAnimation();
         }
 
         private void StartSizeAnimation()=>
@@ -45,11 +43,8 @@ namespace GameActors.InteractableObjects
         
         private void Update()
         {
-            if(_isRotateAnimationActive)
-                RotateObject();
-
-            if (_isSizeAnimationActive)
-                ChangeObjectSizeByMotion();
+            RotateObject();
+            ChangeObjectSizeByMotion();
         }
 
         private void ChangeObjectSizeByMotion()

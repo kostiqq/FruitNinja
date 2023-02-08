@@ -1,18 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
+using Services.Progress;
 using UnityEngine;
 
 public class HealthView : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private ProgressService _progress;
+    
+    public void Construct(ProgressService progress)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        _progress = progress;
     }
 }

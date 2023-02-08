@@ -38,7 +38,7 @@ namespace Infrastructure
             InputHandler inputHandler = new GameObject("InputHandler").AddComponent<InputHandler>();
             inputHandler.Construct(configsHandler.InputConfig, gameCamera);
             
-            InputTrail inputTrail = new GameObject().AddComponent<InputTrail>();
+            InputTrail inputTrail = new GameObject("InputTrail").AddComponent<InputTrail>();
             inputTrail.Construct(inputHandler, _serviceLocator.Get<GameFactory>().LoadInputTrail());
             
             CollisionTracker collisionTracker = new CollisionTracker(inputHandler, 
@@ -46,6 +46,8 @@ namespace Infrastructure
 
             Transform poolTransform = new GameObject("ObjectPool").transform;
             InteractableObjectsPool objectsPool = new InteractableObjectsPool(_serviceLocator.Get<GameFactory>(), 10, poolTransform);
+            
+            GameView gameView = _serviceLocator.Get<GameFactory>().LoadGameView();
             
             FruitBuilder fruitBuilder = new FruitBuilder(configsHandler.FruitConfigs.ToArray());
             GameComplicator complicator = new GameObject("GameComplicator").AddComponent<GameComplicator>();

@@ -16,5 +16,10 @@ namespace Data
             HighScore = PlayerPrefs.GetInt(_highScorePrefsKey, 0);
             CurrentScore = 0;
         }
+
+        public void UpdateHighScore()
+        {
+            PlayerPrefs.SetInt(_highScorePrefsKey, HighScore);
+        }
     }
 }

@@ -26,9 +26,9 @@ namespace GameActors.InteractableObjects
         
         private void CreateCutParticle()
         {
-            _cutParticle = Instantiate(cutEffectPrefab, transform);
+            _cutParticle = Instantiate(cutEffectPrefab);
+            _cutParticle.transform.position = transform.position;
             _cutParticle.GetComponent<ParticleSystemRenderer>().material.mainTexture = _particleTexture;
-            _cutParticle.transform.parent = null;
         }
         
         private FruitPoints CreatePointsLabel(int points)

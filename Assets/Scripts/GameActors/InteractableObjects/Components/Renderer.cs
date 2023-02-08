@@ -26,7 +26,16 @@ namespace GameActors.InteractableObjects
             SetSprite(rendererSprite);
             spriteRenderer.sprite = rendererSprite;
             spriteRenderer.sortingOrder = ObjectLayer;
+            
+            if (isHaveShadow)
+                CreateShadow();
             OnInitialized?.Invoke();
+        }
+
+        private void CreateShadow()
+        {
+            var shadow = gameObject.AddComponent<Shadow>();
+            shadow.InitializeShadow(this);
         }
 
         public void Clear()=>

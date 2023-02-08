@@ -44,9 +44,7 @@ namespace GameActors.Spawner
         private void InitializeSpawnersPosition()
         {
             foreach (var spawnZone in spawnZones)
-            {
                 spawnZone.transform.position = playZone.PositionFromPercentage(spawnZone.GetPositionOnScreen);
-            }
         }
 
         private void InitializeComplexitySettings()
@@ -78,7 +76,7 @@ namespace GameActors.Spawner
                 InteractableObject spawnedObject = _pool.GetFreeElement();
                 spawnedObject.Initialize(_fruitBuilder.GetRandomConfig());
                 spawnedObject.transform.position = spawnPoint;
-                spawnedObject.StartMoving(selectedSpawnZone.NormalVectorWithRandomAngleOffset);
+                spawnedObject.StartMoving(selectedSpawnZone.NormalWithRandomAngleOffset, selectedSpawnZone.GetRandomForce());
                 yield return new WaitForSeconds(_cooldownBetweenFruitsSpawn);
             }
         }

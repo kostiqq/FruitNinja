@@ -35,10 +35,10 @@
           </e>
         </e>
         <e p="Materials" t="Include" />
-        <e p="Prefabs" t="Include">
+        <e p="Prefabs" t="Include" />
+        <e p="Resources" t="Include">
           <e p="UI" t="Include" />
         </e>
-        <e p="Resources" t="Include" />
         <e p="Scenes" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Data" t="Include">
@@ -52,6 +52,7 @@
                 <e p="Animator2d.cs" t="Include" />
                 <e p="ColliderComponent.cs" t="Include" />
                 <e p="Effects.cs" t="Include" />
+                <e p="Physic.cs" t="Include" />
                 <e p="PointerIncreaser.cs" t="Include" />
                 <e p="Renderer.cs" t="Include" />
                 <e p="Shadow.cs" t="Include" />
@@ -85,9 +86,6 @@
               <e p="StateMachine.cs" t="Include" />
             </e>
           </e>
-          <e p="Physics" t="Include">
-            <e p="Physic.cs" t="Include" />
-          </e>
           <e p="ScriptableObjects" t="Include">
             <e p="GameComplexity.cs" t="Include" />
             <e p="InputConfig.cs" t="Include" />
@@ -119,12 +117,12 @@
             <e p="GameView" t="Include">
               <e p="GameView.cs" t="Include" />
               <e p="HealthView.cs" t="Include" />
+              <e p="ScoreText.cs" t="Include" />
               <e p="ScoreView.cs" t="Include" />
             </e>
           </e>
           <e p="Utils" t="Include">
             <e p="BackgroundScaler.cs" t="Include" />
-            <e p="ScreenPoints.cs" t="Include" />
             <e p="SortingOrderDecreaser.cs" t="Include" />
           </e>
         </e>
