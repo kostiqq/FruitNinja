@@ -3,6 +3,7 @@ using GameInput;
 using Services;
 using Services.CutterService;
 using Services.Factory;
+using Services.Progress;
 using Services.ServiceLocator;
 using UnityEngine;
 
@@ -24,7 +25,8 @@ namespace Infrastructure
         private void InitializeServices()
         {
             _serviceLocator = new ServiceLocator<IService>();
-            var gameFactory = new GameFactory();
+            var progressService = new ProgressService(configsHandler.PlayerConfig);
+            var gameFactory = new GameFactory(_serviceLocator);
             var cutterService = new CutterService(gameFactory);
             _serviceLocator.Register(gameFactory);
             _serviceLocator.Register(cutterService);
@@ -49,8 +51,6 @@ namespace Infrastructure
             complicator.Construct(configsHandler.ComplexityConfig);
 
             SpawnerController.Instance.Construct(complicator, objectsPool, fruitBuilder);
-            
-            
         }
     }
 }

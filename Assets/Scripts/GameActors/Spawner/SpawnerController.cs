@@ -66,7 +66,7 @@ namespace GameActors.Spawner
                 Vector2 spawnPoint = selectedSpawnZone.GetPointAtSegment();
 
                 InteractableObject spawnedObject = _pool.GetFreeElement();
-                spawnedObject.Construct(_fruitBuilder.GetRandomConfig());
+                spawnedObject.Initialize(_fruitBuilder.GetRandomConfig());
                 spawnedObject.transform.position = spawnPoint;
                 spawnedObject.StartMoving(selectedSpawnZone.NormalVectorWithRandomAngleOffset);
                 yield return new WaitForSeconds(_cooldownBetweenFruitsSpawn);

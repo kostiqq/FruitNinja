@@ -1,5 +1,7 @@
 ﻿using System;
 using GameActors.InteractableObjects;
+using Services.Progress;
+using Services.ServiceLocator;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
@@ -14,12 +16,19 @@ namespace Services.Factory
         private InteractableObjectsPool _interactableObjectsPool;
         public Action<InteractableObject> OnInteractableObjectCreate;
 
-        public InteractableObject LoadInteractableObject(Transform container)
+        private ServiceLocator<IService> _serviceLocator;
+        public GameFactory(ServiceLocator<IService> serviceLocator)
         {
-           var resource = Resources.Load<InteractableObject>(InteractableObjectPath);
-           var interactableObject = Object.Instantiate(resource, container);
-           OnInteractableObjectCreate?.Invoke(interactableObject);
-           return interactableObject;
+            _serviceLocator = serviceLocator;
+        }
+
+        public Fruit LoadInteractableObject(Transform container)
+        {
+           var resource = Resources.Load<Fruit>(InteractableObjectPath);
+           var fruit = Object.Instantiate(resource, container);
+           fruit.Construct(_serviceLocator.Get<ProgressService>());
+           OnInteractableObjectCreate?.Invoke(fruit);
+           return fruit;
         }
 
 

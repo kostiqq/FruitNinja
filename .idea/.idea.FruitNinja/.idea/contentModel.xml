@@ -37,20 +37,24 @@
         <e p="Scenes" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Data" t="Include">
-            <e p="ZoneData.cs" t="Include" />
+            <e p="Player.cs" t="Include" />
+            <e p="Score.cs" t="Include" />
           </e>
           <e p="FruitBuilder.cs" t="Include" />
           <e p="GameActors" t="Include">
             <e p="InteractableObjects" t="Include">
-              <e p="Animator2d.cs" t="Include" />
-              <e p="ColliderComponent.cs" t="Include" />
-              <e p="Effects.cs" t="Include" />
+              <e p="Components" t="Include">
+                <e p="Animator2d.cs" t="Include" />
+                <e p="ColliderComponent.cs" t="Include" />
+                <e p="Effects.cs" t="Include" />
+                <e p="PointerIncreaser.cs" t="Include" />
+                <e p="Renderer.cs" t="Include" />
+                <e p="Shadow.cs" t="Include" />
+                <e p="Visability.cs" t="Include" />
+              </e>
               <e p="Fruit.cs" t="Include" />
               <e p="InteractableObject.cs" t="Include" />
-              <e p="Renderer.cs" t="Include" />
-              <e p="Shadow.cs" t="Include" />
               <e p="Slice.cs" t="Include" />
-              <e p="Visability.cs" t="Include" />
             </e>
             <e p="Spawner" t="Include">
               <e p="SpawnerController.cs" t="Include" />
@@ -82,6 +86,7 @@
             <e p="GameComplexity.cs" t="Include" />
             <e p="InputConfig.cs" t="Include" />
             <e p="InteractableObjectConfig.cs" t="Include" />
+            <e p="ProgressConfig.cs" t="Include" />
           </e>
           <e p="Services" t="Include">
             <e p="AllServices.cs" t="Include" />
@@ -95,6 +100,9 @@
               <e p="InteractableObjectsPool.cs" t="Include" />
             </e>
             <e p="IService.cs" t="Include" />
+            <e p="Progress" t="Include">
+              <e p="ProgressService.cs" t="Include" />
+            </e>
             <e p="ServiceLocator" t="Include">
               <e p="IServiceLocator.cs" t="Include" />
               <e p="ServiceLocator.cs" t="Include" />

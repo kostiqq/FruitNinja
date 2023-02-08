@@ -9,5 +9,6 @@ namespace Infrastructure
         public GameComplexity ComplexityConfig;
         public List<InteractableObjectConfig> FruitConfigs;
         public InputConfig InputConfig;
+        public ProgressConfig PlayerConfig;
     }
 }

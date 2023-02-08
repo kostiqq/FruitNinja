@@ -1,4 +1,5 @@
 ﻿using Physics;
+using Services.Progress;
 using StaticData;
 using UnityEngine;
 
@@ -9,12 +10,14 @@ namespace GameActors.InteractableObjects
     [RequireComponent(typeof(ColliderComponent))]
     [RequireComponent(typeof(Shadow))]
 	[RequireComponent(typeof(Effects))]
+    [RequireComponent(typeof(PointerIncreaser))]
     public class Fruit : InteractableObject
     {
         [SerializeField] private Shadow shadow;
         [SerializeField] private Effects effects;
+        [SerializeField] private PointerIncreaser pointIncreaser;
         private int _points;
-        public int GetPoints => _points;
+        
         private void OnValidate()
         {
             shadow = GetComponent<Shadow>();
@@ -22,11 +25,17 @@ namespace GameActors.InteractableObjects
             renderer = GetComponent<Renderer>();
             collider = GetComponent<ColliderComponent>();
             effects = GetComponent<Effects>();
+            pointIncreaser = GetComponent<PointerIncreaser>();
+        }
+        
+        public void Construct(ProgressService progress)
+        {
+            pointIncreaser.Construct(progress);
         }
 
-        public override void Construct(InteractableObjectConfig objectConfig)
+        public override void Initialize(InteractableObjectConfig objectConfig)
         {
-            base.Construct(objectConfig);
+            base.Initialize(objectConfig);
             _points = objectConfig.points;
             effects.Construct(objectConfig.FruitEffectSprite);
         }
@@ -36,5 +45,7 @@ namespace GameActors.InteractableObjects
             effects.PlayEffects(_points);
             gameObject.SetActive(false);
         }
+
+
     }
 }

@@ -16,7 +16,7 @@ namespace GameActors.InteractableObjects
         public Vector2 GetVelocity =>
             physicComponent.Velocity;
         
-        public virtual void Construct(InteractableObjectConfig objectConfig)
+        public virtual void Initialize(InteractableObjectConfig objectConfig)
         {
             renderer.Initialize(objectConfig.FruitSprite, objectConfig.FruitEffectSprite, objectConfig.isHaveShadow);
             collider.Enable();
