@@ -30,6 +30,7 @@ namespace Infrastructure
             var cutterService = new CutterService(gameFactory);
             _serviceLocator.Register(gameFactory);
             _serviceLocator.Register(cutterService);
+            _serviceLocator.Register(progressService);
         }
         
         private void CreateCoreObjects()

@@ -36,7 +36,7 @@ namespace GameActors.InteractableObjects
         public override void Initialize(InteractableObjectConfig objectConfig)
         {
             base.Initialize(objectConfig);
-            _points = objectConfig.points;
+            pointIncreaser.AddPoints(objectConfig.points);
             effects.Construct(objectConfig.FruitEffectSprite);
         }
         

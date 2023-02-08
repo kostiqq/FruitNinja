@@ -30,8 +30,7 @@ namespace Services.Factory
            OnInteractableObjectCreate?.Invoke(fruit);
            return fruit;
         }
-
-
+        
         public GameObject LoadInputTrail()
         {
             var trail = Resources.Load<GameObject>(InputTrailPath);

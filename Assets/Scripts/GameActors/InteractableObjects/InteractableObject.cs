@@ -18,7 +18,7 @@ namespace GameActors.InteractableObjects
         
         public virtual void Initialize(InteractableObjectConfig objectConfig)
         {
-            renderer.Initialize(objectConfig.FruitSprite, objectConfig.FruitEffectSprite, objectConfig.isHaveShadow);
+            renderer.Initialize(objectConfig.FruitSprite, objectConfig.isHaveShadow);
             collider.Enable();
         }
 
