@@ -8,9 +8,9 @@ namespace Infrastructure
     {
         public StateMachine StateMachine;
 
-        public Game(ServiceLocator<IService> serviceLocator)
+        public Game(ServiceLocator<IService> serviceLocator, ProjectConfig configsHandler)
         {
-            StateMachine = new StateMachine(serviceLocator);
+            StateMachine = new StateMachine(serviceLocator, configsHandler);
         }
     }
 }
