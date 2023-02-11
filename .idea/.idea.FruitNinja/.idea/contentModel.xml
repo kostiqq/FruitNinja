@@ -4,6 +4,7 @@
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass-testable.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.Player.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -29,12 +30,23 @@
         <e p="Graphics" t="Include">
           <e p="Effects" t="Include" />
           <e p="Fruits" t="Include" />
-          <e p="Sprites" t="Include" />
+          <e p="Sprites" t="Include">
+            <e p="MainMenu" t="Include" />
+          </e>
           <e p="UI" t="Include">
             <e p="GameView" t="Include" />
           </e>
         </e>
         <e p="Materials" t="Include" />
+        <e p="Plugins" t="Include">
+          <e p="Zenject" t="Include">
+            <e p="OptionalExtras" t="Include">
+              <e p="ReflectionBaking" t="Include" />
+              <e p="Signals" t="Include" />
+            </e>
+            <e p="Source" t="Include" />
+          </e>
+        </e>
         <e p="Prefabs" t="Include" />
         <e p="Resources" t="Include">
           <e p="UI" t="Include" />
@@ -117,6 +129,7 @@
             <e p="GameView" t="Include">
               <e p="GameView.cs" t="Include" />
               <e p="HealthView.cs" t="Include" />
+              <e p="Heart.cs" t="Include" />
               <e p="ScoreText.cs" t="Include" />
               <e p="ScoreView.cs" t="Include" />
             </e>
@@ -129,7 +142,10 @@
         <e p="TextMesh Pro" t="Include">
           <e p="Documentation" t="Include" />
           <e p="Fonts" t="Include">
+            <e p="GameView" t="Include" />
             <e p="LiberationSans - OFL.txt" t="Include" />
+            <e p="LoseView" t="Include" />
+            <e p="MainMenu" t="Include" />
           </e>
           <e p="Resources" t="Include">
             <e p="Fonts &amp; Materials" t="Include" />

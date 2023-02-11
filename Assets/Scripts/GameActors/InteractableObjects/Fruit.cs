@@ -23,7 +23,6 @@ namespace GameActors.InteractableObjects
         public void Construct(ProgressService progress)
         {
             pointIncreaser.Construct(progress);
-            visability.OnFruitOutOfScreen += pointIncreaser.RemoveHealth;
         }
 
         public override void Initialize(InteractableObjectConfig objectConfig)
@@ -31,20 +30,24 @@ namespace GameActors.InteractableObjects
             base.Initialize(objectConfig);
             pointIncreaser.AddPoints(objectConfig.points);
             effects.Construct(objectConfig.FruitEffectSprite);
+            visability.OnFruitOutOfScreen += pointIncreaser.RemoveHealth;
+            visability.IsEnbled = true;
         }
         
         protected override void Interact()
         {
             effects.PlayEffects(_points);
+            //visability.IsEnbled = false;
             pointIncreaser.IncreasePoints();
-            gameObject.SetActive(false);
             ClearState();
+            gameObject.SetActive(false);
         }
 
         protected override void ClearState()
         {
+            visability.IsEnbled = false;
             base.ClearState();
-            visability.OnFruitOutOfScreen += pointIncreaser.RemoveHealth;
+            visability.OnFruitOutOfScreen -= pointIncreaser.RemoveHealth;
         }
     }
 }

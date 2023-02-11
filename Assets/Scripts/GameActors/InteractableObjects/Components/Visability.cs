@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 
 namespace GameActors.InteractableObjects
@@ -7,10 +8,11 @@ namespace GameActors.InteractableObjects
     {
         private bool _isShowed;
         public Action OnFruitOutOfScreen;
+        public bool IsEnbled;
 
         private void OnBecameInvisible()
         {
-            if (!_isShowed)
+            if (!IsEnbled)
                 return;
             
             OnFruitOutOfScreen?.Invoke();
