@@ -2,7 +2,7 @@
 
 namespace StaticData
 {
-    [CreateAssetMenu(fileName = "InteractableObjectConfig", menuName = "Configs/InteractableObjectConfig", order = 0)]
+    [CreateAssetMenu(fileName = "InteractableObjectConfig", menuName = "Configs/InteractableObjectConfig", order = 3)]
     public class InteractableObjectConfig : ScriptableObject
     {
         public Sprite FruitSprite;

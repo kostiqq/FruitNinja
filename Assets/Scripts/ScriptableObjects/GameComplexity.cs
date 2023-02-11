@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace StaticData
 {
-    [CreateAssetMenu(fileName = "ComplexityConfig", menuName = "Configs/Complexity", order = 0)]
+    [CreateAssetMenu(fileName = "ComplexityConfig", menuName = "Configs/Complexity", order = 1)]
     public class GameComplexity : ScriptableObject
     {
         [Header("Waves params")]

@@ -1046,8 +1046,6 @@
         </e>
         <e p="Prefabs" t="Include" />
         <e p="Resources" t="Include">
-          <e p="GameInstaller.cs" t="Include" />
-          <e p="Test.cs" t="Include" />
           <e p="UI" t="Include" />
         </e>
         <e p="Scenes" t="Include" />
@@ -1085,6 +1083,7 @@
             <e p="InputHandler.cs" t="Include" />
             <e p="InputTrail.cs" t="Include" />
           </e>
+          <e p="GameInstaller.cs" t="Include" />
           <e p="Infrastructure" t="Include">
             <e p="Bootstrapper.cs" t="Include" />
             <e p="Game.cs" t="Include" />
@@ -1105,6 +1104,7 @@
             <e p="InputConfig.cs" t="Include" />
             <e p="InteractableObjectConfig.cs" t="Include" />
             <e p="ProgressConfig.cs" t="Include" />
+            <e p="SceneConfig.cs" t="Include" />
           </e>
           <e p="Services" t="Include">
             <e p="AllServices.cs" t="Include" />
