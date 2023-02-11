@@ -5,7 +5,7 @@ using Zenject;
 public class MainMenuView : MonoBehaviour
 {
     [SerializeField] private ScoreText bestScore;
-    
+
     [Inject] private ProgressService progress;
     
     public void Start()

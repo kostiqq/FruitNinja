@@ -1,7 +1,5 @@
-using System;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -10,6 +8,7 @@ public class MenuButtonHandler : MonoBehaviour
     [SerializeField] private Button startGame;
     [SerializeField] private Button exitGame;
     [SerializeField] private SceneConfig sceneConfig;
+    [SerializeField] private MainMenuAnimator animator;
 
     private void Awake()
     {
@@ -28,12 +27,11 @@ public class MenuButtonHandler : MonoBehaviour
 
     private IEnumerator LoadSceneAsync()
     {
-        RunAnimation();
-        AsyncOperation load = SceneManager.LoadSceneAsync(sceneConfig.GameSceneIndex);
-
-        if (!load.isDone)
-            yield return null;
+        animator.StartAnimation();
         
+        yield return new WaitForSeconds(animator.GetAnimationTime);
+        
+        SceneManager.LoadScene(sceneConfig.GameSceneIndex);
     }
 
     private void RunAnimation()
