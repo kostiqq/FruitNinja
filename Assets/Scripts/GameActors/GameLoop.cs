@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class GameLoop : MonoBehaviour
 {
-    [SerializeField] private SpawnerController spawnController;
+    private SpawnerController _spawnController;
+    private GameView _gameView;
 
-    public void Construct(ProgressService progressService)
+    public void Construct(ProgressService progressService, GameView gameView)
     {
+        _gameView = gameView;
+        _spawnController = SpawnerController.Instance;
         progressService.OnHealthEmpty += OnPlayerLose;
     }
     
     private void OnPlayerLose()
     {
-        spawnController.StopSpawn();
+        _spawnController.StopSpawn();
+        _gameView.ShowLoseView();
     }
 }

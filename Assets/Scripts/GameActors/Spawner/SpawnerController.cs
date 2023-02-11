@@ -38,6 +38,7 @@ namespace GameActors.Spawner
             _fruitBuilder = fruitBuilder;
             InitializeSpawnersPosition();
             InitializeComplexitySettings();
+            StartCoroutine(SpawnCycle());
         }
 
         private void InitializeSpawnersPosition()

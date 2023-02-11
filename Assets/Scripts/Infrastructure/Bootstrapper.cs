@@ -48,6 +48,8 @@ namespace Infrastructure
             InteractableObjectsPool objectsPool = new InteractableObjectsPool(_serviceLocator.Get<GameFactory>(), 10, poolTransform);
             
             GameView gameView = _serviceLocator.Get<GameFactory>().LoadGameView();
+            GameLoop loop = new GameObject("GameLoop").AddComponent<GameLoop>();
+            loop.Construct(_serviceLocator.Get<ProgressService>(), gameView);
             
             FruitBuilder fruitBuilder = new FruitBuilder(configsHandler.FruitConfigs.ToArray());
             GameComplicator complicator = new GameObject("GameComplicator").AddComponent<GameComplicator>();

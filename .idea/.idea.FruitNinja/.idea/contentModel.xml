@@ -131,6 +131,7 @@
               <e p="GameView.cs" t="Include" />
               <e p="HealthView.cs" t="Include" />
               <e p="Heart.cs" t="Include" />
+              <e p="LoseView.cs" t="Include" />
               <e p="ScoreText.cs" t="Include" />
               <e p="ScoreView.cs" t="Include" />
             </e>
