@@ -11,26 +11,19 @@ namespace GameActors.InteractableObjects
     [RequireComponent(typeof(Shadow))]
 	[RequireComponent(typeof(Effects))]
     [RequireComponent(typeof(PointerIncreaser))]
+    [RequireComponent(typeof(Visability))]
     public class Fruit : InteractableObject
     {
         [SerializeField] private Shadow shadow;
         [SerializeField] private Effects effects;
         [SerializeField] private PointerIncreaser pointIncreaser;
+        [SerializeField] private Visability visability;
         private int _points;
-        
-        private void OnValidate()
-        {
-            shadow = GetComponent<Shadow>();
-            physicComponent = GetComponent<Physic>();
-            renderer = GetComponent<Renderer>();
-            collider = GetComponent<ColliderComponent>();
-            effects = GetComponent<Effects>();
-            pointIncreaser = GetComponent<PointerIncreaser>();
-        }
         
         public void Construct(ProgressService progress)
         {
             pointIncreaser.Construct(progress);
+            visability.OnFruitOutOfScreen += pointIncreaser.RemoveHealth;
         }
 
         public override void Initialize(InteractableObjectConfig objectConfig)
@@ -46,6 +39,12 @@ namespace GameActors.InteractableObjects
             pointIncreaser.IncreasePoints();
             gameObject.SetActive(false);
             ClearState();
+        }
+
+        protected override void ClearState()
+        {
+            base.ClearState();
+            visability.OnFruitOutOfScreen += pointIncreaser.RemoveHealth;
         }
     }
 }

@@ -18,5 +18,10 @@ namespace GameActors.InteractableObjects
 
         public void IncreasePoints()=>
             _progress.UpdateScore(_points);
+
+        public void RemoveHealth()
+        {
+            _progress.UpdateHealth(-1);
+        }
     }
 }

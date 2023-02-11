@@ -39,7 +39,7 @@ namespace Services.Progress
         {
             PlayerData.CurrentHealth += value;
             OnHealthChanged?.Invoke(PlayerData.CurrentHealth);
-            
+            Debug.LogError(PlayerData.CurrentHealth);
             if (PlayerData.CurrentHealth <= 0)
                 OnHealthEmpty?.Invoke();
         }
