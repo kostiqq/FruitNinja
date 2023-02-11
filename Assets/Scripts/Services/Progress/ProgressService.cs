@@ -1,13 +1,14 @@
 using System;
 using Data;
 using StaticData;
+using UnityEngine;
 
 namespace Services.Progress
 {
     public class ProgressService : IService
     {
-        private Player _playerData;
-        private Score _score;
+        public Player PlayerData;
+        public Score Score;
 
         public Action<int> OnScoreIncreased;
         public Action<int> OnNewHighScore;
@@ -17,28 +18,29 @@ namespace Services.Progress
         
         public ProgressService(ProgressConfig configsHandlerPlayerConfig)
         {
-            _score = new Score(configsHandlerPlayerConfig.PlayerRecordPrefs);
-            _playerData = new Player(configsHandlerPlayerConfig.StartHealth);
+            Score = new Score(configsHandlerPlayerConfig.PlayerRecordPrefs);
+            PlayerData = new Player(configsHandlerPlayerConfig.StartHealth);
         }
 
         public void UpdateScore(int value)
         {
-            _score.CurrentScore += value;
-            OnScoreIncreased?.Invoke(_score.CurrentScore);
+            Score.CurrentScore += value;
+            OnScoreIncreased?.Invoke(Score.CurrentScore);
 
-            if (_score.CurrentScore > _score.HighScore)
+            if (Score.CurrentScore > Score.HighScore)
             {
-                _score.HighScore = _score.CurrentScore;
-                OnNewHighScore?.Invoke(_score.HighScore);
+                Score.HighScore = Score.CurrentScore;
+                Score.UpdateHighScore();
+                OnNewHighScore?.Invoke(Score.HighScore);
             }
         }
 
         public void UpdateHealth(int value)
         {
-            _playerData.CurrentHealth += value;
-            OnHealthChanged?.Invoke(_playerData.CurrentHealth);
+            PlayerData.CurrentHealth += value;
+            OnHealthChanged?.Invoke(PlayerData.CurrentHealth);
             
-            if (_playerData.CurrentHealth <= 0)
+            if (PlayerData.CurrentHealth <= 0)
                 OnHealthEmpty?.Invoke();
         }
     }

@@ -14,6 +14,9 @@ namespace GameActors.InteractableObjects
         }
 
         public void AddPoints(int points)=>
-            _points += points;
+            _points = points;
+
+        public void IncreasePoints()=>
+            _progress.UpdateScore(_points);
     }
 }

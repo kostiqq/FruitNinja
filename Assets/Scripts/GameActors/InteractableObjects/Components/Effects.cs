@@ -20,15 +20,15 @@ namespace GameActors.InteractableObjects
             CreateCutParticle();
             _cutParticle.Play();
             
-            var pointsEffect = CreatePointsLabel(points);
-            pointsEffect.Play();
+            /*var pointsEffect = CreatePointsLabel(points);
+            pointsEffect.Play();*/
         }
         
         private void CreateCutParticle()
         {
-            _cutParticle = Instantiate(cutEffectPrefab, transform);
+            _cutParticle = Instantiate(cutEffectPrefab);
+            _cutParticle.transform.position = transform.position;
             _cutParticle.GetComponent<ParticleSystemRenderer>().material.mainTexture = _particleTexture;
-            _cutParticle.transform.parent = null;
         }
         
         private FruitPoints CreatePointsLabel(int points)

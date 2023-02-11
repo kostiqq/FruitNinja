@@ -1,5 +1,4 @@
 using UnityEngine;
-using Utils;
 using Random = UnityEngine.Random;
 
 namespace GameActors.Spawner
@@ -15,27 +14,30 @@ namespace GameActors.Spawner
         [SerializeField] private Transform secondPoint;
         [SerializeField] [Range(-90f, 90f)] private float maxAngleOffset;
         [SerializeField] [Range(-90f, 90f)] private float minAngleOffset;
+        [SerializeField] private Vector2 positionOnScreen;
+        [SerializeField] private Vector2 ForceRange;
 
+        public Vector2 GetPositionOnScreen => positionOnScreen;
         [Header("Angles")] 
         [SerializeField] private bool mirrorAngles;
-        
-        [field: SerializeField]
-        [field: Range(0f, 1f)]
-        public float SpawnProbability { get; } = 0.5f;
 
-        public Vector3 NormalVectorWithRandomAngleOffset =>
-            Vector3.Lerp(NormalVectorWithMinAngleOffset, NormalVectorWithMaxAngleOffset, Random.value);
+        [Range(0f, 1f)] 
+        public float SpawnProbability;
 
-        private Vector3 NormalVector =>
-            Vector3.Cross(secondPoint.position - firstPoint.position, RHSVector);
 
-        private Vector3 RHSVector => mirrorAngles ? Vector3.back : Vector3.forward;
+        public Vector3 NormalWithRandomAngleOffset =>
+            Vector3.Lerp(NormalWithMinAngleOffset, NormalWithMaxAngleOffset, Random.value);
 
-        private Vector3 NormalVectorWithMinAngleOffset =>
-            Quaternion.AngleAxis(minAngleOffset, AxisVector) * NormalVector;
+        private Vector3 Normal =>
+            Vector3.Cross(secondPoint.position - firstPoint.position, AngleDirection);
 
-        private Vector3 NormalVectorWithMaxAngleOffset =>
-            Quaternion.AngleAxis(maxAngleOffset, AxisVector) * NormalVector;
+        private Vector3 AngleDirection => mirrorAngles ? Vector3.back : Vector3.forward;
+
+        private Vector3 NormalWithMinAngleOffset =>
+            Quaternion.AngleAxis(minAngleOffset, AxisVector) * Normal;
+
+        private Vector3 NormalWithMaxAngleOffset =>
+            Quaternion.AngleAxis(maxAngleOffset, AxisVector) * Normal;
 
         private Vector3 AxisVector => mirrorAngles ? Vector3.forward : Vector3.back;
 
@@ -45,27 +47,8 @@ namespace GameActors.Spawner
             return (1 - length) * firstPoint.position + length * secondPoint.position;
         }
 
-        private void Start()
-        {
-            AdaptFromDefaultToCurrentScreen();
-        }
-
-        public void AdaptFromDefaultToCurrentScreen()
-        {
-            AdaptTransformFromDefaultToCurrentScreen(firstPoint);
-            AdaptTransformFromDefaultToCurrentScreen(secondPoint);
-        }
-
-        private void AdaptTransformFromDefaultToCurrentScreen(Transform adaptTransform)
-        {
-            var currentPosition = adaptTransform.position;
-            currentPosition.x *=
-                ScreenPoints.LeftBottomWorldPosition.x / ScreenPoints.ConfigurableLeftBottomWorldPosition.x;
-            currentPosition.y *=
-                ScreenPoints.LeftBottomWorldPosition.y / ScreenPoints.ConfigurableLeftBottomWorldPosition.y;
-            adaptTransform.position = currentPosition;
-        }
-        
+        public float GetRandomForce() =>
+            Random.Range(ForceRange.x, ForceRange.y);
         // TODO Move to editor script.
 
         #region Editor
@@ -84,6 +67,7 @@ namespace GameActors.Spawner
                 ? Random.ColorHSV()
                 : color;
 
+            
             if (minAngleOffset > maxAngleOffset) maxAngleOffset = minAngleOffset;
         }
 
@@ -106,9 +90,8 @@ namespace GameActors.Spawner
             Gizmos.DrawSphere(secondPosition, drawPointRadius);
 
             var centerPosition = (firstPosition + secondPosition) / 2;
-            //transform.position = centerPosition;
-            Gizmos.DrawRay(centerPosition, NormalVectorWithMinAngleOffset);
-            Gizmos.DrawRay(centerPosition, NormalVectorWithMaxAngleOffset);
+            Gizmos.DrawRay(centerPosition, NormalWithMinAngleOffset);
+            Gizmos.DrawRay(centerPosition, NormalWithMaxAngleOffset);
         }
 
         #endregion

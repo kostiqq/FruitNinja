@@ -1,4 +1,4 @@
-﻿using Physics;
+﻿using GameActors.InteractableObjects.Components;
 using Services.Progress;
 using StaticData;
 using UnityEngine;
@@ -43,9 +43,9 @@ namespace GameActors.InteractableObjects
         protected override void Interact()
         {
             effects.PlayEffects(_points);
+            pointIncreaser.IncreasePoints();
             gameObject.SetActive(false);
+            ClearState();
         }
-
-
     }
 }

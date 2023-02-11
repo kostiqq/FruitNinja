@@ -1,4 +1,4 @@
-﻿using Physics;
+﻿using GameActors.InteractableObjects.Components;
 using UnityEngine;
 
 namespace GameActors.InteractableObjects
@@ -7,8 +7,9 @@ namespace GameActors.InteractableObjects
     [RequireComponent(typeof(Renderer))]
     public class Slice : MonoBehaviour
     {
-        [SerializeField]private Physic _physicComponent;
-        [SerializeField]private Renderer _renderer;
+        [SerializeField] private Physic _physicComponent;
+        [SerializeField] private Renderer _renderer;
+        private const float force = 6f;
         
         private void OnValidate()
         {
@@ -16,14 +17,26 @@ namespace GameActors.InteractableObjects
             _renderer = GetComponent<Renderer>();
         }
 
-        public void AddForce(Vector3 force)
+        private void Start()
         {
-            _physicComponent.AddForce(force / 1000);
+            CreateShadow();
         }
 
-        public void SetSprite(Sprite sprite)
-        {
+        public void AddForce(Vector3 direction)=>
+            _physicComponent.AddForce(direction, force);
+
+        public void SetSprite(Sprite sprite)=>
             _renderer.SetSprite(sprite);
+
+        private void OnBecameInvisible()
+        {
+            Destroy(gameObject);
+        }
+        
+        private void CreateShadow()
+        {
+            var shadow = gameObject.AddComponent<Shadow>();
+            shadow.InitializeShadow(_renderer);
         }
     }
 }

@@ -9,12 +9,13 @@ namespace GameActors.Spawner
 {
     public class SpawnerController : MonoBehaviour
     {
-        private GameComplicator _complicator;
+
         [SerializeField] private List<SpawnZone> spawnZones;
+        [SerializeField] private PlayZone playZone;
 
         private InteractableObjectsPool _pool;
         private FruitBuilder _fruitBuilder;
-        
+        private GameComplicator _complicator;
         private float _waveCooldown;
         private float _cooldownBetweenFruitsSpawn;
         private int _minFruitCount;
@@ -35,8 +36,15 @@ namespace GameActors.Spawner
             _complicator = gameComplicator;
             _pool = pool;
             _fruitBuilder = fruitBuilder;
+            InitializeSpawnersPosition();
             InitializeComplexitySettings();
             StartCoroutine(SpawnCycle());
+        }
+
+        private void InitializeSpawnersPosition()
+        {
+            foreach (var spawnZone in spawnZones)
+                spawnZone.transform.position = playZone.PositionFromPercentage(spawnZone.GetPositionOnScreen);
         }
 
         private void InitializeComplexitySettings()
@@ -68,7 +76,7 @@ namespace GameActors.Spawner
                 InteractableObject spawnedObject = _pool.GetFreeElement();
                 spawnedObject.Initialize(_fruitBuilder.GetRandomConfig());
                 spawnedObject.transform.position = spawnPoint;
-                spawnedObject.StartMoving(selectedSpawnZone.NormalVectorWithRandomAngleOffset);
+                spawnedObject.StartMoving(selectedSpawnZone.NormalWithRandomAngleOffset, selectedSpawnZone.GetRandomForce());
                 yield return new WaitForSeconds(_cooldownBetweenFruitsSpawn);
             }
         }

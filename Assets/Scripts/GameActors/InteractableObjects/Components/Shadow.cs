@@ -1,30 +1,26 @@
+using System;
 using UnityEngine;
 
 namespace GameActors.InteractableObjects
 {
-    [RequireComponent(typeof(Renderer))]
     public class Shadow : MonoBehaviour
     {
         private const int ShadowLayer = 3;
-        [SerializeField] private Renderer render;
-        [SerializeField] private Vector2 offset;
+        private Renderer _render;
+        private Vector2 offset;
 
         private Transform _shadow;
 
-        private void OnValidate()
-        {
-            render ??= GetComponent<Renderer>();
-        }
-
         private void Awake()
         {
-            render.OnInitialized += InitializeShadow;
-            render.OnClean += RemoveShadow;
+            offset = Vector2.one * 0.2f;
         }
-        
-        private void InitializeShadow()
+
+        public void InitializeShadow(Renderer renderer)
         {
-            var sprite = render.GetSprite;
+            _render = renderer;
+            _render.OnClean += RemoveShadow;
+            var sprite = _render.GetSprite;
             var shadowObject = new GameObject("Shadow");
             _shadow = shadowObject.transform;
             _shadow.localScale = Vector3.one;
@@ -45,7 +41,7 @@ namespace GameActors.InteractableObjects
 
         private void LateUpdate()
         {
-            if (_shadow == null)
+            if(_shadow == null)
                 return;
             
             _shadow.position = transform.position + (Vector3)offset;

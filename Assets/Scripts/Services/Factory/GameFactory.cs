@@ -9,9 +9,10 @@ namespace Services.Factory
 {
     public class GameFactory : IService
     {
-        private const string InteractableObjectPath = "InteractableObject";
+        private const string InteractableObjectPath = "Fruit";
         private const string InputTrailPath = "InputTrail";
         private const string SlicePath = "Slice";
+        private const string GameViewPath = "UI/GameView";
 
         private InteractableObjectsPool _interactableObjectsPool;
         public Action<InteractableObject> OnInteractableObjectCreate;
@@ -20,6 +21,14 @@ namespace Services.Factory
         public GameFactory(ServiceLocator<IService> serviceLocator)
         {
             _serviceLocator = serviceLocator;
+        }
+
+        public GameView LoadGameView()
+        {
+            var resource = Resources.Load<GameView>(GameViewPath);
+            GameView gameView =  Object.Instantiate(resource);
+            gameView.Construct(_serviceLocator.Get<ProgressService>());
+            return gameView;
         }
 
         public Fruit LoadInteractableObject(Transform container)
