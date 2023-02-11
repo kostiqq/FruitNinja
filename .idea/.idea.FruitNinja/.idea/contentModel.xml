@@ -1046,6 +1046,8 @@
         </e>
         <e p="Prefabs" t="Include" />
         <e p="Resources" t="Include">
+          <e p="GameInstaller.cs" t="Include" />
+          <e p="Test.cs" t="Include" />
           <e p="UI" t="Include" />
         </e>
         <e p="Scenes" t="Include" />
