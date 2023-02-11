@@ -59,6 +59,7 @@
           </e>
           <e p="FruitBuilder.cs" t="Include" />
           <e p="GameActors" t="Include">
+            <e p="GameLoop.cs" t="Include" />
             <e p="InteractableObjects" t="Include">
               <e p="Components" t="Include">
                 <e p="Animator2d.cs" t="Include" />
