@@ -13,7 +13,6 @@ namespace Infrastructure
     public class Bootstrapper : MonoBehaviour
     {
         [SerializeField] private ProjectConfig configsHandler;
-        [SerializeField] private Camera gameCamera;
 
         private ServiceLocator<IService> _serviceLocator;
 
@@ -21,6 +20,7 @@ namespace Infrastructure
 
         private void Awake()
         {
+            DontDestroyOnLoad(this);
             _serviceLocator = new ServiceLocator<IService>();
             _game = new Game(_serviceLocator, configsHandler);
 
@@ -31,7 +31,7 @@ namespace Infrastructure
         private void CreateCoreObjects()
         {
             InputHandler inputHandler = new GameObject("InputHandler").AddComponent<InputHandler>();
-            inputHandler.Construct(configsHandler.InputConfig, gameCamera);
+            inputHandler.Construct(configsHandler.InputConfig, Camera.main);
             
             InputTrail inputTrail = new GameObject("InputTrail").AddComponent<InputTrail>();
             inputTrail.Construct(inputHandler, _serviceLocator.Get<GameFactory>().LoadInputTrail());

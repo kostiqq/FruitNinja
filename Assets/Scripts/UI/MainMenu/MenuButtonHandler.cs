@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MenuButtonHandler : MonoBehaviour
@@ -19,7 +20,7 @@ public class MenuButtonHandler : MonoBehaviour
 
     private void StartGame()
     {
-
+        SceneManager.LoadSceneAsync(1).;
     }
     
 }
