@@ -8,9 +8,11 @@ namespace Infrastructure
     {
         public StateMachine StateMachine;
 
-        public Game(ServiceLocator<IService> serviceLocator)
+        private SceneLoader _sceneLoader;
+        public Game(ServiceLocator<IService> serviceLocator, ProjectConfig configsHandler)
         {
-            StateMachine = new StateMachine(serviceLocator);
+            _sceneLoader = new SceneLoader();
+            StateMachine = new StateMachine(serviceLocator, configsHandler, _sceneLoader);
         }
     }
 }

@@ -1,5 +1,6 @@
 using GameActors.Spawner;
 using GameInput;
+using Infrastructure.States;
 using Services;
 using Services.CutterService;
 using Services.Factory;
@@ -15,24 +16,18 @@ namespace Infrastructure
         [SerializeField] private Camera gameCamera;
 
         private ServiceLocator<IService> _serviceLocator;
-        
+
+        private Game _game;
+
         private void Awake()
         {
-            InitializeServices();
-            CreateCoreObjects();
+            _serviceLocator = new ServiceLocator<IService>();
+            _game = new Game(_serviceLocator, configsHandler);
+
+            _game.StateMachine.Enter<BootstrapState>();
+            //CreateCoreObjects();
         }
 
-        private void InitializeServices()
-        {
-            _serviceLocator = new ServiceLocator<IService>();
-            var progressService = new ProgressService(configsHandler.PlayerConfig);
-            var gameFactory = new GameFactory(_serviceLocator);
-            var cutterService = new CutterService(gameFactory);
-            _serviceLocator.Register(gameFactory);
-            _serviceLocator.Register(cutterService);
-            _serviceLocator.Register(progressService);
-        }
-        
         private void CreateCoreObjects()
         {
             InputHandler inputHandler = new GameObject("InputHandler").AddComponent<InputHandler>();

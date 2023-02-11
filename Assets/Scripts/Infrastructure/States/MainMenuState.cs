@@ -3,16 +3,17 @@
     public class MainMenuState : IState
     {
         private StateMachine _stateMachine;
-
-        public MainMenuState(StateMachine stateMachine)
+        private SceneLoader _sceneLoader;
+        
+        public MainMenuState(StateMachine stateMachine, SceneLoader sceneLoader)
         {
             _stateMachine = stateMachine;
+            _sceneLoader = sceneLoader;
         }
-        
+
         public void Enter()
         {
-            //todo spawn UI;
-            _stateMachine.Enter<PlayModeState>();
+            _sceneLoader.LoadScene(0);
         }
 
         public void Exit()
