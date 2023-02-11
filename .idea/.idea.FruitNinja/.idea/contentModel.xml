@@ -80,6 +80,7 @@
             <e p="Game.cs" t="Include" />
             <e p="GameRunner.cs" t="Include" />
             <e p="ProjectConfig.cs" t="Include" />
+            <e p="SceneLoader.cs" t="Include" />
             <e p="States" t="Include">
               <e p="BootstrapState.cs" t="Include" />
               <e p="GameOverState.cs" t="Include" />

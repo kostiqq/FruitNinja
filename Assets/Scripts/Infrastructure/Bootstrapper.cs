@@ -18,7 +18,7 @@ namespace Infrastructure
         private ServiceLocator<IService> _serviceLocator;
 
         private Game _game;
-        
+
         private void Awake()
         {
             _serviceLocator = new ServiceLocator<IService>();

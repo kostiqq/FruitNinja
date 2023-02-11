@@ -5,16 +5,15 @@
         private StateMachine _stateMachine;
         private SceneLoader _sceneLoader;
         
-        public MainMenuState(StateMachine stateMachine)
+        public MainMenuState(StateMachine stateMachine, SceneLoader sceneLoader)
         {
             _stateMachine = stateMachine;
-            
+            _sceneLoader = sceneLoader;
         }
-        
+
         public void Enter()
         {
-                
-            //_stateMachine.Enter<PlayModeState>();
+            _sceneLoader.LoadScene(0);
         }
 
         public void Exit()

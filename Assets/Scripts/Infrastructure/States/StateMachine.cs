@@ -10,12 +10,12 @@ namespace Infrastructure.States
         private readonly Dictionary<Type, IState> _states;
         private IState _activeState;
 
-        public StateMachine(ServiceLocator<IService> allServices, ProjectConfig configsHandler)
+        public StateMachine(ServiceLocator<IService> allServices, ProjectConfig configsHandler, SceneLoader sceneLoader)
         {
             _states = new Dictionary<Type, IState>()
             {
                 [typeof(BootstrapState)] = new BootstrapState(this, allServices, configsHandler),
-                [typeof(MainMenuState)] = new MainMenuState(this),
+                [typeof(MainMenuState)] = new MainMenuState(this, sceneLoader),
                 [typeof(PlayModeState)] = new PlayModeState(this),
                 [typeof(GameOverState)] = new GameOverState(this)
             };
