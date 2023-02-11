@@ -19,7 +19,7 @@ namespace Infrastructure
         private void Awake()
         {
             InitializeServices();
-            CreateCoreObjects();
+            //CreateCoreObjects();
         }
 
         private void InitializeServices()
