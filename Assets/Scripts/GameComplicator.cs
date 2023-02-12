@@ -21,6 +21,12 @@ public class GameComplicator : MonoBehaviour
         _complexityCoefficientGrowth = complexityConfig.ComplexityCoef;
         _timeBetweenObjectComplexityGrowth = complexityConfig.fruitComplexityGrowthTime;
     }
+    
+    public void Reset()
+    {
+        CurrentWaveComplexityCoefficient = 1;
+        CurrentObjectComplexityCoefficient = 0;
+    }
 
     private void Update()
     {
@@ -45,6 +51,4 @@ public class GameComplicator : MonoBehaviour
 
     private void IncreaseObjectComplexity() =>
         CurrentObjectComplexityCoefficient++;
-
-
 }

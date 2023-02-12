@@ -113,5 +113,11 @@ namespace GameActors.Spawner
 
         public void StopSpawn()=>
             StopAllCoroutines();
+
+        public void Restart()
+        {
+            _complicator.Reset();
+            StartCoroutine(SpawnCycle());
+        }
     }
 }

@@ -7,23 +7,29 @@ using Zenject;
 
 public class GameState : MonoBehaviour
 {
-    private const float showLoseScreenDelay = 2f;
+    private const float showLoseScreenDelay = 1.5f;
     private SpawnerController _spawnController;
     [SerializeField] private GameView _gameView;
     [SerializeField] private ObjectContainer activeObjects;
     [SerializeField] private InputHandler input;
-
+    
     [Inject] private ProgressService progress;
 
     private void Start()
     {
-        _spawnController = SpawnerController.Instance;
+        _gameView.getLoseView.OnRestart += RestartGame;
         progress.OnHealthEmpty += OnPlayerLose;
+    }
+
+    private void OnDestroy()
+    {
+        _gameView.getLoseView.OnRestart -= RestartGame;
+        progress.OnHealthEmpty -= OnPlayerLose;
     }
 
     private void OnPlayerLose()
     {
-        _spawnController.StopSpawn();
+        SpawnerController.Instance.StopSpawn();
         input.enabled = false;
         StartCoroutine(EndGame());
     }
@@ -34,5 +40,12 @@ public class GameState : MonoBehaviour
         
         yield return new WaitForSeconds(showLoseScreenDelay);
         _gameView.ShowLoseView();
+    }
+
+    private void RestartGame()
+    {
+        input.enabled = true;
+        SpawnerController.Instance.Restart();
+        _gameView.ReInit();
     }
 }

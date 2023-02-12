@@ -45,5 +45,12 @@ namespace Services.Progress
             if (PlayerData.CurrentHealth == 0)
                 OnHealthEmpty?.Invoke();
         }
+
+        public void ResetSessionData()
+        {
+            PlayerData.CurrentHealth = PlayerData.MaxHealth;
+            Score.CurrentScore = 0;
+        }
+            
     }
 }

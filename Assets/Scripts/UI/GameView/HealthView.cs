@@ -1,17 +1,19 @@
+using System;
 using System.Collections.Generic;
 using Services.Progress;
 using UnityEngine;
+using Zenject;
 
 public class HealthView : MonoBehaviour
 {
     [SerializeField] private Heart heartPrefab;
 
     private List<Heart> _currentHearts;
-    private ProgressService _progress;
+    
+    [Inject]private ProgressService _progress;
 
-    public void Construct(ProgressService progress)
+    public void Construct()
     {
-        _progress = progress;
         _currentHearts = new List<Heart>();
         Initialize();
     }
@@ -22,10 +24,11 @@ public class HealthView : MonoBehaviour
         _progress.OnHealthChanged += UpdateHearts;
         _progress.OnHealthEmpty += ClearView;
     }
-
+    
     private void ClearView()
     {
         _progress.OnHealthChanged -= UpdateHearts;
+        _progress.OnHealthEmpty -= ClearView;
     }
 
     private void UpdateHearts(int hearts)
