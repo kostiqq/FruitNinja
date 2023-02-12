@@ -22,6 +22,7 @@ namespace GameActors.InteractableObjects
         
         public virtual void Initialize(InteractableObjectConfig objectConfig)
         {
+            physicComponent.Clear();
             visability.OnFruitOutOfScreen += HideFruit;
             renderer.Initialize(objectConfig.FruitSprite, objectConfig.isHaveShadow);
             collider.Enable();
@@ -55,7 +56,6 @@ namespace GameActors.InteractableObjects
             objectTransform.localScale = Vector3.one;
             objectTransform.rotation = Quaternion.identity;
             renderer.Clear();
-            physicComponent.Clear();
         }
 
         public void StartMoving(Vector3 direction, float force)=>

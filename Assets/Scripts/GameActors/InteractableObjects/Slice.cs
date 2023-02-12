@@ -28,10 +28,8 @@ namespace GameActors.InteractableObjects
         public void SetSprite(Sprite sprite)=>
             _renderer.SetSprite(sprite);
 
-        private void OnBecameInvisible()
-        {
+        private void OnBecameInvisible()=>
             Destroy(gameObject);
-        }
         
         private void CreateShadow()
         {

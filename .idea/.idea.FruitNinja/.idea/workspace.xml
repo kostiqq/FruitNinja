@@ -20,14 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="24b67b54-75fa-4580-865a-237b9a2d8147" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Effects/CutEffect.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Effects/CutEffect.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/InteractableObjects/Fruit.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/InteractableObjects/Fruit.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Effects.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Effects.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Fruit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Fruit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/FruitPoints.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/FruitPoints.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/InteractableObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/InteractableObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Slice.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Slice.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameInput/InputHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameInput/InputHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,14 +146,17 @@
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data/Score.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Physic.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/GameView/ScoreText.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/GameView/HealthView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/GameView/ScoreView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/GameView/GameView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
@@ -169,7 +169,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Renderer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Shadow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Visability.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/PointerIncreaser.cs" />
@@ -188,7 +187,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/MainMenu/MainMenuView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/MainMenu/MainMenuAnimator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Installers/GameInstaller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameInput/InputHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameInput/InputTrail.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/States/BootstrapState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/Factory/IGameFactory.cs" />
@@ -200,9 +198,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/Factory/GameFactory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Installers/CutterServiceInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/CollisionTracker.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Services/CutterService/CutterService.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InteractableObjectsPool.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/InteractableObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/GameLoop.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ObjectContainer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/MainMenu/MenuButtonHandler.cs" />
@@ -220,6 +216,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Fruit.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Effects.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Effects/FruitScore.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/InteractableObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Services/CutterService/CutterService.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Slice.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameInput/InputHandler.cs" />
       </list>
     </option>
   </component>
@@ -272,7 +272,8 @@
       <workItem from="1676132795657" duration="49000" />
       <workItem from="1676132863467" duration="60000" />
       <workItem from="1676133071116" duration="6966000" />
-      <workItem from="1676190708111" duration="20883000" />
+      <workItem from="1676190708111" duration="23724000" />
+      <workItem from="1676221994191" duration="13000" />
     </task>
     <servers />
   </component>
@@ -302,10 +303,10 @@
     </state>
     <state x="634" y="131" key="RiderGenerateDialog/0.0.1600.860@0.0.1600.860" timestamp="1675788977315" />
     <state x="761" y="186" key="RiderGenerateDialog/0.25.1920.1055@0.25.1920.1055" timestamp="1676192199061" />
-    <state width="600" height="428" key="javadoc.popup" timestamp="1676216238305">
+    <state width="600" height="428" key="javadoc.popup" timestamp="1676219410387">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
-    <state width="600" height="428" key="javadoc.popup/0.25.1920.1055@0.25.1920.1055" timestamp="1676216238305" />
+    <state width="600" height="428" key="javadoc.popup/0.25.1920.1055@0.25.1920.1055" timestamp="1676219410387" />
     <state x="623" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1675621369372">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>

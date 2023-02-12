@@ -30,6 +30,8 @@ namespace GameInput
 
         public void Start()
         {
+            Input.multiTouchEnabled = false;
+            
             _minSwipeDistance = configsHandlerInputConfig.minDistance;
             _mouseButtonIndex = configsHandlerInputConfig.MouseButtonIndex;
             _screenOffset = new Vector3(0, 0, -_gameCamera.transform.position.z);
@@ -40,12 +42,21 @@ namespace GameInput
 
         private void AwaitSwipe()
         {
-            if (Vector3.Distance(Input.mousePosition, _startTouchPos) > _minSwipeDistance)
+            float speed = InputVector().magnitude / Time.deltaTime;
+            if (speed > _minSwipeDistance) 
                 _inputState = InputState.Swipe;
         }
+       
 
-        private void SendSwipeEvent()=>
-            OnSwipe?.Invoke(_gameCamera.ScreenToWorldPoint(Input.mousePosition + _screenOffset));
+       private void SendSwipeEvent()
+       {
+           OnSwipe?.Invoke(_gameCamera.ScreenToWorldPoint(Input.mousePosition + _screenOffset));
+           
+           float speed = InputVector().magnitude / Time.deltaTime;
+           if (speed > _minSwipeDistance) 
+               _inputState = InputState.Touch;
+       }
+            
         
         public void Update()
         {
@@ -72,7 +83,7 @@ namespace GameInput
                         throw new ArgumentOutOfRangeException();
                 }
 
-                _previousPos = Input.mousePosition;
+                _previousPos = _gameCamera.ScreenToWorldPoint(Input.mousePosition);
             }
             else if (Input.GetMouseButtonUp(_mouseButtonIndex))
             {
