@@ -12,11 +12,11 @@ namespace Services.Factory
         
         private Stack<InteractableObject> _pool;
 
-        public InteractableObjectsPool(int count, Transform container, IGameFactory factory)
+        public InteractableObjectsPool(Transform container, IGameFactory factory, int startCount = 10)
         {
             _gameFactory = factory;
             _container = container;
-            CreatePool(count);
+            CreatePool(startCount);
         }
 
         private void CreatePool(int count)

@@ -20,6 +20,7 @@ namespace GameActors.InteractableObjects
         {
             renderer.Initialize(objectConfig.FruitSprite, objectConfig.isHaveShadow);
             collider.Enable();
+            gameObject.SetActive(true);
         }
 
         protected virtual void Interact()

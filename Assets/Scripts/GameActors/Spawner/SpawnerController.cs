@@ -35,7 +35,7 @@ namespace GameActors.Spawner
         
         public void Start()
         {
-            _pool = new InteractableObjectsPool(90, transform, factory);
+            _pool = new InteractableObjectsPool(transform, factory);
             InitializeSpawnersPosition();
             InitializeComplexitySettings();
             StartCoroutine(SpawnCycle());
