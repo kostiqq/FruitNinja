@@ -35,7 +35,10 @@ namespace Services.Factory
             return newObject;
         }
 
-        public void Return(InteractableObject obj)=>
+        public void Return(InteractableObject obj)
+        {
+            obj.transform.SetParent(_container);
             _pool.Push(obj);
+        }
     }
 }
