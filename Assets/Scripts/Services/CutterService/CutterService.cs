@@ -33,7 +33,7 @@ namespace Services.CutterService
 
        private Slice CreatePart(InteractableObject block, Rect textureRect, Vector2 texturePivot)
        {
-           var part = _gameFactory.CreateSlice();
+           var part = _gameFactory.CreateSlice(null);
            part.transform.position = block.transform.position;
            part.transform.localScale = block.transform.localScale;
 

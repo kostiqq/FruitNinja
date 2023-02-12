@@ -3,25 +3,27 @@ using System.Collections.Generic;
 using GameActors.InteractableObjects;
 using Services.Factory;
 using UnityEngine;
+using Zenject;
 using Random = UnityEngine.Random;
 
 namespace GameActors.Spawner
 {
     public class SpawnerController : MonoBehaviour
     {
-
         [SerializeField] private List<SpawnZone> spawnZones;
         [SerializeField] private PlayZone playZone;
-
+        [SerializeField] private GameComplicator _complicator;
+        
         private InteractableObjectsPool _pool;
-        private FruitBuilder _fruitBuilder;
-        private GameComplicator _complicator;
         private float _waveCooldown;
         private float _cooldownBetweenFruitsSpawn;
         private int _minFruitCount;
         private int _maxFruitCount;
 
         public static SpawnerController Instance;
+        
+        [Inject] private InteractableObjectConfigHandler _objectConfigs;
+        [Inject] private IGameFactory factory;
 
         private void Awake()
         {
@@ -31,11 +33,9 @@ namespace GameActors.Spawner
                 Destroy(gameObject);
         }
         
-        public void Construct(GameComplicator gameComplicator, InteractableObjectsPool pool, FruitBuilder fruitBuilder)
+        public void Start()
         {
-            _complicator = gameComplicator;
-            _pool = pool;
-            _fruitBuilder = fruitBuilder;
+            _pool = new InteractableObjectsPool(90, transform, factory);
             InitializeSpawnersPosition();
             InitializeComplexitySettings();
             StartCoroutine(SpawnCycle());
@@ -74,7 +74,7 @@ namespace GameActors.Spawner
                 Vector2 spawnPoint = selectedSpawnZone.GetPointAtSegment();
 
                 InteractableObject spawnedObject = _pool.GetFreeElement();
-                spawnedObject.Initialize(_fruitBuilder.GetRandomConfig());
+                spawnedObject.Initialize(_objectConfigs.GetRandomFruitConfig());
                 spawnedObject.transform.position = spawnPoint;
                 spawnedObject.StartMoving(selectedSpawnZone.NormalWithRandomAngleOffset, selectedSpawnZone.GetRandomForce());
                 yield return new WaitForSeconds(_cooldownBetweenFruitsSpawn);

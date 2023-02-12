@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using GameActors.InteractableObjects;
 using UnityEngine;
+using Zenject;
 
 namespace Services.Factory
 {
@@ -8,11 +9,11 @@ namespace Services.Factory
     {
         private Transform _container;
         private Sprite[] _objectSprites;
-        private GameFactory _gameFactory;
         
+        private IGameFactory _gameFactory;
         private List<InteractableObject> _pool;
 
-        public InteractableObjectsPool(GameFactory factory, int count, Transform container)
+        public InteractableObjectsPool(int count, Transform container, IGameFactory factory)
         {
             _gameFactory = factory;
             _container = container;
@@ -22,9 +23,8 @@ namespace Services.Factory
         private void CreatePool(int count)
         {
             _pool = new List<InteractableObject>();
-            
             for (int i = 0; i < count; i++)
-                _pool.Add(_gameFactory.LoadFruitObject(_container));
+                _pool.Add(_gameFactory.CreateFruit(_container));
         }
 
         public bool HasFreeElement(out InteractableObject element)
@@ -51,7 +51,7 @@ namespace Services.Factory
             }
             else
             {
-                var newObject = _gameFactory.LoadFruitObject(_container);
+                var newObject = _gameFactory.CreateFruit(_container);
                 _pool.Add(newObject);
                 return newObject;
             }

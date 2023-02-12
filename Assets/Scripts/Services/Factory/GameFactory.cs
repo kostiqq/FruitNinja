@@ -20,10 +20,11 @@ namespace Services.Factory
 
         public GameFactory(Fruit fruitPrefab, Slice slicePrefab)
         {
+            Debug.LogError("createFactory");
             _fruitPrefab = fruitPrefab;
             _slicePrefab = slicePrefab;
         }
-
+        
         public Action<Fruit> OnInteractableObjectCreate { get; set; }
 
         public Fruit CreateFruit(Transform container)

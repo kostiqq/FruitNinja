@@ -3,7 +3,7 @@ using Services.Factory;
 using UnityEngine;
 using Zenject;
 
-public class GameFactoryInstaller : MonoInstaller
+public class GameFactoryInstaller : MonoInstaller<GameFactoryInstaller>
 {
     [SerializeField] private Fruit fruitPrefab;
     [SerializeField] private Slice slicePrefab;
@@ -14,6 +14,6 @@ public class GameFactoryInstaller : MonoInstaller
             Bind<IGameFactory>().
             To<GameFactory>().
             AsSingle().
-            WithArguments(fruitPrefab, slicePrefab);
+            WithArguments(fruitPrefab, slicePrefab).NonLazy();
     }
 }

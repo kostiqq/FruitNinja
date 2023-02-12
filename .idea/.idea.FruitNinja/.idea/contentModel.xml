@@ -1044,17 +1044,18 @@
             <e p="zenject.asmdef" t="Include" />
           </e>
         </e>
-        <e p="Prefabs" t="Include" />
-        <e p="Resources" t="Include">
+        <e p="Prefabs" t="Include">
+          <e p="Effects" t="Include" />
+          <e p="InteractableObjects" t="Include" />
           <e p="UI" t="Include" />
         </e>
+        <e p="Resources" t="Include" />
         <e p="Scenes" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Data" t="Include">
             <e p="Player.cs" t="Include" />
             <e p="Score.cs" t="Include" />
           </e>
-          <e p="FruitBuilder.cs" t="Include" />
           <e p="GameActors" t="Include">
             <e p="GameLoop.cs" t="Include" />
             <e p="InteractableObjects" t="Include">
@@ -1090,6 +1091,7 @@
             <e p="Installers" t="Include">
               <e p="GameFactoryInstaller.cs" t="Include" />
               <e p="GameInstaller.cs" t="Include" />
+              <e p="InteractableObjectConfigInstaller.cs" t="Include" />
             </e>
             <e p="ProjectConfig.cs" t="Include" />
             <e p="SceneLoader.cs" t="Include" />
@@ -1102,6 +1104,7 @@
               <e p="StateMachine.cs" t="Include" />
             </e>
           </e>
+          <e p="InteractableObjectConfigHandler.cs" t="Include" />
           <e p="ScriptableObjects" t="Include">
             <e p="GameComplexity.cs" t="Include" />
             <e p="InputConfig.cs" t="Include" />
