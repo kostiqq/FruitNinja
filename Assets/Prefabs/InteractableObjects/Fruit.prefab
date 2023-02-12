@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cutEffectPrefab: {fileID: 8777025799003076331, guid: c34b407fc2eacd14d987e706164e4c62, type: 3}
-  pointsViewPrefab: {fileID: 0}
+  pointsViewPrefab: {fileID: 1131262146, guid: 46d536ab0b46c49948e7f786825edb2e, type: 3}
   sliceEffectPrefab: {fileID: 7941203381880807411, guid: cf7c24eea432f4a4981d6a8aabd8ce4a, type: 3}
 --- !u!114 &7205228200751217377
 MonoBehaviour:

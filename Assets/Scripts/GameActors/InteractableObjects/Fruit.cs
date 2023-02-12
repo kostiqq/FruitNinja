@@ -29,7 +29,7 @@ namespace GameActors.InteractableObjects
         {
             base.Initialize(objectConfig);
             pointIncreaser.AddPoints(objectConfig.points);
-            effects.Construct(objectConfig.FruitEffectSprite, objectConfig.EffectColor);
+            effects.Construct(objectConfig.FruitEffectSprite, objectConfig.EffectColor, objectConfig.points);
             visability.OnFruitOutOfScreen += pointIncreaser.RemoveHealth;
             visability.IsEnbled = true;
         }

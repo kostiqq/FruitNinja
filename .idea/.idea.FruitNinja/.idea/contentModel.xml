@@ -1056,6 +1056,9 @@
             <e p="Player.cs" t="Include" />
             <e p="Score.cs" t="Include" />
           </e>
+          <e p="Effects" t="Include">
+            <e p="FruitScore.cs" t="Include" />
+          </e>
           <e p="GameActors" t="Include">
             <e p="GameState.cs" t="Include" />
             <e p="InteractableObjects" t="Include">
@@ -1135,7 +1138,6 @@
             </e>
           </e>
           <e p="UI" t="Include">
-            <e p="FruitPoints.cs" t="Include" />
             <e p="GameView" t="Include">
               <e p="GameView.cs" t="Include" />
               <e p="HealthView.cs" t="Include" />

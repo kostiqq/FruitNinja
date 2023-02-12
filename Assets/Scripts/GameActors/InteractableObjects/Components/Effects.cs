@@ -1,4 +1,3 @@
-using UI;
 using UnityEngine;
 
 namespace GameActors.InteractableObjects
@@ -6,15 +5,17 @@ namespace GameActors.InteractableObjects
     public class Effects : MonoBehaviour
     {
         [SerializeField] private ParticleSystem cutEffectPrefab;
-        [SerializeField] private FruitPoints pointsViewPrefab;
+        [SerializeField] private FruitScore pointsViewPrefab;
         [SerializeField] private ParticleSystem sliceEffectPrefab;
         
         private ParticleSystem _cutParticle;
         private Texture _particleTexture;
         private Color _effectColor;
+        private int _points;
 
-        public void Construct(Texture particleTexture, Color effectColor)
+        public void Construct(Texture particleTexture, Color effectColor, int points)
         {
+            _points = points;
             _effectColor = effectColor;
             _particleTexture = particleTexture;
         }
@@ -27,8 +28,7 @@ namespace GameActors.InteractableObjects
             var effect = Instantiate(sliceEffectPrefab);
             effect.startColor = _effectColor;
             effect.transform.position = transform.position;
-            /*var pointsEffect = CreatePointsLabel(points);
-            pointsEffect.Play();*/
+            CreatePointsLabel(points);
         }
         
         private void CreateCutParticle()
@@ -38,11 +38,13 @@ namespace GameActors.InteractableObjects
             _cutParticle.GetComponent<ParticleSystemRenderer>().material.mainTexture = _particleTexture;
         }
         
-        private FruitPoints CreatePointsLabel(int points)
+        private void CreatePointsLabel(int points)
         {
             var pointsLabel = Instantiate(pointsViewPrefab);
-            pointsLabel.Construct(points);
-            return pointsLabel;
+            pointsLabel.SetScore(_points);
+            Vector2 offset = Random.insideUnitCircle;
+            pointsLabel.transform.position = transform.position + new Vector3(offset.x,offset.y, 0);
+            pointsLabel.StartAnimation();
         }
     }
 }
