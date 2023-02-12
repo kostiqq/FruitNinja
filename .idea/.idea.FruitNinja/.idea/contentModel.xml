@@ -1083,11 +1083,13 @@
             <e p="InputHandler.cs" t="Include" />
             <e p="InputTrail.cs" t="Include" />
           </e>
-          <e p="GameInstaller.cs" t="Include" />
           <e p="Infrastructure" t="Include">
             <e p="Bootstrapper.cs" t="Include" />
             <e p="Game.cs" t="Include" />
             <e p="GameRunner.cs" t="Include" />
+            <e p="Installers" t="Include">
+              <e p="GameInstaller.cs" t="Include" />
+            </e>
             <e p="ProjectConfig.cs" t="Include" />
             <e p="SceneLoader.cs" t="Include" />
             <e p="States" t="Include">

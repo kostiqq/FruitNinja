@@ -20,13 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="24b67b54-75fa-4580-865a-237b9a2d8147" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Sprites/MainMenu/HouseRight.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/Sprites/MainMenu/HouseRight.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Startup.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Startup.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MainMenu/MainMenuView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MainMenu/MainMenuView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MainMenu/MenuButtonHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MainMenu/MenuButtonHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameInstaller.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameInstaller.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +42,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Effects.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/Factory/IGameFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/Progress/ProgressService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/IService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/AllServices.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/GameLoop.cs" root0="FORCE_HIGHLIGHTING" />
@@ -70,7 +66,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/SceneConfig.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Shadow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data/Player.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/GameView/LoseView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Infrastructure/GameRunner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Infrastructure/SceneLoader.cs" root0="FORCE_HIGHLIGHTING" />
@@ -88,13 +83,13 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Infrastructure/States/IState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Infrastructure/Game.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/FruitPoints.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/GameView/GameView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Infrastructure/Bootstrapper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameComplicator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame1 (Beginner)/Scripts/Installers/GameInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/PlayZone.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/InteractableObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Infrastructure/Installers/GameInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Fruit.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Visability.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/MainMenu/MainMenuAnimator.cs" root0="FORCE_HIGHLIGHTING" />
@@ -103,7 +98,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Services/CutterService/CutterService.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Physics/Physic.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Utils/SortingOrderDecreaser.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/CollisionTracker.cs" />
@@ -154,6 +148,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/MainMenu/MainMenuView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/MainMenu/MenuButtonHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/MainMenu/MainMenuAnimator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Installers/GameInstaller.cs" />
       </list>
     </option>
   </component>
@@ -205,7 +200,8 @@
       <workItem from="1676132749225" duration="28000" />
       <workItem from="1676132795657" duration="49000" />
       <workItem from="1676132863467" duration="60000" />
-      <workItem from="1676133071116" duration="6833000" />
+      <workItem from="1676133071116" duration="6966000" />
+      <workItem from="1676190708111" duration="18000" />
     </task>
     <servers />
   </component>
