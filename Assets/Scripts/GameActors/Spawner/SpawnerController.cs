@@ -13,6 +13,7 @@ namespace GameActors.Spawner
         [SerializeField] private List<SpawnZone> spawnZones;
         [SerializeField] private PlayZone playZone;
         [SerializeField] private GameComplicator _complicator;
+        [SerializeField] private ObjectContainer activeObjects; 
         
         private InteractableObjectsPool _pool;
         private float _waveCooldown;
@@ -74,6 +75,8 @@ namespace GameActors.Spawner
                 Vector2 spawnPoint = selectedSpawnZone.GetPointAtSegment();
 
                 InteractableObject spawnedObject = _pool.GetFreeElement();
+                activeObjects.AddObject(spawnedObject);
+                
                 spawnedObject.Initialize(_objectConfigs.GetRandomFruitConfig());
                 spawnedObject.transform.position = spawnPoint;
                 spawnedObject.StartMoving(selectedSpawnZone.NormalWithRandomAngleOffset, selectedSpawnZone.GetRandomForce());
@@ -107,9 +110,7 @@ namespace GameActors.Spawner
             return null;
         }
 
-        public void StopSpawn()
-        {
+        public void StopSpawn()=>
             StopAllCoroutines();
-        }
     }
 }

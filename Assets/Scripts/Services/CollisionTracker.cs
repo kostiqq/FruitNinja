@@ -1,29 +1,23 @@
 using System.Collections.Generic;
 using GameActors.InteractableObjects;
 using Services.CutterService;
-using Services.Factory;
 using UnityEngine;
-using Zenject;
 
 namespace GameInput
 {
-    public class CollisionTracker
+    public class CollisionTracker : MonoBehaviour
     {
-        private InputHandler _inputHandler;
-
+        [SerializeField] private CutterService _cutter;
+        [SerializeField] private InputHandler _inputHandler;
+        
         private List<ColliderComponent> _colliderObjects = new List<ColliderComponent>();
-        private CutterService _cutter;
-        [Inject] private IGameFactory factory;
 
-        public CollisionTracker(InputHandler inputHandler, CutterService cutter)
+        public void Start()
         {
-            _inputHandler = inputHandler;
-            factory.OnInteractableObjectCreate += AddColliderObject;
-            _cutter = cutter;
             _inputHandler.OnSwipe += TrackCollision;
         }
 
-        private void AddColliderObject(InteractableObject interactableObject)
+        public void AddColliderObject(InteractableObject interactableObject)
         {
             interactableObject.TryGetComponent(out ColliderComponent collider);
 
@@ -44,7 +38,6 @@ namespace GameInput
                     _colliderObjects[i].CollisionEnter();
                     _cutter.Cut(_colliderObjects[i], _inputHandler.InputVector().normalized);
                 }
-                    
             }
         }
     }

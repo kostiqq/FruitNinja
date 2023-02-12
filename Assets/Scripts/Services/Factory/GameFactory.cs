@@ -20,7 +20,6 @@ namespace Services.Factory
 
         public GameFactory(Fruit fruitPrefab, Slice slicePrefab)
         {
-            Debug.LogError("createFactory");
             _fruitPrefab = fruitPrefab;
             _slicePrefab = slicePrefab;
         }

@@ -1105,6 +1105,7 @@
             </e>
           </e>
           <e p="InteractableObjectConfigHandler.cs" t="Include" />
+          <e p="ObjectContainer.cs" t="Include" />
           <e p="ScriptableObjects" t="Include">
             <e p="GameComplexity.cs" t="Include" />
             <e p="InputConfig.cs" t="Include" />
@@ -1117,6 +1118,7 @@
             <e p="CollisionTracker.cs" t="Include" />
             <e p="CutterService" t="Include">
               <e p="CutterService.cs" t="Include" />
+              <e p="ICutterService.cs" t="Include" />
             </e>
             <e p="Factory" t="Include">
               <e p="GameFactory.cs" t="Include" />

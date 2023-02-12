@@ -1,18 +1,14 @@
 ﻿using GameActors.InteractableObjects;
 using Services.Factory;
 using UnityEngine;
+using Zenject;
 
 namespace Services.CutterService
 {
-    public class CutterService : IService
+    public class CutterService : MonoBehaviour, ICutterService
     {
-        private GameFactory _gameFactory;
-        
-        public CutterService(GameFactory gameFactory)
-        {
-            _gameFactory = gameFactory;
-        }
-        
+        [Inject] private IGameFactory _gameFactory;
+
         public void Cut(ColliderComponent colliderObject, Vector3 normalized)
         {
            colliderObject.TryGetComponent(out InteractableObject fruit);
