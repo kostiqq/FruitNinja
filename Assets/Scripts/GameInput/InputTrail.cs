@@ -3,13 +3,11 @@ using UnityEngine;
 
 public class InputTrail : MonoBehaviour
 {
-    private InputHandler _inputHandler;
-    private GameObject _trail;
+    [SerializeField] private InputHandler _inputHandler;
+    [SerializeField] private GameObject _trail;
     
-    public void Construct(InputHandler inputHandler, GameObject trail)
+    public void Start()
     {
-        _trail = trail;
-        _inputHandler = inputHandler;
         Initialize();
     }
     

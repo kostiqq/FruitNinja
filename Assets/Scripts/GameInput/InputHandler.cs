@@ -9,7 +9,9 @@ namespace GameInput
         private float _minSwipeDistance = 20;
         private int _mouseButtonIndex = 0;
 
-        private Camera _gameCamera;
+        [SerializeField] private Camera _gameCamera;
+        [SerializeField] private InputConfig configsHandlerInputConfig;
+        
         private InputState _inputState;
         private Vector3 _startTouchPos;
         private Vector3 _screenOffset;
@@ -26,11 +28,10 @@ namespace GameInput
             Swipe
         }
 
-        public void Construct(InputConfig configsHandlerInputConfig, Camera gameCamera)
+        public void Start()
         {
             _minSwipeDistance = configsHandlerInputConfig.minDistance;
             _mouseButtonIndex = configsHandlerInputConfig.MouseButtonIndex;
-            _gameCamera = gameCamera;
             _screenOffset = new Vector3(0, 0, -_gameCamera.transform.position.z);
         }
 
@@ -43,11 +44,9 @@ namespace GameInput
                 _inputState = InputState.Swipe;
         }
 
-        private void SendSwipeEvent()
-        {
+        private void SendSwipeEvent()=>
             OnSwipe?.Invoke(_gameCamera.ScreenToWorldPoint(Input.mousePosition + _screenOffset));
-        }
-
+        
         public void Update()
         {
             if (Input.GetMouseButtonDown(_mouseButtonIndex))

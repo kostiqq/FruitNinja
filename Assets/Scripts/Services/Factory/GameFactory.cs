@@ -2,35 +2,34 @@
 using GameActors.InteractableObjects;
 using Services.Progress;
 using Services.ServiceLocator;
+using StaticData;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
 namespace Services.Factory
 {
-    public class GameFactory : IService
+    public class GameFactory : IGameFactory
     {
         private const string InteractableObjectPath = "Fruit";
         private const string InputTrailPath = "InputTrail";
         private const string SlicePath = "Slice";
         private const string GameViewPath = "UI/GameView";
+        
 
         private InteractableObjectsPool _interactableObjectsPool;
         public Action<InteractableObject> OnInteractableObjectCreate;
 
         private ServiceLocator<IService> _serviceLocator;
-        public GameFactory(ServiceLocator<IService> serviceLocator)
-        {
-            _serviceLocator = serviceLocator;
-        }
 
-        public GameView LoadGameView()
+        private Fruit _fruitPrefab;
+        private Slice _slicePrefab;
+        
+        public GameFactory(Fruit fruitPrefab, Slice slicePrefab)
         {
-            var resource = Resources.Load<GameView>(GameViewPath);
-            GameView gameView =  Object.Instantiate(resource);
-            gameView.Construct(_serviceLocator.Get<ProgressService>());
-            return gameView;
+            _fruitPrefab = fruitPrefab;
+            _slicePrefab = slicePrefab;
         }
-
+        
         public Fruit LoadInteractableObject(Transform container)
         {
            var resource = Resources.Load<Fruit>(InteractableObjectPath);
@@ -39,11 +38,21 @@ namespace Services.Factory
            OnInteractableObjectCreate?.Invoke(fruit);
            return fruit;
         }
-        
+
+        public InteractableObject LoadInteractableObject()
+        {
+            return null;
+        }
+
         public GameObject LoadInputTrail()
         {
             var trail = Resources.Load<GameObject>(InputTrailPath);
             return Object.Instantiate(trail);
+        }
+
+        public InteractableObjectConfig[] LoadFruitConfigs()
+        {
+            return null;
         }
 
         public Slice CreateSlice()

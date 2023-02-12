@@ -29,13 +29,8 @@ namespace Infrastructure
         }
 
         private void CreateCoreObjects()
-        {
-            InputHandler inputHandler = new GameObject("InputHandler").AddComponent<InputHandler>();
-            inputHandler.Construct(configsHandler.InputConfig, Camera.main);
-            
-            InputTrail inputTrail = new GameObject("InputTrail").AddComponent<InputTrail>();
-            inputTrail.Construct(inputHandler, _serviceLocator.Get<GameFactory>().LoadInputTrail());
-            
+        {/*
+
             CollisionTracker collisionTracker = new CollisionTracker(inputHandler, 
                 _serviceLocator.Get<GameFactory>(), _serviceLocator.Get<CutterService>());
 
@@ -50,7 +45,7 @@ namespace Infrastructure
             GameComplicator complicator = new GameObject("GameComplicator").AddComponent<GameComplicator>();
             complicator.Construct(configsHandler.ComplexityConfig);
 
-            SpawnerController.Instance.Construct(complicator, objectsPool, fruitBuilder);
+            SpawnerController.Instance.Construct(complicator, objectsPool, fruitBuilder);*/
         }
     }
 }

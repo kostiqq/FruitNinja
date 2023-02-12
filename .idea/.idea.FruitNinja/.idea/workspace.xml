@@ -20,10 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="24b67b54-75fa-4580-865a-237b9a2d8147" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/TrailMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/TrailMaterial.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/InputTrail.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/InputTrail.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameInstaller.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameInstaller.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameInput/InputHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameInput/InputHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameInput/InputTrail.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameInput/InputTrail.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Bootstrapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Bootstrapper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/Factory/GameFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Factory/GameFactory.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +42,9 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/Spawner/SpawnerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ProgressConfig.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/Factory/InteractableObjectsPool.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/Factory/GameFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Renderer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Effects.cs" root0="FORCE_HIGHLIGHTING" />
@@ -47,9 +55,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/GameLoop.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameInput/InputTrail.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/MainMenu/MainMenuView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameInput/InputHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/MainMenu/MenuButtonHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FruitBuilder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Infrastructure/Installers/GameFactoryInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/CutterService/CutterService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/InteractableObjectConfig.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/ServiceLocator/ServiceLocator.cs" root0="FORCE_HIGHLIGHTING" />
@@ -63,6 +73,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Animator2d.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/GameView/Heart.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Infrastructure/ProjectConfig.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/SceneConfig.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Shadow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data/Player.cs" root0="FORCE_HIGHLIGHTING" />
@@ -98,8 +109,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Physics/Physic.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Utils/SortingOrderDecreaser.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/CollisionTracker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/ColliderComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/Factory/IGameFactory.cs" />
@@ -112,14 +121,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Data/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/PlayZone.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/InteractableObject.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameInput/InputHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Effects.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/Spawner/SpawnerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/Spawner/SpawnZone.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Physic.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/GameView/GameView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/GameView/HealthView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Services/Factory/GameFactory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Data/Score.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/GameView/ScoreView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Slice.cs" />
@@ -138,7 +145,6 @@
         <option value="$PROJECT_DIR$/Assets/Resources/Test.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/GameInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/GameView/LoseView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Bootstrapper.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/GameView/ScoreText.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/SceneConfig.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/GameComplexity.cs" />
@@ -149,6 +155,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/MainMenu/MenuButtonHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/MainMenu/MainMenuAnimator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Installers/GameInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameInput/InputHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameInput/InputTrail.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Bootstrapper.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Services/Factory/GameFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Installers/GameFactoryInstaller.cs" />
       </list>
     </option>
   </component>
@@ -201,7 +212,7 @@
       <workItem from="1676132795657" duration="49000" />
       <workItem from="1676132863467" duration="60000" />
       <workItem from="1676133071116" duration="6966000" />
-      <workItem from="1676190708111" duration="18000" />
+      <workItem from="1676190708111" duration="1556000" />
     </task>
     <servers />
   </component>
@@ -226,14 +237,15 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="634" y="131" key="RiderGenerateDialog" timestamp="1675788977315">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="634" y="131" key="RiderGenerateDialog/0.0.1600.860@0.0.1600.860" timestamp="1675788977315" />
-    <state width="600" height="428" key="javadoc.popup" timestamp="1676133451954">
+    <state x="761" y="186" key="RiderGenerateDialog" timestamp="1676192199061">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
-    <state width="600" height="428" key="javadoc.popup/0.25.1920.1055@0.25.1920.1055" timestamp="1676133451954" />
+    <state x="634" y="131" key="RiderGenerateDialog/0.0.1600.860@0.0.1600.860" timestamp="1675788977315" />
+    <state x="761" y="186" key="RiderGenerateDialog/0.25.1920.1055@0.25.1920.1055" timestamp="1676192199061" />
+    <state width="600" height="428" key="javadoc.popup" timestamp="1676192240994">
+      <screen x="0" y="25" width="1920" height="1055" />
+    </state>
+    <state width="600" height="428" key="javadoc.popup/0.25.1920.1055@0.25.1920.1055" timestamp="1676192240994" />
     <state x="623" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1675621369372">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
