@@ -3,6 +3,7 @@ using GameActors.InteractableObjects;
 using Services.CutterService;
 using Services.Factory;
 using UnityEngine;
+using Zenject;
 
 namespace GameInput
 {
@@ -12,8 +13,9 @@ namespace GameInput
 
         private List<ColliderComponent> _colliderObjects = new List<ColliderComponent>();
         private CutterService _cutter;
+        [Inject] private IGameFactory factory;
 
-        public CollisionTracker(InputHandler inputHandler, GameFactory factory, CutterService cutter)
+        public CollisionTracker(InputHandler inputHandler, CutterService cutter)
         {
             _inputHandler = inputHandler;
             factory.OnInteractableObjectCreate += AddColliderObject;

@@ -24,7 +24,7 @@ namespace Services.Factory
             _pool = new List<InteractableObject>();
             
             for (int i = 0; i < count; i++)
-                _pool.Add(_gameFactory.LoadInteractableObject(_container));
+                _pool.Add(_gameFactory.LoadFruitObject(_container));
         }
 
         public bool HasFreeElement(out InteractableObject element)
@@ -51,7 +51,7 @@ namespace Services.Factory
             }
             else
             {
-                var newObject = _gameFactory.LoadInteractableObject(_container);
+                var newObject = _gameFactory.LoadFruitObject(_container);
                 _pool.Add(newObject);
                 return newObject;
             }

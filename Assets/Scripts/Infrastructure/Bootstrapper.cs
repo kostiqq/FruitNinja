@@ -30,7 +30,6 @@ namespace Infrastructure
 
         private void CreateCoreObjects()
         {/*
-
             CollisionTracker collisionTracker = new CollisionTracker(inputHandler, 
                 _serviceLocator.Get<GameFactory>(), _serviceLocator.Get<CutterService>());
 

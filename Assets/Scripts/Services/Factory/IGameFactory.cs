@@ -1,11 +1,15 @@
-﻿using GameActors.InteractableObjects;
-using StaticData;
+﻿using System;
+using GameActors.InteractableObjects;
 using UnityEngine;
 
 namespace Services.Factory
 {
-    public interface IGameFactory : IService
+    public interface IGameFactory
     {
-        public InteractableObject LoadInteractableObject();
+        Action<Fruit> OnInteractableObjectCreate { get; set; }
+        
+        public Fruit CreateFruit(Transform container);
+
+        public Slice CreateSlice(Transform container);
     }
 }
