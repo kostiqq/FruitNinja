@@ -16,11 +16,6 @@ namespace GameActors.InteractableObjects
 
         public Sprite GetSprite => spriteRenderer.sprite;
 
-        private void OnValidate()
-        {
-            spriteRenderer ??= GetComponent<SpriteRenderer>();
-        }
-        
         public void Initialize(Sprite rendererSprite, bool isHaveShadow)
         {
             SetSprite(rendererSprite);

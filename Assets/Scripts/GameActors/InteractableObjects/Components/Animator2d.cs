@@ -19,11 +19,6 @@ namespace GameActors.InteractableObjects
 
         private bool _isSizeAnimationActive;
 
-        private void OnValidate()
-        {
-            rigidObject = GetComponent<Physic>();
-        }
-
         private void Start()
         {
             StartRotateAnimation();
