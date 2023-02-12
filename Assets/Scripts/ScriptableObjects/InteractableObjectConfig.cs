@@ -9,5 +9,6 @@ namespace StaticData
         public Texture FruitEffectSprite;
         public bool isHaveShadow;
         public int points;
+        public Color EffectColor;
     }
 }

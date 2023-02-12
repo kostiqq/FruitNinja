@@ -7,11 +7,15 @@ namespace GameActors.InteractableObjects
     {
         [SerializeField] private ParticleSystem cutEffectPrefab;
         [SerializeField] private FruitPoints pointsViewPrefab;
+        [SerializeField] private ParticleSystem sliceEffectPrefab;
+        
         private ParticleSystem _cutParticle;
         private Texture _particleTexture;
+        private Color _effectColor;
 
-        public void Construct(Texture particleTexture)
+        public void Construct(Texture particleTexture, Color effectColor)
         {
+            _effectColor = effectColor;
             _particleTexture = particleTexture;
         }
         
@@ -19,7 +23,10 @@ namespace GameActors.InteractableObjects
         {
             CreateCutParticle();
             _cutParticle.Play();
-            
+
+            var effect = Instantiate(sliceEffectPrefab);
+            effect.startColor = _effectColor;
+            effect.transform.position = transform.position;
             /*var pointsEffect = CreatePointsLabel(points);
             pointsEffect.Play();*/
         }

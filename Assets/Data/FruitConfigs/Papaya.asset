@@ -16,3 +16,4 @@ MonoBehaviour:
   FruitEffectSprite: {fileID: 2800000, guid: de9d69f6c64e1234cbc7ad40d8033848, type: 3}
   isHaveShadow: 1
   points: 20
+  EffectColor: {r: 0.3137255, g: 0.7607844, b: 0.121568635, a: 1}

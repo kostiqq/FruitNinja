@@ -1152,7 +1152,6 @@
           </e>
           <e p="Utils" t="Include">
             <e p="BackgroundScaler.cs" t="Include" />
-            <e p="SortingOrderDecreaser.cs" t="Include" />
           </e>
         </e>
         <e p="TextMesh Pro" t="Include">
