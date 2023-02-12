@@ -7,7 +7,5 @@ namespace Services.Factory
     public interface IGameFactory : IService
     {
         public InteractableObject LoadInteractableObject();
-        GameObject LoadInputTrail();
-        InteractableObjectConfig[] LoadFruitConfigs();
     }
 }

@@ -23,12 +23,7 @@ namespace Infrastructure.States
 
         private void RegisterAllServices()
         {
-            var progressService = new ProgressService(_configs.PlayerConfig);
-            var gameFactory = new GameFactory(_services);
-            var cutterService = new CutterService(gameFactory);
-            _services.Register(gameFactory);
-            _services.Register(cutterService);
-            _services.Register(progressService);
+
         }
 
         public void Enter()
