@@ -8,10 +8,9 @@ namespace Services.Factory
     public class InteractableObjectsPool
     {
         private Transform _container;
-        private Sprite[] _objectSprites;
-        
         private IGameFactory _gameFactory;
-        private List<InteractableObject> _pool;
+        
+        private Stack<InteractableObject> _pool;
 
         public InteractableObjectsPool(int count, Transform container, IGameFactory factory)
         {
@@ -22,39 +21,21 @@ namespace Services.Factory
 
         private void CreatePool(int count)
         {
-            _pool = new List<InteractableObject>();
+            _pool = new Stack<InteractableObject>();
             for (int i = 0; i < count; i++)
-                _pool.Add(_gameFactory.CreateFruit(_container));
-        }
-
-        public bool HasFreeElement(out InteractableObject element)
-        {
-            foreach (InteractableObject interactableObject in _pool)
-            {
-                if (!interactableObject.gameObject.activeInHierarchy)
-                {
-                    element = interactableObject;
-                    interactableObject.gameObject.SetActive(true);
-                    return true;
-                }
-            }
-
-            element = null;
-            return false;
+                _pool.Push(_gameFactory.CreateFruit(_container));
         }
 
         public InteractableObject GetFreeElement()
         {
-            if (HasFreeElement(out var interactableObject))
-            {
-                return interactableObject;
-            }
-            else
-            {
-                var newObject = _gameFactory.CreateFruit(_container);
-                _pool.Add(newObject);
-                return newObject;
-            }
+            if (_pool.Count > 0)
+                return _pool.Pop();
+            
+            var newObject = _gameFactory.CreateFruit(_container);
+            return newObject;
         }
+
+        public void Return(InteractableObject obj)=>
+            _pool.Push(obj);
     }
 }
