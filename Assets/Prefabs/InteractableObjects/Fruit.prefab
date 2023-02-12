@@ -103,8 +103,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 994bd6f0404149488f7ed1fcb8317ac4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderer: {fileID: 5390472884042766235}
-  collider: {fileID: 3883035785328378243}
+  objectRenderer: {fileID: 5390472884042766235}
+  objectCollider: {fileID: 3883035785328378243}
   physicComponent: {fileID: -8679824364002854750}
   visability: {fileID: 9089179541307538471}
   shadow: {fileID: 479222857044383654}

@@ -6,6 +6,7 @@ public class FruitScore : MonoBehaviour
 {
     [SerializeField] private TextMeshPro textLabel;
     [SerializeField] private float flySpeed = 5f;
+    [SerializeField] private float animationDuration = 2f;
     private Color _zeroAlphaColor;
 
     private void Awake()
@@ -21,7 +22,7 @@ public class FruitScore : MonoBehaviour
 
     public void StartAnimation()
     {
-        transform.DOMove(transform.position + Vector3.up * 7f, 2f);
-        textLabel.DOColor(_zeroAlphaColor, 2f).OnComplete(()=> Destroy(gameObject));
+        transform.DOMove(transform.position + Vector3.up * flySpeed, animationDuration);
+        textLabel.DOColor(_zeroAlphaColor, animationDuration).OnComplete(()=> Destroy(gameObject));
     }
 }

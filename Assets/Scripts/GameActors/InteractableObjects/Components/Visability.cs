@@ -6,7 +6,6 @@ namespace GameActors.InteractableObjects
 {
     public class Visability : MonoBehaviour
     {
-        private bool _isShowed;
         public Action OnFruitOutOfScreen;
         public bool IsEnbled;
 
@@ -16,11 +15,6 @@ namespace GameActors.InteractableObjects
                 return;
             
             OnFruitOutOfScreen?.Invoke();
-        }
-
-        private void OnBecameVisible()
-        {
-            _isShowed = true;
         }
     }
 }

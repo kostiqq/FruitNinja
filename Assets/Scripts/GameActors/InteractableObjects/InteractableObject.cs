@@ -7,15 +7,15 @@ namespace GameActors.InteractableObjects
 {
     public abstract class InteractableObject : MonoBehaviour
     {
-        [SerializeField] protected Renderer renderer;
-        [SerializeField] protected ColliderComponent collider;
+        [SerializeField] protected Renderer objectRenderer;
+        [SerializeField] protected ColliderComponent objectCollider;
         [SerializeField] protected Physic physicComponent;
         [SerializeField] protected Visability visability;
         
         public Action<InteractableObject> OnObjectHide;
         
         public Sprite GetSprite =>
-            renderer.GetSprite;
+            objectRenderer.GetSprite;
 
         public Vector2 GetVelocity =>
             physicComponent.Velocity;
@@ -24,8 +24,8 @@ namespace GameActors.InteractableObjects
         {
             physicComponent.Clear();
             visability.OnFruitOutOfScreen += HideFruit;
-            renderer.Initialize(objectConfig.FruitSprite, objectConfig.isHaveShadow);
-            collider.Enable();
+            objectRenderer.Initialize(objectConfig.FruitSprite, objectConfig.isHaveShadow);
+            objectCollider.Enable();
             gameObject.SetActive(true);
         }
 
@@ -41,7 +41,7 @@ namespace GameActors.InteractableObjects
 
         protected void Awake()
         {
-            collider.OnColliderEnter += Interact;
+            objectCollider.OnColliderEnter += Interact;
         }
 
         public void HideObject()
@@ -55,7 +55,7 @@ namespace GameActors.InteractableObjects
             var objectTransform = transform;
             objectTransform.localScale = Vector3.one;
             objectTransform.rotation = Quaternion.identity;
-            renderer.Clear();
+            objectRenderer.Clear();
         }
 
         public void StartMoving(Vector3 direction, float force)=>

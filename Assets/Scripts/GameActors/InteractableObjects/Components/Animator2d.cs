@@ -15,7 +15,6 @@ namespace GameActors.InteractableObjects
         [SerializeField] private float sizeParameter;
         [SerializeField] private Physic rigidObject;
         
-        private bool _isRotateAnimationActive;
         private float _rotationSpeed;
 
         private bool _isSizeAnimationActive;
@@ -38,7 +37,6 @@ namespace GameActors.InteractableObjects
         {
             var randomValue = Random.Range(-maxRotationAngle, maxRotationAngle);
             _rotationSpeed = randomValue * Time.deltaTime;
-            _isRotateAnimationActive = true;
         }
         
         private void Update()

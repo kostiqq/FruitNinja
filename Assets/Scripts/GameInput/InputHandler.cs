@@ -6,14 +6,13 @@ namespace GameInput
 {
     public class InputHandler : MonoBehaviour
     {
-        private float _minSwipeDistance = 20;
+        private float _minSwipeDistance = 15;
         private int _mouseButtonIndex = 0;
 
         [SerializeField] private Camera _gameCamera;
         [SerializeField] private InputConfig configsHandlerInputConfig;
         
         private InputState _inputState;
-        private Vector3 _startTouchPos;
         private Vector3 _screenOffset;
         private Vector3 _previousPos;
 
@@ -64,7 +63,6 @@ namespace GameInput
             {
                 _previousPos = _gameCamera.ScreenToWorldPoint(Input.mousePosition);
                 _inputState = InputState.Touch;
-                _startTouchPos = Input.mousePosition;
                 OnGetTouch?.Invoke(_gameCamera.ScreenToWorldPoint(Input.mousePosition + _screenOffset));
             }
             else if (Input.GetMouseButton(_mouseButtonIndex))

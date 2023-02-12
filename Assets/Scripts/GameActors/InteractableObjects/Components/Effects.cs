@@ -24,7 +24,7 @@ namespace GameActors.InteractableObjects
         {
             CreateCutParticle();
             _cutParticle.Play();
-
+            
             var effect = Instantiate(sliceEffectPrefab);
             effect.startColor = _effectColor;
             effect.transform.position = transform.position;
