@@ -1,4 +1,5 @@
-﻿using GameActors.InteractableObjects.Components;
+﻿using System;
+using GameActors.InteractableObjects.Components;
 using StaticData;
 using UnityEngine;
 
@@ -9,6 +10,9 @@ namespace GameActors.InteractableObjects
         [SerializeField] protected Renderer renderer;
         [SerializeField] protected ColliderComponent collider;
         [SerializeField] protected Physic physicComponent;
+        [SerializeField] protected Visability visability;
+        
+        public Action<InteractableObject> OnObjectHide;
         
         public Sprite GetSprite =>
             renderer.GetSprite;
@@ -18,9 +22,16 @@ namespace GameActors.InteractableObjects
         
         public virtual void Initialize(InteractableObjectConfig objectConfig)
         {
+            visability.OnFruitOutOfScreen += HideFruit;
             renderer.Initialize(objectConfig.FruitSprite, objectConfig.isHaveShadow);
             collider.Enable();
             gameObject.SetActive(true);
+        }
+
+        protected void HideFruit()
+        {
+            HideObject();
+            OnObjectHide?.Invoke(this);
         }
 
         protected virtual void Interact()

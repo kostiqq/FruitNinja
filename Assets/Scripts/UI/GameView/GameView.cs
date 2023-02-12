@@ -12,7 +12,7 @@ public class GameView : MonoBehaviour
 
    private void Start()
    {
-      score.Construct(progress);
+      score.Construct();
       health.Construct(progress);
       loseView.gameObject.SetActive(false);
    }

@@ -27,16 +27,11 @@ public class MenuButtonHandler : MonoBehaviour
 
     private IEnumerator LoadSceneAsync()
     {
-        animator.StartAnimation();
+        if(animator != null) animator.StartAnimation();
         
         yield return new WaitForSeconds(animator.GetAnimationTime);
         
         SceneManager.LoadScene(sceneConfig.GameSceneIndex);
-    }
-
-    private void RunAnimation()
-    {
-        
     }
 
     private void DisableButtons()

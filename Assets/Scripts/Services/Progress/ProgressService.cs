@@ -1,7 +1,6 @@
 using System;
 using Data;
 using StaticData;
-using UnityEngine;
 
 namespace Services.Progress
 {
@@ -37,10 +36,13 @@ namespace Services.Progress
 
         public void UpdateHealth(int value)
         {
+            if (PlayerData.CurrentHealth < 0)
+                return;
+            
             PlayerData.CurrentHealth += value;
             OnHealthChanged?.Invoke(PlayerData.CurrentHealth);
-            Debug.LogError(PlayerData.CurrentHealth);
-            if (PlayerData.CurrentHealth <= 0)
+            
+            if (PlayerData.CurrentHealth == 0)
                 OnHealthEmpty?.Invoke();
         }
     }

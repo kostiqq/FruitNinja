@@ -17,7 +17,7 @@ namespace GameActors.InteractableObjects
         [SerializeField] private Shadow shadow;
         [SerializeField] private Effects effects;
         [SerializeField] private PointerIncreaser pointIncreaser;
-        [SerializeField] private Visability visability;
+
         private int _points;
         
         public void Construct(ProgressService progress)

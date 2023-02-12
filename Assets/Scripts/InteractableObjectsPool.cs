@@ -37,7 +37,6 @@ namespace Services.Factory
 
         public void Return(InteractableObject obj)
         {
-            obj.transform.SetParent(_container);
             _pool.Push(obj);
         }
     }

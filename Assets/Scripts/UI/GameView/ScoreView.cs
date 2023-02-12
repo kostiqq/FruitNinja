@@ -1,17 +1,17 @@
 using Services.Progress;
 using UnityEngine;
+using Zenject;
 
 public class ScoreView : MonoBehaviour
 {
     [SerializeField] private ScoreText bestScore;
     [SerializeField] private ScoreText currentScore;
-    private ProgressService _progress;
     
-    public void Construct(ProgressService progress)
+    [Inject] private ProgressService _progress;
+    
+    public void Construct()
     {
-        _progress = progress;
         Initialize();
-        Subscribe();
     }
 
     private void Initialize()
@@ -20,10 +20,16 @@ public class ScoreView : MonoBehaviour
        bestScore.Initialize(_progress.Score.HighScore);
     }
 
-    private void Subscribe()
+    private void OnEnable()
     {
         _progress.OnScoreIncreased += UpdateCurrentScore;
         _progress.OnNewHighScore += UpdateBestScore;
+    }
+
+    private void OnDestroy()
+    {
+        _progress.OnScoreIncreased -= UpdateCurrentScore;
+        _progress.OnNewHighScore -= UpdateBestScore;
     }
 
     private void UpdateBestScore(int newBestScore)=>
