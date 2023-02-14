@@ -1095,6 +1095,7 @@
             <e p="Game.cs" t="Include" />
             <e p="GameRunner.cs" t="Include" />
             <e p="Installers" t="Include">
+              <e p="ComboTimerInstaller.cs" t="Include" />
               <e p="GameFactoryInstaller.cs" t="Include" />
               <e p="GameInstaller.cs" t="Include" />
               <e p="InteractableObjectConfigInstaller.cs" t="Include" />
@@ -1116,6 +1117,7 @@
           <e p="ObjectPool.cs" t="Include" />
           <e p="ScriptableObjects" t="Include">
             <e p="BlastConfig.cs" t="Include" />
+            <e p="ComboTimerConfig.cs" t="Include" />
             <e p="GameComplexity.cs" t="Include" />
             <e p="InputConfig.cs" t="Include" />
             <e p="InteractableObjectConfig.cs" t="Include" />
@@ -1125,6 +1127,8 @@
           <e p="Services" t="Include">
             <e p="AllServices.cs" t="Include" />
             <e p="CollisionTracker.cs" t="Include" />
+            <e p="ComboTimer" t="Include" />
+            <e p="ComboTimer.cs" t="Include" />
             <e p="CutterService" t="Include">
               <e p="CutterService.cs" t="Include" />
               <e p="ICutterService.cs" t="Include" />
@@ -1133,7 +1137,9 @@
               <e p="GameFactory.cs" t="Include" />
               <e p="IGameFactory.cs" t="Include" />
             </e>
+            <e p="IComboTimer.cs" t="Include" />
             <e p="IService.cs" t="Include" />
+            <e p="ITimeScaler.cs" t="Include" />
             <e p="Progress" t="Include">
               <e p="ProgressService.cs" t="Include" />
             </e>
