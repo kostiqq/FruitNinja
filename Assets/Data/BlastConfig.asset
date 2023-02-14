@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad63a1fcb9a2421eaa67bb7201b90e3c, type: 3}
   m_Name: BlastConfig
   m_EditorClassIdentifier: 
-  blastStrength: 4
+  blastStrength: 20
   blastRadius: 0
