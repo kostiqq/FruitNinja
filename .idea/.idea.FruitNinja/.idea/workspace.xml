@@ -20,19 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="24b67b54-75fa-4580-865a-237b9a2d8147" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/BlastConfig.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/BlastConfig.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameActors/BlastWave.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameActors/BlastWave.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Bomb.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Bomb.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Physic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Physic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/InteractableObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/InteractableObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Slice.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Slice.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameActors/Spawner/SpawnerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameActors/Spawner/SpawnerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ObjectContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ObjectContainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/Factory/GameFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Factory/GameFactory.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,6 +78,7 @@
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/InteractableObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Slice.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Fruit.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameInput/InputHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Animator2d.cs" root0="FORCE_HIGHLIGHTING" />
@@ -120,6 +109,7 @@
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/BlastConfig.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ProgressConfig.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/IService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data/Score.cs" root0="FORCE_HIGHLIGHTING" />
@@ -188,8 +178,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/BlastConfig.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Physic.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/InteractableObject.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/BlastWave.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Bomb.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/BlastWave.cs" />
       </list>
     </option>
   </component>
@@ -249,7 +239,7 @@
       <workItem from="1676361827524" duration="143000" />
       <workItem from="1676362686003" duration="18000" />
       <workItem from="1676373092366" duration="480000" />
-      <workItem from="1676373918879" duration="7383000" />
+      <workItem from="1676373918879" duration="7519000" />
     </task>
     <servers />
   </component>
@@ -279,10 +269,10 @@
     </state>
     <state x="634" y="131" key="RiderGenerateDialog/0.0.1600.860@0.0.1600.860" timestamp="1675788977315" />
     <state x="761" y="186" key="RiderGenerateDialog/0.25.1920.1055@0.25.1920.1055" timestamp="1676376999849" />
-    <state width="600" height="428" key="javadoc.popup" timestamp="1676381350254">
+    <state width="600" height="428" key="javadoc.popup" timestamp="1676381967465">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
-    <state width="600" height="428" key="javadoc.popup/0.25.1920.1055@0.25.1920.1055" timestamp="1676381350254" />
+    <state width="600" height="428" key="javadoc.popup/0.25.1920.1055@0.25.1920.1055" timestamp="1676381967465" />
     <state x="623" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1676375245850">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>

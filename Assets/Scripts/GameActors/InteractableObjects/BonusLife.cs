@@ -27,7 +27,6 @@ namespace GameActors.InteractableObjects
         {
             base.Initialize(objectConfig);
             effects.Construct(objectConfig.FruitEffectSprite, objectConfig.EffectColor, objectConfig.points);
-            //visability.OnFruitOutOfScreen += game.RemoveHealth;
             visability.IsEnbled = true;
         }
         

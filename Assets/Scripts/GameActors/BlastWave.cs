@@ -11,7 +11,12 @@ namespace Services.Factory.GameActors
         
         private float _blastStrength;
         private float _blastRadius;
-        
+
+        private void Start()
+        {
+            _blastStrength = config.blastStrength;
+        }
+
         public void CreateBlast(Vector3 initPosition)
         {
             while(container.GetFruits.MoveNext())
