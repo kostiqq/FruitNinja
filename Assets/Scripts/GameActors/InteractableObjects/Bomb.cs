@@ -18,7 +18,7 @@ namespace GameActors.InteractableObjects
         
         private int _points;
 
-        public Action OnExplode; 
+        public Action<Vector3> OnExplode; 
         public void Construct(ProgressService progress)
         {
             healthAffector.Construct(progress);
@@ -34,7 +34,7 @@ namespace GameActors.InteractableObjects
         protected override void Interact()
         {
             effects.PlayEffects(_points);
-            OnExplode?.Invoke();
+            OnExplode?.Invoke(transform.position);
             healthAffector.UpdateHealth();
             ClearState();
             gameObject.SetActive(false);

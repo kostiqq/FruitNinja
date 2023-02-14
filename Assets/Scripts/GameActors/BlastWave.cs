@@ -19,8 +19,12 @@ namespace Services.Factory.GameActors
 
         public void CreateBlast(Vector3 initPosition)
         {
-            while(container.GetFruits.MoveNext())
-                AddBlast(container.GetFruits.Current, initPosition);
+            foreach (var fr  in container._fruits)
+            {
+                AddBlast(fr, initPosition);
+            }
+            /*while(container.GetFruits.MoveNext())
+                AddBlast(container.GetFruits.Current, initPosition);*/
         }
 
         private void AddBlast(InteractableObject fruit, Vector3 initPosition)

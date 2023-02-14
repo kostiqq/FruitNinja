@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using GameActors.InteractableObjects;
 using Services.Factory;
+using Services.Factory.GameActors;
 using UnityEngine;
 using Zenject;
 using Random = UnityEngine.Random;
@@ -13,7 +14,8 @@ namespace GameActors.Spawner
         [SerializeField] private List<SpawnZone> spawnZones;
         [SerializeField] private PlayZone playZone;
         [SerializeField] private GameComplicator _complicator;
-        [SerializeField] private ObjectContainer activeObjects; 
+        [SerializeField] private ObjectContainer activeObjects;
+        [SerializeField] private BlastWave blast;
         
         private FruitPool _fruitsPool;
         private BombsPool _bombsPool;
@@ -89,12 +91,12 @@ namespace GameActors.Spawner
                 yield return new WaitForSeconds(_cooldownBetweenFruitsSpawn);
             }
 
-            for (int i = 0; i < bombsCount; i++)
+            for (int i = 0; i < 10; i++)
             {
                 Vector2 spawnPoint = selectedSpawnZone.GetPointAtSegment();
-                InteractableObject bomb = _bombsPool.GetFreeElement();
+                Bomb bomb = _bombsPool.GetFreeElement();
                 activeObjects.AddObject(bomb);
-                
+                bomb.OnExplode += blast.CreateBlast;
                 bomb.Initialize(_objectConfigs.GetBombConfig());
                 bomb.transform.position = spawnPoint;
                 bomb.StartMoving(selectedSpawnZone.NormalWithRandomAngleOffset, selectedSpawnZone.GetRandomForce());

@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1a9c90710be4b28b24eb5ce0e92b56f, type: 3}
-  m_Name: InputConfig
+  m_Script: {fileID: 11500000, guid: ad63a1fcb9a2421eaa67bb7201b90e3c, type: 3}
+  m_Name: BlastConfig
   m_EditorClassIdentifier: 
-  minDistance: 0
-  MouseButtonIndex: 0
+  blastStrength: 4
+  blastRadius: 0

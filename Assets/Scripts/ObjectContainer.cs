@@ -9,7 +9,7 @@ public class ObjectContainer : MonoBehaviour
     [SerializeField] private CollisionTracker _collisionTracker;
     
     private List<InteractableObject> _objects = new List<InteractableObject>();
-    private List<InteractableObject> _fruits = new List<InteractableObject>();
+    public List<InteractableObject> _fruits = new List<InteractableObject>();
 
     public IEnumerator<InteractableObject> GetFruits => _fruits.GetEnumerator();
     
@@ -34,4 +34,6 @@ public class ObjectContainer : MonoBehaviour
         Pool.Return(objToRemove as Fruit);
         _objects.Remove(objToRemove);
     }
+    
+    
 }
