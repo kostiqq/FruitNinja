@@ -23,7 +23,7 @@ namespace GameActors.InteractableObjects
         }
 
         public void AddForce(Vector3 direction)=>
-            _physicComponent.AddForce(direction, force);
+            _physicComponent.SetForce(direction, force);
 
         public void SetSprite(Sprite sprite)=>
             _renderer.SetSprite(sprite);

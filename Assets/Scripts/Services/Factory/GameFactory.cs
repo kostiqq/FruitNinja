@@ -18,7 +18,7 @@ namespace Services.Factory
         private Bomb _bombPrefab;
         private BonusLife _bonusLifePrefab;
         
-        [Inject] private ProgressService _progressService; 
+        [Inject] private ProgressService _progressService;
 
         public GameFactory(Fruit fruitPrefab, Slice slicePrefab, Bomb bomb, BonusLife bonusLife)
         {

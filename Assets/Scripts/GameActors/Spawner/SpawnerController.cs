@@ -76,7 +76,7 @@ namespace GameActors.Spawner
                 Vector2 spawnPoint = selectedSpawnZone.GetPointAtSegment();
 
                 InteractableObject spawnedObject = _pool.GetFreeElement();
-                activeObjects.AddObject(spawnedObject);
+                activeObjects.AddFruit(spawnedObject);
                 
                 spawnedObject.Initialize(_objectConfigs.GetRandomFruitConfig());
                 spawnedObject.transform.position = spawnPoint;

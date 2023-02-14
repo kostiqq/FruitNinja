@@ -59,6 +59,9 @@ namespace GameActors.InteractableObjects
         }
 
         public void StartMoving(Vector3 direction, float force)=>
+            physicComponent.SetForce(direction, force);
+
+        public void AddForce(Vector3 direction, float force)=>
             physicComponent.AddForce(direction, force);
         
     }

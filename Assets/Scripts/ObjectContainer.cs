@@ -9,12 +9,19 @@ public class ObjectContainer : MonoBehaviour
     [SerializeField] private CollisionTracker _collisionTracker;
     
     private List<InteractableObject> _objects = new List<InteractableObject>();
+    private List<InteractableObject> _fruits = new List<InteractableObject>();
+
+    public IEnumerator<InteractableObject> GetFruits => _fruits.GetEnumerator();
+    
     public InteractableObjectsPool Pool;
     
     public int getObjectsCount => _objects.Count;
 
-    public void AddObject(InteractableObject newObj)
+    public void AddFruit(InteractableObject newObj)
     {
+        if(newObj is Fruit)
+            _fruits.Add(newObj);
+        
         newObj.OnObjectHide += RemoveObject;
         _objects.Add(newObj);
         _collisionTracker.AddColliderObject(newObj);

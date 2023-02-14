@@ -1115,6 +1115,7 @@
           <e p="ObjectContainer.cs" t="Include" />
           <e p="ObjectPool.cs" t="Include" />
           <e p="ScriptableObjects" t="Include">
+            <e p="BlastConfig.cs" t="Include" />
             <e p="GameComplexity.cs" t="Include" />
             <e p="InputConfig.cs" t="Include" />
             <e p="InteractableObjectConfig.cs" t="Include" />

@@ -9,8 +9,11 @@ namespace GameActors.InteractableObjects.Components
 
         public Vector3 Velocity => _direction;
 
-        public void AddForce(Vector3 direction, float f)=>
+        public void SetForce(Vector3 direction, float f)=>
             _direction = direction.normalized * f;
+
+        public void AddForce(Vector3 direction, float f)=>
+            _direction += direction.normalized * f;
         
         public void Clear()=>
             _direction = Vector3.zero;

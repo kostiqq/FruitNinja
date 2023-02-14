@@ -1,3 +1,4 @@
+using System;
 using GameActors.InteractableObjects.Components;
 using Services.Progress;
 using StaticData;
@@ -16,7 +17,8 @@ namespace GameActors.InteractableObjects
         [SerializeField] private HealthAffector healthAffector;
         
         private int _points;
-        
+
+        public Action OnExplode; 
         public void Construct(ProgressService progress)
         {
             healthAffector.Construct(progress);
@@ -32,6 +34,7 @@ namespace GameActors.InteractableObjects
         protected override void Interact()
         {
             effects.PlayEffects(_points);
+            OnExplode?.Invoke();
             healthAffector.UpdateHealth();
             ClearState();
             gameObject.SetActive(false);
