@@ -13,7 +13,7 @@ namespace Services.CutterService
         public void Cut(ColliderComponent colliderObject, Vector3 normalized)
         {
             colliderObject.TryGetComponent(out InteractableObject fruit);
-            objectContainer.RemoveObject(fruit);
+            objectContainer.RemoveFruit(fruit);
             var currentSpriteRect = fruit.GetSprite.rect;
 
             var leftPart = CreatePart(fruit,

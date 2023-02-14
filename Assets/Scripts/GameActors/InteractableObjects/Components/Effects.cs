@@ -24,10 +24,13 @@ namespace GameActors.InteractableObjects
         {
             CreateCutParticle();
             _cutParticle.Play();
-            
-            var effect = Instantiate(sliceEffectPrefab);
-            effect.startColor = _effectColor;
-            effect.transform.position = transform.position;
+
+            if (sliceEffectPrefab != null)
+            {
+                var effect = Instantiate(sliceEffectPrefab);
+                effect.startColor = _effectColor;
+                effect.transform.position = transform.position;
+            }
             
             if(points != 0)
                 CreatePointsLabel(points);

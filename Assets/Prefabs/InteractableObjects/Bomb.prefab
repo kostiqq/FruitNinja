@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb62d6d7ab64ab6bc59d75d7a7b0dcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cutEffectPrefab: {fileID: 0}
+  cutEffectPrefab: {fileID: 3400535190617628541, guid: 4c38d771320b243f0ac7a8051f68df39, type: 3}
   pointsViewPrefab: {fileID: 0}
   sliceEffectPrefab: {fileID: 0}
 --- !u!114 &1825224025328484392

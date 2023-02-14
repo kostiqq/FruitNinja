@@ -15,8 +15,8 @@ namespace GameActors.Spawner
         [SerializeField] private GameComplicator _complicator;
         [SerializeField] private ObjectContainer activeObjects; 
         
-        private InteractableObjectsPool _fruitsPool;
-        private InteractableObjectsPool _bombsPool;
+        private FruitPool _fruitsPool;
+        private BombsPool _bombsPool;
         
         private float _waveCooldown;
         private float _cooldownBetweenFruitsSpawn;
@@ -38,7 +38,9 @@ namespace GameActors.Spawner
         
         public void Start()
         {
-            _fruitsPool = new InteractableObjectsPool(transform, factory);
+            _fruitsPool = new FruitPool(transform, factory);
+            _bombsPool = new BombsPool(transform, factory);
+            
             activeObjects.Pool = _fruitsPool;
             InitializeSpawnersPosition();
             InitializeComplexitySettings();

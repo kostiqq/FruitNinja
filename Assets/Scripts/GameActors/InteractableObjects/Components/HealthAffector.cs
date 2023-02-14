@@ -1,5 +1,6 @@
 using Services.Progress;
 using UnityEngine;
+using Zenject;
 
 namespace GameActors.InteractableObjects.Components
 {
@@ -8,6 +9,7 @@ namespace GameActors.InteractableObjects.Components
         [SerializeField] private int healthToRestore = 1;
         
         private ProgressService _progress;
+        
         public void Construct(ProgressService progress)
         {
             _progress = progress;

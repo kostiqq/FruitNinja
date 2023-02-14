@@ -10,7 +10,7 @@ namespace Services.Factory
 {
     public class GameFactory : IGameFactory
     {
-        private InteractableObjectsPool _interactableObjectsPool;
+        private FruitPool _interactableObjectsPool;
         private ServiceLocator<IService> _serviceLocator;
 
         private Fruit _fruitPrefab;
@@ -41,8 +41,14 @@ namespace Services.Factory
         public Slice CreateSlice(Transform container)=> 
             Object.Instantiate(_slicePrefab);
 
-        public Bomb CreateBomb(Transform container)=>
-            Object.Instantiate(_bombPrefab);
+        public Bomb CreateBomb(Transform container)
+        {
+            var bomb = Object.Instantiate(_bombPrefab);
+            bomb.Construct(_progressService);
+            return bomb;
+            //OnInteractableObjectCreate?.Invoke(bomb);
+        }
+
 
         public BonusLife CreateBonusLife(Transform container)=>
             Object.Instantiate(_bonusLifePrefab);

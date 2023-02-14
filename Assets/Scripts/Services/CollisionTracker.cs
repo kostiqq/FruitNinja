@@ -36,7 +36,8 @@ namespace GameInput
                 if (Vector3.Distance(touchPosition, _colliderObjects[i].Position) <= _colliderObjects[i].Radius)
                 {
                     _colliderObjects[i].CollisionEnter();
-                    _cutter.Cut(_colliderObjects[i], _inputHandler.InputVector().normalized);
+                    if(_colliderObjects[i].IsCuttable)
+                        _cutter.Cut(_colliderObjects[i], _inputHandler.InputVector().normalized);
                 }
             }
         }

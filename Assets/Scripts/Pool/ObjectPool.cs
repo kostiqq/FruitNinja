@@ -5,8 +5,8 @@ namespace Services.Factory
 {
     public class ObjectPool<T> where T : MonoBehaviour
     {
-        private Transform _container;
-        private IGameFactory _gameFactory;
+        protected Transform _container;
+        protected IGameFactory _gameFactory;
 
         protected Stack<T> _pool;
 

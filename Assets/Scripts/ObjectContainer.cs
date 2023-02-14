@@ -13,7 +13,7 @@ public class ObjectContainer : MonoBehaviour
 
     public IEnumerator<InteractableObject> GetFruits => _fruits.GetEnumerator();
     
-    public InteractableObjectsPool Pool;
+    public FruitPool Pool;
     
     public int getObjectsCount => _objects.Count;
 
@@ -22,16 +22,16 @@ public class ObjectContainer : MonoBehaviour
         if(newObj is Fruit)
             _fruits.Add(newObj);
         
-        newObj.OnObjectHide += RemoveObject;
+        newObj.OnObjectHide += RemoveFruit;
         _objects.Add(newObj);
         _collisionTracker.AddColliderObject(newObj);
         newObj.transform.SetParent(transform);
     }
 
-    public void RemoveObject(InteractableObject objToRemove)
+    public void RemoveFruit(InteractableObject objToRemove)
     {
-        objToRemove.OnObjectHide -= RemoveObject;
-        Pool.Return(objToRemove);
+        objToRemove.OnObjectHide -= RemoveFruit;
+        Pool.Return(objToRemove as Fruit);
         _objects.Remove(objToRemove);
     }
 }

@@ -19,3 +19,5 @@ MonoBehaviour:
   MinFruitsCount: 2
   MaxFruitsCount: 3
   fruitComplexityGrowthTime: 20
+  BombsPerWavePerc: 0.914
+  HeartPerWavePerc: 0

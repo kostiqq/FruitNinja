@@ -8,6 +8,7 @@ namespace GameActors.InteractableObjects
         public Vector3 Position => transform.position;
         public bool IsEnabled { get; set; }
 
+        public bool IsCuttable;
         public float Radius = 1f;
 
         public Action OnColliderEnter;
@@ -26,4 +27,5 @@ namespace GameActors.InteractableObjects
             Gizmos.DrawWireSphere(transform.position, Radius);
         }
     }
+    
 }
