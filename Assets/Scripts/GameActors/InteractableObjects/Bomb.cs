@@ -27,7 +27,7 @@ namespace GameActors.InteractableObjects
         public override void Initialize(InteractableObjectConfig objectConfig)
         {
             base.Initialize(objectConfig);
-            effects.Construct(objectConfig.FruitEffectSprite, objectConfig.EffectColor, objectConfig.points);
+            effects.Construct(objectConfig.FruitEffectSprite, objectConfig.EffectColor);
             visability.IsEnbled = true;
         }
         

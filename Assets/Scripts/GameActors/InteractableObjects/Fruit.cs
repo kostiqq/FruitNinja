@@ -1,4 +1,5 @@
 ﻿using GameActors.InteractableObjects.Components;
+using Services;
 using Services.Progress;
 using StaticData;
 using UnityEngine;
@@ -20,26 +21,26 @@ namespace GameActors.InteractableObjects
 
         private int _points;
         
-        public void Construct(ProgressService progress)
+        public void Construct(ProgressService progress, IComboTimer comboTimer)
         {
-            pointIncreaser.Construct(progress);
+            pointIncreaser.Construct(progress,comboTimer);
         }
 
         public override void Initialize(InteractableObjectConfig objectConfig)
         {
             base.Initialize(objectConfig);
             pointIncreaser.AddPoints(objectConfig.points);
-            effects.Construct(objectConfig.FruitEffectSprite, objectConfig.EffectColor, objectConfig.points);
+            effects.Construct(objectConfig.FruitEffectSprite, objectConfig.EffectColor);
             visability.OnFruitOutOfScreen += pointIncreaser.RemoveHealth;
             visability.IsEnbled = true;
         }
         
         protected override void Interact()
         {
-            effects.PlayEffects(_points);
             pointIncreaser.IncreasePoints();
             ClearState();
             gameObject.SetActive(false);
+            effects.PlayEffects(pointIncreaser.GetPoints);
         }
 
         protected override void ClearState()

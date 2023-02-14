@@ -19,6 +19,7 @@ namespace Services.Factory
         private BonusLife _bonusLifePrefab;
         
         [Inject] private ProgressService _progressService;
+        [Inject] private IComboTimer _comboTimer;
 
         public GameFactory(Fruit fruitPrefab, Slice slicePrefab, Bomb bomb, BonusLife bonusLife)
         {
@@ -33,7 +34,7 @@ namespace Services.Factory
         public Fruit CreateFruit(Transform container)
         { 
             var fruit = Object.Instantiate(_fruitPrefab, container);
-            fruit.Construct(_progressService);
+            fruit.Construct(_progressService, _comboTimer);
             OnInteractableObjectCreate?.Invoke(fruit);
             return fruit;
         }

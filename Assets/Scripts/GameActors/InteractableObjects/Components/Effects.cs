@@ -11,11 +11,9 @@ namespace GameActors.InteractableObjects
         private ParticleSystem _cutParticle;
         private Texture _particleTexture;
         private Color _effectColor;
-        private int _points;
 
-        public void Construct(Texture particleTexture, Color effectColor, int points)
+        public void Construct(Texture particleTexture, Color effectColor)
         {
-            _points = points;
             _effectColor = effectColor;
             _particleTexture = particleTexture;
         }
@@ -46,7 +44,7 @@ namespace GameActors.InteractableObjects
         private void CreatePointsLabel(int points)
         {
             var pointsLabel = Instantiate(pointsViewPrefab);
-            pointsLabel.SetScore(_points);
+            pointsLabel.SetScore(points);
             Vector2 offset = Random.insideUnitCircle;
             pointsLabel.transform.position = transform.position + new Vector3(offset.x,offset.y, 0);
             pointsLabel.StartAnimation();

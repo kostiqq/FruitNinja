@@ -1,3 +1,4 @@
+using System;
 using ScriptableObjects;
 using UnityEngine;
 
@@ -23,6 +24,8 @@ namespace Services
             _currentTime = Time.time;
         }
 
+        public Action<int, int> OnComboIncrease { get; set; }
+
         public int GetCombo()
         {
             CheckTime();
@@ -30,7 +33,6 @@ namespace Services
             _currentSlices++;
 
             UpdateCurrentCombo();
-            
             return _curentCombo;
         }
 
@@ -39,6 +41,7 @@ namespace Services
             if (_currentSlices >= _sliceCountToIncreaseCombo && _curentCombo < _maxComboMultiplyer)
             {
                 _curentCombo++;
+                OnComboIncrease?.Invoke(_curentCombo, _currentSlices);
                 _currentSlices = 0;
             }
         }
