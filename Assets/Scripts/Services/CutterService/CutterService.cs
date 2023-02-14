@@ -26,6 +26,7 @@ namespace Services.CutterService
                 new Vector2(0f, 0.5f));
 
             Vector2 normalizedBlade = normalized;
+            
             leftPart.AddForce(Rotate(normalizedBlade, -90f) + fruit.GetVelocity.normalized);
             rightPart.AddForce(Rotate(normalizedBlade, 90f) + fruit.GetVelocity.normalized);
         }

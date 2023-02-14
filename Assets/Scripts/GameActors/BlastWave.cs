@@ -19,19 +19,15 @@ namespace Services.Factory.GameActors
 
         public void CreateBlast(Vector3 initPosition)
         {
-            foreach (var fr  in container._fruits)
-            {
+            foreach (var fr  in container.Fruits)
                 AddBlast(fr, initPosition);
-            }
-            /*while(container.GetFruits.MoveNext())
-                AddBlast(container.GetFruits.Current, initPosition);*/
         }
 
         private void AddBlast(InteractableObject fruit, Vector3 initPosition)
         {
-            Vector3 fruitTram = fruit.transform.position;
-            Vector3 forceVector = fruitTram - initPosition;
-            float force = _blastStrength / (fruitTram - initPosition).magnitude;
+            Vector3 fruitPos = fruit.transform.position;
+            Vector3 forceVector = fruitPos - initPosition;
+            float force = _blastStrength / (fruitPos - initPosition).magnitude;
             fruit.AddForce(forceVector, force);
         }
     }

@@ -43,7 +43,8 @@ namespace GameActors.Spawner
             _fruitsPool = new FruitPool(transform, factory);
             _bombsPool = new BombsPool(transform, factory);
             
-            activeObjects.Pool = _fruitsPool;
+            activeObjects.FruitPool = _fruitsPool;
+            activeObjects.BombsPool = _bombsPool;
             InitializeSpawnersPosition();
             InitializeComplexitySettings();
             StartCoroutine(SpawnCycle());
@@ -78,6 +79,19 @@ namespace GameActors.Spawner
             int bombsCount = GetBombsWithProb();
             int fruitCount = GetRandomFruitCount();
             SpawnZone selectedSpawnZone = GetRandomSpawnZone();
+            
+            for (int i = 0; i < bombsCount; i++)
+            {
+                Vector2 spawnPoint = selectedSpawnZone.GetPointAtSegment();
+                Bomb bomb = _bombsPool.GetFreeElement();
+                activeObjects.AddBomb(bomb);
+                bomb.OnExplode += blast.CreateBlast;
+                bomb.Initialize(_objectConfigs.GetBombConfig());
+                bomb.transform.position = spawnPoint;
+                bomb.StartMoving(selectedSpawnZone.NormalWithRandomAngleOffset, selectedSpawnZone.GetRandomForce());
+                yield return new WaitForSeconds(_cooldownBetweenFruitsSpawn);
+            }
+            
             for(int i = 0; i < fruitCount; i++)
             {
                 Vector2 spawnPoint = selectedSpawnZone.GetPointAtSegment();
@@ -90,21 +104,9 @@ namespace GameActors.Spawner
                 spawnedObject.StartMoving(selectedSpawnZone.NormalWithRandomAngleOffset, selectedSpawnZone.GetRandomForce());
                 yield return new WaitForSeconds(_cooldownBetweenFruitsSpawn);
             }
-
-            for (int i = 0; i < 10; i++)
-            {
-                Vector2 spawnPoint = selectedSpawnZone.GetPointAtSegment();
-                Bomb bomb = _bombsPool.GetFreeElement();
-                activeObjects.AddObject(bomb);
-                bomb.OnExplode += blast.CreateBlast;
-                bomb.Initialize(_objectConfigs.GetBombConfig());
-                bomb.transform.position = spawnPoint;
-                bomb.StartMoving(selectedSpawnZone.NormalWithRandomAngleOffset, selectedSpawnZone.GetRandomForce());
-                yield return new WaitForSeconds(_cooldownBetweenFruitsSpawn);
-            }
         }
 
-            //todo calculate bombs count
+        //todo calculate bombs count
         private int GetBombsWithProb()
         {
             if (Random.value < _complicator.GetBombProb)
