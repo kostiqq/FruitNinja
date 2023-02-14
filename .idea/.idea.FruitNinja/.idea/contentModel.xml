@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
-      <e p="Assembly-CSharp-Editor-firstpass-testable.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -1062,6 +1061,8 @@
           <e p="GameActors" t="Include">
             <e p="GameState.cs" t="Include" />
             <e p="InteractableObjects" t="Include">
+              <e p="Bomb.cs" t="Include" />
+              <e p="BonusLife.cs" t="Include" />
               <e p="Components" t="Include">
                 <e p="Animator2d.cs" t="Include" />
                 <e p="ColliderComponent.cs" t="Include" />
@@ -1214,7 +1215,9 @@
               </e>
               <e p="ObjectMenuCreation" t="Include">
                 <e p="DefaultAssets" t="Include">
-                  <e p="Textures" t="Include" />
+                  <e p="Textures" t="Include">
+                    <e p="v2" t="Include" />
+                  </e>
                 </e>
                 <e p="ItemCreationUtility.cs" t="Include" />
                 <e p="MenuItems.cs" t="Include" />
@@ -1231,6 +1234,8 @@
                 <e p="SpriteEditorMenu.cs" t="Include" />
                 <e p="SpriteEditorUtility.cs" t="Include" />
                 <e p="SpriteEditorWindow.cs" t="Include" />
+                <e p="SpriteEditorWindowSettings.cs" t="Include" />
+                <e p="SpriteNameFileIdPair.cs" t="Include" />
                 <e p="SpriteRect.cs" t="Include" />
                 <e p="SpriteUtilityWindow.cs" t="Include" />
               </e>
@@ -1238,6 +1243,7 @@
                 <e p="ISpriteEditorModule.cs" t="Include" />
                 <e p="SpriteEditorData.cs" t="Include" />
                 <e p="SpriteFrameModule" t="Include">
+                  <e p="DefaultSpriteNameFileIdDataProvider.cs" t="Include" />
                   <e p="SpriteFrameModule.cs" t="Include" />
                   <e p="SpriteFrameModuleBase.cs" t="Include" />
                   <e p="SpriteFrameModuleBaseView.cs" t="Include" />
@@ -1264,87 +1270,6 @@
             <e p="Tests" t="Include">
               <e p="Editor" t="Include">
                 <e p="Unity.2D.Sprite.Package.EditorTests.asmdef" t="Include" />
-              </e>
-            </e>
-          </e>
-          <e p="com.unity.device-simulator@3.1.0-preview" t="Include">
-            <e p="Editor" t="Include">
-              <e p="AssemblyInfo.cs" t="Include" />
-              <e p="DeviceInfo" t="Include">
-                <e p="DeviceInfo.cs" t="Include" />
-                <e p="DeviceInfoAsset.cs" t="Include" />
-                <e p="DeviceInfoImporter.cs" t="Include" />
-                <e p="DeviceInfoImporterEditor.cs" t="Include" />
-                <e p="DeviceLoader.cs" t="Include" />
-              </e>
-              <e p="DeviceListPopup.cs" t="Include" />
-              <e p="DeviceSimulatorMain.cs" t="Include" />
-              <e p="Input" t="Include">
-                <e p="InputManagerBackend.cs" t="Include" />
-                <e p="InputSystemPlugin.cs" t="Include" />
-                <e p="TouchEventManipulator.cs" t="Include" />
-              </e>
-              <e p="Plugins" t="Include">
-                <e p="ApplicationPlugin.cs" t="Include" />
-                <e p="DeviceSimulator.cs" t="Include" />
-                <e p="DeviceSimulatorExtensionWrapperPlugin.cs" t="Include" />
-                <e p="DeviceSimulatorPlugin.cs" t="Include" />
-                <e p="NotInitializePluginAttribute.cs" t="Include" />
-                <e p="PluginController.cs" t="Include" />
-              </e>
-              <e p="Scripting" t="Include">
-                <e p="DeviceSimulatorCallbacks.cs" t="Include" />
-                <e p="DeviceSimulatorInterfaces.cs" t="Include" />
-              </e>
-              <e p="settings" t="Include">
-                <e p="DeviceSimulatorProjectSettings.cs" t="Include" />
-                <e p="DeviceSimulatorProjectSettingsProvider.cs" t="Include" />
-              </e>
-              <e p="Shims" t="Include">
-                <e p="ApplicationSimulation.cs" t="Include" />
-                <e p="ScreenSimulation.cs" t="Include" />
-                <e p="SystemInfoSimulation.cs" t="Include" />
-              </e>
-              <e p="SimulatorPlayerSettings.cs" t="Include" />
-              <e p="SimulatorResources" t="Include">
-                <e p="DeviceAssets" t="Include">
-                  <e p="DeviceOverlays" t="Include" />
-                </e>
-                <e p="Icons" t="Include" />
-                <e p="StyleSheets" t="Include">
-                  <e p="styles_common.uss" t="Include" />
-                  <e p="styles_dark.uss" t="Include" />
-                  <e p="styles_light.uss" t="Include" />
-                  <e p="styles_settings.uss" t="Include" />
-                </e>
-                <e p="UXML" t="Include">
-                  <e p="ui_application_settings.uxml" t="Include" />
-                  <e p="ui_device_simulator.uxml" t="Include" />
-                  <e p="ui_project_settings.uxml" t="Include" />
-                </e>
-              </e>
-              <e p="SimulatorState.cs" t="Include" />
-              <e p="SimulatorUtilities.cs" t="Include" />
-              <e p="SimulatorWindow.cs" t="Include" />
-              <e p="Unity.DeviceSimulator.Editor.asmdef" t="Include" />
-              <e p="UserInterfaceController.cs" t="Include" />
-              <e p="VisualElements" t="Include">
-                <e p="DeviceView.cs" t="Include" />
-                <e p="TwoPaneSplitView.cs" t="Include" />
-              </e>
-            </e>
-            <e p="package.json" t="Include" />
-            <e p="Tests" t="Include">
-              <e p="Editor" t="Include">
-                <e p="Device Managment" t="Include" />
-                <e p="Input" t="Include" />
-                <e p="Screen" t="Include" />
-                <e p="TestResources" t="Include">
-                  <e p="CustomDevices" t="Include" />
-                </e>
-                <e p="TestUtilities" t="Include" />
-                <e p="UI" t="Include" />
-                <e p="Unity.DeviceSimulator.Tests.Common.asmdef" t="Include" />
               </e>
             </e>
           </e>
@@ -2080,6 +2005,10 @@
                 </e>
                 <e p="RaycastResult.cs" t="Include" />
                 <e p="UIBehaviour.cs" t="Include" />
+                <e p="UIElements" t="Include">
+                  <e p="PanelEventHandler.cs" t="Include" />
+                  <e p="PanelRaycaster.cs" t="Include" />
+                </e>
               </e>
               <e p="Properties" t="Include">
                 <e p="AssemblyInfo.cs" t="Include" />
@@ -2151,8 +2080,6 @@
                   <e p="Toggle.cs" t="Include" />
                   <e p="ToggleGroup.cs" t="Include" />
                   <e p="Utility" t="Include">
-                    <e p="ListPool.cs" t="Include" />
-                    <e p="ObjectPool.cs" t="Include" />
                     <e p="ReflectionMethodsCache.cs" t="Include" />
                     <e p="VertexHelper.cs" t="Include" />
                   </e>
@@ -2210,7 +2137,6 @@
       <e p="Temp/Bin" t="ExcludeRecursive" />
       <e p="Unity.2D.Sprite.Editor.csproj" t="IncludeRecursive" />
       <e p="Unity.2D.Sprite.Package.EditorTests.csproj" t="IncludeRecursive" />
-      <e p="Unity.DeviceSimulator.Editor.csproj" t="IncludeRecursive" />
       <e p="Unity.Rider.Editor.csproj" t="IncludeRecursive" />
       <e p="Unity.TextMeshPro.csproj" t="IncludeRecursive" />
       <e p="Unity.TextMeshPro.Editor.csproj" t="IncludeRecursive" />
