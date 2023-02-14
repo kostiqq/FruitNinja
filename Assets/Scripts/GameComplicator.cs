@@ -14,12 +14,14 @@ public class GameComplicator : MonoBehaviour
 
     private float _timeSinceWaveComplexityGrowth;
     private float _timeSinceObjectComplexityGrowth;
-        
+    public float GetBombProb { get; private set; }
+
     public void Start()
     {
         _timeBetweenComplexityGrowth = complexityConfig.ComplexityCoefIncreaseTime;
         _complexityCoefficientGrowth = complexityConfig.ComplexityCoef;
         _timeBetweenObjectComplexityGrowth = complexityConfig.fruitComplexityGrowthTime;
+        GetBombProb = complexityConfig.BombsPerWavePerc;
     }
     
     public void Reset()

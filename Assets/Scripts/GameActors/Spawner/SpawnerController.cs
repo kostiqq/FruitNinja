@@ -15,7 +15,9 @@ namespace GameActors.Spawner
         [SerializeField] private GameComplicator _complicator;
         [SerializeField] private ObjectContainer activeObjects; 
         
-        private InteractableObjectsPool _pool;
+        private InteractableObjectsPool _fruitsPool;
+        private InteractableObjectsPool _bombsPool;
+        
         private float _waveCooldown;
         private float _cooldownBetweenFruitsSpawn;
         private int _minFruitCount;
@@ -25,7 +27,7 @@ namespace GameActors.Spawner
         
         [Inject] private InteractableObjectConfigHandler _objectConfigs;
         [Inject] private IGameFactory factory;
-
+        
         private void Awake()
         {
             if (Instance == null)
@@ -36,8 +38,8 @@ namespace GameActors.Spawner
         
         public void Start()
         {
-            _pool = new InteractableObjectsPool(transform, factory);
-            activeObjects.Pool = _pool;
+            _fruitsPool = new InteractableObjectsPool(transform, factory);
+            activeObjects.Pool = _fruitsPool;
             InitializeSpawnersPosition();
             InitializeComplexitySettings();
             StartCoroutine(SpawnCycle());
@@ -69,22 +71,44 @@ namespace GameActors.Spawner
 
         private IEnumerator SpawnWave()
         {
-            int objectsCount = GetRandomFruitCount();
+            int bombsCount = GetBombsWithProb();
+            int fruitCount = GetRandomFruitCount();
             SpawnZone selectedSpawnZone = GetRandomSpawnZone();
-            for(int i = 0; i < objectsCount; i++)
+            for(int i = 0; i < fruitCount; i++)
             {
                 Vector2 spawnPoint = selectedSpawnZone.GetPointAtSegment();
 
-                InteractableObject spawnedObject = _pool.GetFreeElement();
-                activeObjects.AddFruit(spawnedObject);
+                InteractableObject spawnedObject = _fruitsPool.GetFreeElement();
+                activeObjects.AddObject(spawnedObject);
                 
                 spawnedObject.Initialize(_objectConfigs.GetRandomFruitConfig());
                 spawnedObject.transform.position = spawnPoint;
                 spawnedObject.StartMoving(selectedSpawnZone.NormalWithRandomAngleOffset, selectedSpawnZone.GetRandomForce());
                 yield return new WaitForSeconds(_cooldownBetweenFruitsSpawn);
             }
+
+            for (int i = 0; i < bombsCount; i++)
+            {
+                Vector2 spawnPoint = selectedSpawnZone.GetPointAtSegment();
+                InteractableObject bomb = _bombsPool.GetFreeElement();
+                activeObjects.AddObject(bomb);
+                
+                bomb.Initialize(_objectConfigs.GetBombConfig());
+                bomb.transform.position = spawnPoint;
+                bomb.StartMoving(selectedSpawnZone.NormalWithRandomAngleOffset, selectedSpawnZone.GetRandomForce());
+                yield return new WaitForSeconds(_cooldownBetweenFruitsSpawn);
+            }
         }
-        
+
+            //todo calculate bombs count
+        private int GetBombsWithProb()
+        {
+            if (Random.value < _complicator.GetBombProb)
+                return 1;
+
+            return 0;
+        }
+
         private int GetRandomFruitCount()
         {
             int complexityCoef = _complicator.CurrentObjectComplexityCoefficient;

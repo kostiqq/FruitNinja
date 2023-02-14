@@ -17,7 +17,7 @@ public class ObjectContainer : MonoBehaviour
     
     public int getObjectsCount => _objects.Count;
 
-    public void AddFruit(InteractableObject newObj)
+    public void AddObject(InteractableObject newObj)
     {
         if(newObj is Fruit)
             _fruits.Add(newObj);
