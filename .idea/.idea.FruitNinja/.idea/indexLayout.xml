@@ -3,6 +3,7 @@
   <component name="ContentModelUserStore">
     <attachedFolders />
     <explicitIncludes>
+      <Path>Assets</Path>
       <Path>Library/PackageCache/com.unity.2d.sprite@1.0.0</Path>
       <Path>Library/PackageCache/com.unity.device-simulator@3.1.0-preview</Path>
       <Path>Library/PackageCache/com.unity.ext.nunit@1.0.6</Path>
@@ -49,6 +50,7 @@
     <explicitExcludes>
       <Path>.git</Path>
       <Path>.idea</Path>
+      <Path>Library</Path>
       <Path>Logs</Path>
       <Path>Temp</Path>
       <Path>UserSettings</Path>

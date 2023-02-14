@@ -16,5 +16,12 @@ namespace StaticData
         public int MinFruitsCount;
         public int MaxFruitsCount;
         public float fruitComplexityGrowthTime;
+
+        [Space(5)] 
+        [Header("Bonuses")] 
+        [Range(0, 1)]
+        public float BombsPerWavePerc;
+        [Range(0,1)]
+        public float HeartPerWavePerc;
     }
 }
