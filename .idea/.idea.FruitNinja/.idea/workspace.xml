@@ -20,7 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="24b67b54-75fa-4580-865a-237b9a2d8147" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/SliceEffect.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/SliceEffect.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,7 +222,7 @@
       <workItem from="1676362686003" duration="18000" />
       <workItem from="1676373092366" duration="480000" />
       <workItem from="1676373918879" duration="11628000" />
-      <workItem from="1676392191881" duration="352000" />
+      <workItem from="1676392191881" duration="709000" />
     </task>
     <servers />
   </component>
