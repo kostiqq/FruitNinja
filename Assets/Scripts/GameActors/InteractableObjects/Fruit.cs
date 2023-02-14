@@ -37,7 +37,6 @@ namespace GameActors.InteractableObjects
         protected override void Interact()
         {
             effects.PlayEffects(_points);
-            //visability.IsEnbled = false;
             pointIncreaser.IncreasePoints();
             ClearState();
             gameObject.SetActive(false);

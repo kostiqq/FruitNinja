@@ -10,22 +10,24 @@ namespace GameActors.InteractableObjects
     [RequireComponent(typeof(Renderer))]
     [RequireComponent(typeof(ColliderComponent))]    
     [RequireComponent(typeof(Visability))]
+    [RequireComponent(typeof(HealthAffector))]
     public class BonusLife : InteractableObject
     {
         [SerializeField] private Effects effects;
+        [SerializeField] private HealthAffector healthAffector;
 
         private int _points;
         
         public void Construct(ProgressService progress)
         {
-            //pointIncreaser.Construct(progress);
+            healthAffector.Construct(progress);
         }
 
         public override void Initialize(InteractableObjectConfig objectConfig)
         {
             base.Initialize(objectConfig);
             effects.Construct(objectConfig.FruitEffectSprite, objectConfig.EffectColor, objectConfig.points);
-            //visability.OnFruitOutOfScreen += pointIncreaser.RemoveHealth;
+            //visability.OnFruitOutOfScreen += game.RemoveHealth;
             visability.IsEnbled = true;
         }
         

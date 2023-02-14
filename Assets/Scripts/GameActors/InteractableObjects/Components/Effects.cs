@@ -28,7 +28,9 @@ namespace GameActors.InteractableObjects
             var effect = Instantiate(sliceEffectPrefab);
             effect.startColor = _effectColor;
             effect.transform.position = transform.position;
-            CreatePointsLabel(points);
+            
+            if(points != 0)
+                CreatePointsLabel(points);
         }
         
         private void CreateCutParticle()

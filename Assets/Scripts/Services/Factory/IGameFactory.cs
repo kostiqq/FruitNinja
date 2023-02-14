@@ -11,5 +11,9 @@ namespace Services.Factory
         public Fruit CreateFruit(Transform container);
 
         public Slice CreateSlice(Transform container);
+
+        public Bomb CreateBomb(Transform container);
+
+        public BonusLife CreateBonusLife(Transform container);
     }
 }

@@ -1059,6 +1059,7 @@
             <e p="FruitScore.cs" t="Include" />
           </e>
           <e p="GameActors" t="Include">
+            <e p="BlastWave.cs" t="Include" />
             <e p="GameState.cs" t="Include" />
             <e p="InteractableObjects" t="Include">
               <e p="Bomb.cs" t="Include" />
@@ -1067,6 +1068,7 @@
                 <e p="Animator2d.cs" t="Include" />
                 <e p="ColliderComponent.cs" t="Include" />
                 <e p="Effects.cs" t="Include" />
+                <e p="HealthAffector.cs" t="Include" />
                 <e p="Physic.cs" t="Include" />
                 <e p="PointerIncreaser.cs" t="Include" />
                 <e p="Renderer.cs" t="Include" />
@@ -1111,6 +1113,7 @@
           <e p="InteractableObjectConfigHandler.cs" t="Include" />
           <e p="InteractableObjectsPool.cs" t="Include" />
           <e p="ObjectContainer.cs" t="Include" />
+          <e p="ObjectPool.cs" t="Include" />
           <e p="ScriptableObjects" t="Include">
             <e p="GameComplexity.cs" t="Include" />
             <e p="InputConfig.cs" t="Include" />
@@ -1137,6 +1140,7 @@
               <e p="IServiceLocator.cs" t="Include" />
               <e p="ServiceLocator.cs" t="Include" />
             </e>
+            <e p="TimeScaler.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
             <e p="GameView" t="Include">
