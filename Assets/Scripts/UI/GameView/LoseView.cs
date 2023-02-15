@@ -8,8 +8,8 @@ using UnityEngine.UI;
 
 public class LoseView : MonoBehaviour
 {
-    [SerializeField] private Button RestartButton;
-    [SerializeField] private Button menuButton;
+    [SerializeField] private ButtonAnimator RestartButton;
+    [SerializeField] private ButtonAnimator menuButton;
     [SerializeField] private ScoreText bestScore;
     [SerializeField] private ScoreText sessionScore;
     
@@ -21,8 +21,8 @@ public class LoseView : MonoBehaviour
     {
         bestScore.Initialize(_progress.Score.HighScore);
         sessionScore.Initialize(_progress.Score.CurrentScore);
-        RestartButton.onClick.AddListener(Restart);
-        menuButton.onClick.AddListener(LoadMenuScene);
+        RestartButton.OnTouchPerformed += Restart;
+        menuButton.OnTouchPerformed += LoadMenuScene;
     }
 
     private void LoadMenuScene()

@@ -26,7 +26,7 @@ public class ScoreView : MonoBehaviour
         _progress.OnNewHighScore += UpdateBestScore;
     }
 
-    private void OnDestroy()
+    private void OnDisable()
     {
         _progress.OnScoreIncreased -= UpdateCurrentScore;
         _progress.OnNewHighScore -= UpdateBestScore;

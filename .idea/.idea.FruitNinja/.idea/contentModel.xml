@@ -7,6 +7,9 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.Player.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Animations" t="Include">
+          <e p="HeartUI" t="Include" />
+        </e>
         <e p="Data" t="Include">
           <e p="ObjectConfigs" t="Include" />
         </e>
@@ -1155,6 +1158,7 @@
             <e p="TimeScaler.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
+            <e p="ButtonAnimator.cs" t="Include" />
             <e p="GameView" t="Include">
               <e p="ComboText.cs" t="Include" />
               <e p="GameView.cs" t="Include" />

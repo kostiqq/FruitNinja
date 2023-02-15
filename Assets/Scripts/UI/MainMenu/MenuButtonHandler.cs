@@ -5,15 +5,15 @@ using UnityEngine.UI;
 
 public class MenuButtonHandler : MonoBehaviour
 {
-    [SerializeField] private Button startGame;
-    [SerializeField] private Button exitGame;
+    [SerializeField] private ButtonAnimator startGame;
+    [SerializeField] private ButtonAnimator exitGame;
     [SerializeField] private SceneConfig sceneConfig;
     [SerializeField] private MainMenuAnimator animator;
 
     private void Awake()
     {
-        startGame.onClick.AddListener(StartGame);
-        exitGame.onClick.AddListener(ExitGame);
+        startGame.OnTouchPerformed += StartGame;
+        exitGame.OnTouchPerformed += ExitGame;
     }
 
     private void ExitGame()=>

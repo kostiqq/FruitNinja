@@ -139,6 +139,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21f7742038b7f634089b303d72191106, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &273067561 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7123359678776436017, guid: 397a540c490845247b91b2b05de66741, type: 3}
+  m_PrefabInstance: {fileID: 8468498211071480569}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &273067563 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7123359678776436019, guid: 397a540c490845247b91b2b05de66741, type: 3}
+  m_PrefabInstance: {fileID: 8468498211071480569}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273067561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &273067566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273067561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30746db3ac5a549bfbb323031093676d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btnImage: {fileID: 273067563}
+  buttonSprite: {fileID: 21300000, guid: 1683d0f08c2cd454aa1c4bf59c873936, type: 3}
+  pressedSprite: {fileID: 21300000, guid: eb168ca8c7e7d4ad19431c39286072a5, type: 3}
 --- !u!1 &700111590
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,6 +273,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21f7742038b7f634089b303d72191106, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2053234683 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7123359677808786870, guid: 397a540c490845247b91b2b05de66741, type: 3}
+  m_PrefabInstance: {fileID: 8468498211071480569}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2053234685 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7123359677808786864, guid: 397a540c490845247b91b2b05de66741, type: 3}
+  m_PrefabInstance: {fileID: 8468498211071480569}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053234683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2053234688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053234683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30746db3ac5a549bfbb323031093676d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btnImage: {fileID: 2053234685}
+  buttonSprite: {fileID: 21300000, guid: 33fb99f4b5dc24410815f0b07a0c9a3e, type: 3}
+  pressedSprite: {fileID: 21300000, guid: 85aceeb1d7f814de0b583431b38a7411, type: 3}
 --- !u!1001 &594798951304433574
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1833,7 +1895,35 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1217843470, guid: 397a540c490845247b91b2b05de66741, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4704696896394920596, guid: 397a540c490845247b91b2b05de66741, type: 3}
+      propertyPath: m_Colors.m_PressedColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4704696896394920596, guid: 397a540c490845247b91b2b05de66741, type: 3}
+      propertyPath: m_Colors.m_PressedColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4704696896394920596, guid: 397a540c490845247b91b2b05de66741, type: 3}
+      propertyPath: m_Colors.m_PressedColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4704696896917967091, guid: 397a540c490845247b91b2b05de66741, type: 3}
+      propertyPath: m_Colors.m_PressedColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4704696896917967091, guid: 397a540c490845247b91b2b05de66741, type: 3}
+      propertyPath: m_Colors.m_PressedColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4704696896917967091, guid: 397a540c490845247b91b2b05de66741, type: 3}
+      propertyPath: m_Colors.m_PressedColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4704696897030925033, guid: 397a540c490845247b91b2b05de66741, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5466298263975201975, guid: 397a540c490845247b91b2b05de66741, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1935,5 +2025,13 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -69.8999
       objectReference: {fileID: 0}
+    - target: {fileID: 6046197080384365443, guid: 397a540c490845247b91b2b05de66741, type: 3}
+      propertyPath: menuButton
+      value: 
+      objectReference: {fileID: 273067566}
+    - target: {fileID: 6046197080384365443, guid: 397a540c490845247b91b2b05de66741, type: 3}
+      propertyPath: RestartButton
+      value: 
+      objectReference: {fileID: 2053234688}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 397a540c490845247b91b2b05de66741, type: 3}

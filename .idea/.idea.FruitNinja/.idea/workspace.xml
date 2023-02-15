@@ -20,16 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="24b67b54-75fa-4580-865a-237b9a2d8147" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/HeartUI/DestroyAnimation.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/HeartUI/DestroyAnimation.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/HeartUI/HeartUIAnimator.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/HeartUI/HeartUIAnimator.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/BlastConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/BlastConfig.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/ComplexityConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/ComplexityConfig.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/InteractableObjects/BonusLife.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/InteractableObjects/BonusLife.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Heart.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Heart.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Sprites/MainMenu/ExitBtn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Sprites/MainMenu/ExitBtn.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Sprites/MainMenu/StartGameBtn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Sprites/MainMenu/StartGameBtn.png.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/GameView/Heart.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/GameView/Heart.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/GameView/LoseView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/GameView/LoseView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/GameView/ScoreView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/GameView/ScoreView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MainMenu/MenuButtonHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MainMenu/MenuButtonHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,6 +109,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/SceneConfig.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/InputConfig.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/ButtonAnimator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data/Player.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/HealthAffector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/GameComplexity.cs" root0="FORCE_HIGHLIGHTING" />
@@ -133,10 +137,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/GameView/GameView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/GameView/LoseView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/GameView/HealthView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Bootstrapper.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/GameState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/InteractableObjectConfig.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Slice.cs" />
@@ -184,6 +184,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/InteractableObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/BonusLife.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/GameView/Heart.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/GameView/ScoreView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/GameView/LoseView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/MainMenu/MenuButtonHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/ButtonAnimator.cs" />
       </list>
     </option>
   </component>
@@ -245,7 +249,7 @@
       <workItem from="1676373092366" duration="480000" />
       <workItem from="1676373918879" duration="11628000" />
       <workItem from="1676392191881" duration="10786000" />
-      <workItem from="1676483943603" duration="6042000" />
+      <workItem from="1676483943603" duration="8114000" />
     </task>
     <servers />
   </component>
