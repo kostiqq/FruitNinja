@@ -7,6 +7,7 @@ namespace StaticData
     {
         public Sprite FruitSprite;
         public Texture FruitEffectSprite;
+        public ParticleSystem sliceEffect;
         public bool isHaveShadow;
         public int points;
         public Color EffectColor;

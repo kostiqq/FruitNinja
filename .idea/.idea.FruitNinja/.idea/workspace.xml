@@ -21,10 +21,19 @@
   <component name="ChangeListManager">
     <list default="true" id="24b67b54-75fa-4580-865a-237b9a2d8147" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/InputConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/InputConfig.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/GameView/LoseView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/GameView/LoseView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/ObjectConfigs/Coconut.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/ObjectConfigs/Coconut.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/ObjectConfigs/Figs.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/ObjectConfigs/Figs.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/ObjectConfigs/Lemon.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/ObjectConfigs/Lemon.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/ObjectConfigs/Mango.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/ObjectConfigs/Mango.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/ObjectConfigs/Papaya.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/ObjectConfigs/Papaya.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/ObjectConfigs/Pear.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/ObjectConfigs/Pear.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/ObjectConfigs/Pomegranate.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/ObjectConfigs/Pomegranate.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/ObjectConfigs/Watermelon.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/ObjectConfigs/Watermelon.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Effects/CutEffect.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Effects/CutEffect.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Effects.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Effects.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Fruit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Fruit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/InteractableObjectConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/InteractableObjectConfig.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +84,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/CutterService/CutterService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/InteractableObjectConfigHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Effects/FruitScore.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/GameView/Heart.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/GameView/HealthView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/InteractableObject.cs" root0="FORCE_HIGHLIGHTING" />
@@ -83,6 +93,7 @@
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Fruit.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameInput/InputHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Animator2d.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/ColliderComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Pool/BonusLifePool.cs" root0="FORCE_HIGHLIGHTING" />
@@ -96,6 +107,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/BlastWave.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Shadow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame1 (Beginner)/Scripts/Installers/GameInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/MainMenu/MainMenuView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/SceneConfig.cs" root0="FORCE_HIGHLIGHTING" />
@@ -130,7 +142,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/GameState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/InteractableObjectConfig.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Slice.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Visability.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Effects/FruitScore.cs" />
@@ -160,7 +171,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/CutterService/CutterService.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/BlastWave.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/PointerIncreaser.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Effects.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/IComboTimer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/ComboTimer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/GameView/ComboText.cs" />
@@ -172,7 +182,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Installers/InteractableObjectConfigInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/Factory/GameFactory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Bomb.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Fruit.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/InteractableObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/BonusLife.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/GameView/Heart.cs" />
@@ -180,6 +189,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/MainMenu/MenuButtonHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/ButtonAnimator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/GameView/LoseView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/InteractableObjectConfig.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Fruit.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Effects.cs" />
       </list>
     </option>
   </component>
@@ -271,10 +283,10 @@
     </state>
     <state x="634" y="131" key="RiderGenerateDialog/0.0.1600.860@0.0.1600.860" timestamp="1675788977315" />
     <state x="761" y="186" key="RiderGenerateDialog/0.25.1920.1055@0.25.1920.1055" timestamp="1676376999849" />
-    <state width="600" height="428" key="javadoc.popup" timestamp="1676493247621">
+    <state width="600" height="428" key="javadoc.popup" timestamp="1676501414613">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
-    <state width="600" height="428" key="javadoc.popup/0.25.1920.1055@0.25.1920.1055" timestamp="1676493247621" />
+    <state width="600" height="428" key="javadoc.popup/0.25.1920.1055@0.25.1920.1055" timestamp="1676501414613" />
     <state x="623" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1676385705338">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>

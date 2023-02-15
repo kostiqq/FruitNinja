@@ -12,10 +12,11 @@ namespace GameActors.InteractableObjects
         private Texture _particleTexture;
         private Color _effectColor;
 
-        public void Construct(Texture particleTexture, Color effectColor)
+        public void Construct(Texture particleTexture, Color effectColor, ParticleSystem objectConfigSliceEffect = null)
         {
             _effectColor = effectColor;
             _particleTexture = particleTexture;
+            sliceEffectPrefab = objectConfigSliceEffect;
         }
         
         public void PlayEffects(int points)
@@ -26,7 +27,6 @@ namespace GameActors.InteractableObjects
             if (sliceEffectPrefab != null)
             {
                 var effect = Instantiate(sliceEffectPrefab);
-                effect.startColor = _effectColor;
                 effect.transform.position = transform.position;
             }
             

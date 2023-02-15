@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FruitSprite: {fileID: 21300000, guid: 252011402ccac45f4889bc0b6e9a46af, type: 3}
   FruitEffectSprite: {fileID: 2800000, guid: 2dae970273d3b314cbd20cc9efda2bdd, type: 3}
+  sliceEffect: {fileID: 7941203381880807411, guid: cf7c24eea432f4a4981d6a8aabd8ce4a, type: 3}
   isHaveShadow: 1
   points: 30
   EffectColor: {r: 1, g: 0.82417583, b: 0, a: 1}
