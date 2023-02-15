@@ -42,6 +42,7 @@ namespace GameActors.InteractableObjects
 
         protected override void ClearState()
         {
+            
             visability.IsEnbled = false;
             base.ClearState();
         }

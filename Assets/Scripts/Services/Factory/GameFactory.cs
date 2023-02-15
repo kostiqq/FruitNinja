@@ -44,14 +44,18 @@ namespace Services.Factory
 
         public Bomb CreateBomb(Transform container)
         {
-            var bomb = Object.Instantiate(_bombPrefab);
+            var bomb = Object.Instantiate(_bombPrefab, container);
             bomb.Construct(_progressService);
             return bomb;
             //OnInteractableObjectCreate?.Invoke(bomb);
         }
 
-
-        public BonusLife CreateBonusLife(Transform container)=>
-            Object.Instantiate(_bonusLifePrefab);
+        public BonusLife CreateBonusLife(Transform container)
+        {
+            var bonusLife = Object.Instantiate(_bonusLifePrefab, container);
+            bonusLife.Construct(_progressService);
+            return bonusLife;
+        }
+            
     }
 }

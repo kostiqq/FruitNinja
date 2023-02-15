@@ -15,6 +15,7 @@ namespace GameActors.InteractableObjects
     {
         [SerializeField] private Effects effects;
         [SerializeField] private HealthAffector healthAffector;
+        [SerializeField] private float forceMultiplyer = 1.5f;
 
         private int _points;
         
@@ -32,6 +33,7 @@ namespace GameActors.InteractableObjects
         
         protected override void Interact()
         {
+            healthAffector.UpdateHealth();
             effects.PlayEffects(_points);
             ClearState();
             gameObject.SetActive(false);
@@ -41,6 +43,11 @@ namespace GameActors.InteractableObjects
         {
             visability.IsEnbled = false;
             base.ClearState();
+        }
+
+        public override void StartMoving(Vector3 direction, float force)
+        {
+            base.StartMoving(direction, force + forceMultiplyer);
         }
     }
 }
