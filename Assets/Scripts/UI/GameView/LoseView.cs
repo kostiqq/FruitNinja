@@ -4,7 +4,7 @@ using Services.Progress;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Zenject;
-using UnityEngine.UI;
+using System.Collections;
 
 public class LoseView : MonoBehaviour
 {
@@ -12,6 +12,7 @@ public class LoseView : MonoBehaviour
     [SerializeField] private ButtonAnimator menuButton;
     [SerializeField] private ScoreText bestScore;
     [SerializeField] private ScoreText sessionScore;
+    [SerializeField] private CanvasGroup aspectRaito;
     
     [Inject] private ProgressService _progress;
 
@@ -28,7 +29,12 @@ public class LoseView : MonoBehaviour
     private void LoadMenuScene()
     {
         _progress.ResetSessionData();
-        SceneManager.LoadScene(0);
+        SceneTranslation();
+    }
+
+    private void SceneTranslation()
+    {
+        aspectRaito.DOFade(1, 1f).OnComplete(()=>SceneManager.LoadScene(0));
     }
 
     private void Restart()
