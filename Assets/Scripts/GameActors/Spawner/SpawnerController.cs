@@ -19,6 +19,7 @@ namespace GameActors.Spawner
         
         private FruitPool _fruitsPool;
         private BombsPool _bombsPool;
+        private BonusLifePool _bonusLifePool;
         
         private float _waveCooldown;
         private float _cooldownBetweenFruitsSpawn;
@@ -40,11 +41,14 @@ namespace GameActors.Spawner
         
         public void Start()
         {
-            _fruitsPool = new FruitPool(transform, factory);
-            _bombsPool = new BombsPool(transform, factory);
-            
+            _fruitsPool = new FruitPool(new GameObject("Fruits").transform, factory);
+            _bombsPool = new BombsPool(new GameObject("Bombs").transform, factory);
+            _bonusLifePool = new BonusLifePool(new GameObject("BonusLife").transform, factory);
+                
             activeObjects.FruitPool = _fruitsPool;
             activeObjects.BombsPool = _bombsPool;
+            activeObjects.BonusLifePool = _bonusLifePool;
+            
             InitializeSpawnersPosition();
             InitializeComplexitySettings();
             StartCoroutine(SpawnCycle());
@@ -77,6 +81,7 @@ namespace GameActors.Spawner
         private IEnumerator SpawnWave()
         {
             int bombsCount = GetBombsWithProb();
+            int bonusLifesCount = GetBonusLifeWithProb();
             int fruitCount = GetRandomFruitCount();
             SpawnZone selectedSpawnZone = GetRandomSpawnZone();
             
@@ -104,6 +109,28 @@ namespace GameActors.Spawner
                 spawnedObject.StartMoving(selectedSpawnZone.NormalWithRandomAngleOffset, selectedSpawnZone.GetRandomForce());
                 yield return new WaitForSeconds(_cooldownBetweenFruitsSpawn);
             }
+            
+            for(int i = 0; i < bonusLifesCount; i++)
+            {
+                Vector2 spawnPoint = selectedSpawnZone.GetPointAtSegment();
+
+                BonusLife spawnedObject = _bonusLifePool.GetFreeElement();
+                activeObjects.AddBonusLife(spawnedObject);
+                
+                spawnedObject.Initialize(_objectConfigs.GetBonusLifeConfig());
+                spawnedObject.transform.position = spawnPoint;
+                spawnedObject.StartMoving(selectedSpawnZone.NormalWithRandomAngleOffset, selectedSpawnZone.GetRandomForce());
+                yield return new WaitForSeconds(_cooldownBetweenFruitsSpawn);
+            }
+        }
+
+        //todo calculate lifes count
+        private int GetBonusLifeWithProb()
+        {
+            if (Random.value < _complicator.GetBonusLifeProb)
+                return 1;
+
+            return 0;
         }
 
         //todo calculate bombs count

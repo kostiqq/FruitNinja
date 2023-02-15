@@ -13,6 +13,7 @@ public class ObjectContainer : MonoBehaviour
 
     public FruitPool FruitPool;
     public BombsPool BombsPool;
+    public BonusLifePool BonusLifePool;
 
     public int getObjectsCount => _objects.Count;
 
@@ -34,6 +35,7 @@ public class ObjectContainer : MonoBehaviour
         _objects.Remove(objToRemove);
     }
 
+    //todo separate container for all object types
     public void AddBomb(Bomb bomb)
     {
         _objects.Add(bomb);
@@ -46,5 +48,19 @@ public class ObjectContainer : MonoBehaviour
         _objects.Remove(bomb);
         BombsPool.Return(bomb as Bomb);
         bomb.OnObjectHide -= RemoveBomb;
+    }
+
+    public void AddBonusLife(InteractableObject bonusLife)
+    {
+        _objects.Add(bonusLife);
+        _collisionTracker.AddColliderObject(bonusLife);
+        bonusLife.OnObjectHide += RemoveBonusLife;
+    }
+
+    private void RemoveBonusLife(InteractableObject bonusLife)
+    {
+        _objects.Remove(bonusLife);
+        BonusLifePool.Return(bonusLife as BonusLife);
+        bonusLife.OnObjectHide -= RemoveBomb;
     }
 }

@@ -20,8 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="24b67b54-75fa-4580-865a-237b9a2d8147" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Pool/BonusLifePool.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Pool/BonusLifePool.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/ComplexityConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/ComplexityConfig.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/ObjectConfigs/BonusLife.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/ObjectConfigs/BonusLife.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameActors/Spawner/SpawnerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameActors/Spawner/SpawnerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameComplicator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameComplicator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Installers/InteractableObjectConfigInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Installers/InteractableObjectConfigInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InteractableObjectConfigHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InteractableObjectConfigHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ObjectContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ObjectContainer.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,8 +121,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/GameView/ScoreView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/GameView/LoseViewButtonsHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/Progress/ProgressService.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/GameView/GameView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/GameView/LoseView.cs" />
@@ -142,7 +146,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/ITimeScaler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/TimeScaler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/GameComplexity.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameComplicator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Pool/InteractableObjectsPool.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Pool/FruitPool.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Pool/BombsPool.cs" />
@@ -152,9 +155,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/ColliderComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/CollisionTracker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Pool/ObjectPool.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/Spawner/SpawnerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/CutterService/CutterService.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ObjectContainer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/BlastWave.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/Factory/GameFactory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/PointerIncreaser.cs" />
@@ -166,6 +167,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/ComboTimer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/GameView/ComboText.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Pool/BonusLifePool.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameComplicator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/Spawner/SpawnerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/InteractableObjectConfigHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ObjectContainer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Installers/InteractableObjectConfigInstaller.cs" />
       </list>
     </option>
   </component>
@@ -227,7 +233,7 @@
       <workItem from="1676373092366" duration="480000" />
       <workItem from="1676373918879" duration="11628000" />
       <workItem from="1676392191881" duration="10786000" />
-      <workItem from="1676483943603" duration="580000" />
+      <workItem from="1676483943603" duration="2243000" />
     </task>
     <servers />
   </component>

@@ -2183,6 +2183,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c48c92b19e428e74bb296917adeb6345, type: 2}
   - {fileID: 11400000, guid: 46d15ac6cebe157459d56940068919a6, type: 2}
   bombConfig: {fileID: 11400000, guid: 5fecbed69da7b48388de8f554e8ce585, type: 2}
+  bonusLifeConfig: {fileID: 11400000, guid: a628fafc0ee5941199265e8c7d803504, type: 2}
 --- !u!1 &2769237085216006243
 GameObject:
   m_ObjectHideFlags: 0
