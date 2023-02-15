@@ -1116,6 +1116,7 @@
           <e p="ObjectContainer.cs" t="Include" />
           <e p="Pool" t="Include">
             <e p="BombsPool.cs" t="Include" />
+            <e p="BonusLifePool.cs" t="Include" />
             <e p="FruitPool.cs" t="Include" />
             <e p="ObjectPool.cs" t="Include" />
           </e>
