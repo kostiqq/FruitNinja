@@ -18,12 +18,18 @@ public class LoseView : MonoBehaviour
 
     public Action OnRestart;
     
-    private void Start()
+    private void OnEnable()
     {
         bestScore.Initialize(_progress.Score.HighScore);
         sessionScore.Initialize(_progress.Score.CurrentScore);
         RestartButton.OnTouchPerformed += Restart;
         menuButton.OnTouchPerformed += LoadMenuScene;
+    }
+
+    private void OnDisable()
+    {
+        RestartButton.OnTouchPerformed -= Restart;
+        menuButton.OnTouchPerformed -= LoadMenuScene;
     }
 
     private void LoadMenuScene()
