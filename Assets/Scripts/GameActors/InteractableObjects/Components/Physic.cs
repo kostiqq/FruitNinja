@@ -4,6 +4,7 @@ namespace GameActors.InteractableObjects.Components
 {
     public class Physic : MonoBehaviour
     {
+        [SerializeField] private float speed = 1.1f;
         private float Gravity = -9.81f;
         private Vector3 _direction;
 
@@ -21,10 +22,10 @@ namespace GameActors.InteractableObjects.Components
         private void Update()
         {
             UseGravity();
-            transform.position += _direction * Time.deltaTime;
+            transform.position += _direction * (Time.deltaTime * speed);
         }
 
         private void UseGravity()=>
-            _direction += Vector3.up * (Gravity * Time.deltaTime);
+            _direction += Vector3.up * (Gravity * Time.deltaTime * speed);
     }
 }

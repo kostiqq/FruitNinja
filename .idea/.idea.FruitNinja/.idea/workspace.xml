@@ -20,7 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="24b67b54-75fa-4580-865a-237b9a2d8147" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/GameView/Heart.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/GameView/Heart.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameActors/GameState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameActors/GameState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Physic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Physic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameInput/InputHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameInput/InputHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/GameView/HealthView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/GameView/HealthView.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +154,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Services/Factory/IGameFactory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/TimeScalerService.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/BlastConfig.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Installers/ComboTimerInstaller.cs" />
@@ -185,7 +188,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/BlastWave.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Utils/BackgroundScaler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/ComboTimer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Physic.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/GameView/ComboText.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ComboTimerConfig.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Bootstrapper.cs" />
@@ -196,11 +198,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Containers/ObjectContainer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/Spawner/SpawnerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/BonusLife.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/GameView/HealthView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameInput/InputTrail.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameInput/InputHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/CutterService/CutterService.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/GameView/Heart.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Physic.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameInput/InputHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/GameState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/GameView/HealthView.cs" />
       </list>
     </option>
   </component>
@@ -263,7 +267,7 @@
       <workItem from="1676373918879" duration="11628000" />
       <workItem from="1676392191881" duration="10786000" />
       <workItem from="1676483943603" duration="8114000" />
-      <workItem from="1676804979112" duration="15723000" />
+      <workItem from="1676804979112" duration="16646000" />
     </task>
     <servers />
   </component>

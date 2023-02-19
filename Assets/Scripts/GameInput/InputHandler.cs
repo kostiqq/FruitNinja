@@ -88,5 +88,11 @@ namespace GameInput
                 _inputState = InputState.Empty;
             }
         }
+
+        public void DisableInput()
+        {
+            OnTouchFinish?.Invoke();
+            _inputState = InputState.Empty;
+        }
     }
 }

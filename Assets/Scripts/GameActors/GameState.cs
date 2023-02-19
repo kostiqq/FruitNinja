@@ -44,7 +44,8 @@ public class GameState : MonoBehaviour
 
     private void RestartGame()
     {
-        input.enabled = true;
+        input.DisableInput();
+        input.enabled = false;
         SpawnerController.Instance.Restart();
         _gameView.ReInit();
     }
