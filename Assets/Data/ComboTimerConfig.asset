@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: ComboTimerConfig
   m_EditorClassIdentifier: 
   MaxCombo: 4
-  TimerInterval: 3
-  SliceCountToIncreaseCombo: 6
+  TimerInterval: 0.501
+  SliceCountToIncreaseCombo: 1

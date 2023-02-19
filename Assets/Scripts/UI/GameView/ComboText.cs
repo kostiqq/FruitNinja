@@ -21,7 +21,8 @@ public class ComboText : MonoBehaviour
 
     private void UpdateComboText(int combo, int fruits)
     {
-        fruitsCount.text =  fruits + fruitText;
+        string end = combo <= 4 ? "a" : "ов";
+        fruitsCount.text =  combo + fruitText + end;
         multiplyer.text = $"{combo}X";
         ShowAnimation();
     }

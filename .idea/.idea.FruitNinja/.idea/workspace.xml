@@ -21,7 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="24b67b54-75fa-4580-865a-237b9a2d8147" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/BackgroundScaler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/BackgroundScaler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/ComboTimerConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/ComboTimerConfig.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ComboTimerConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ComboTimerConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/ComboTimer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/ComboTimer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/GameView/ComboText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/GameView/ComboText.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +43,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/CollisionTracker.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/Factory/GameFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/ComboTimer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ObjectContainer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Infrastructure/ProjectConfig.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/GameView/ScoreText.cs" root0="FORCE_HIGHLIGHTING" />
@@ -59,6 +64,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Infrastructure/States/PlayModeState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/GameView/LoseView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ComboTimerConfig.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/Progress/ProgressService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Infrastructure/Bootstrapper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Infrastructure/Installers/ComboTimerInstaller.cs" root0="FORCE_HIGHLIGHTING" />
@@ -85,6 +91,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Renderer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Visability.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/BlastWave.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Shadow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame1 (Beginner)/Scripts/Installers/GameInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/MainMenu/MainMenuView.cs" root0="FORCE_HIGHLIGHTING" />
@@ -92,11 +99,13 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/InputConfig.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/ButtonAnimator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data/Player.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/HealthAffector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/GameComplexity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/TimeScaler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/BackgroundScaler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/AllServices.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/BlastConfig.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ProgressConfig.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/IService.cs" root0="FORCE_HIGHLIGHTING" />
@@ -127,8 +136,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/Factory/IGameFactory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/TimeScalerService.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/BlastConfig.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Physic.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ComboTimerConfig.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Installers/ComboTimerInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/ITimeScaler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/TimeScaler.cs" />
@@ -145,8 +152,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/CutterService/CutterService.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/PointerIncreaser.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/IComboTimer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Services/ComboTimer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/GameView/ComboText.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Pool/BonusLifePool.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameComplicator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/Spawner/SpawnerController.cs" />
@@ -168,6 +173,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Effects/GameTextMeshPro.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/BlastWave.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Utils/BackgroundScaler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ComboTimerConfig.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Services/ComboTimer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Physic.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/GameView/ComboText.cs" />
       </list>
     </option>
   </component>
@@ -230,7 +239,7 @@
       <workItem from="1676373918879" duration="11628000" />
       <workItem from="1676392191881" duration="10786000" />
       <workItem from="1676483943603" duration="8114000" />
-      <workItem from="1676804979112" duration="1408000" />
+      <workItem from="1676804979112" duration="3044000" />
     </task>
     <servers />
   </component>
@@ -260,10 +269,10 @@
     </state>
     <state x="634" y="131" key="RiderGenerateDialog/0.0.1600.860@0.0.1600.860" timestamp="1675788977315" />
     <state x="761" y="186" key="RiderGenerateDialog/0.25.1920.1055@0.25.1920.1055" timestamp="1676376999849" />
-    <state width="600" height="428" key="javadoc.popup" timestamp="1676501414613">
+    <state width="600" height="428" key="javadoc.popup" timestamp="1676807216184">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
-    <state width="600" height="428" key="javadoc.popup/0.25.1920.1055@0.25.1920.1055" timestamp="1676501414613" />
+    <state width="600" height="428" key="javadoc.popup/0.25.1920.1055@0.25.1920.1055" timestamp="1676807216184" />
     <state x="623" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1676385705338">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>

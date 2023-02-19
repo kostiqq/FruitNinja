@@ -8,10 +8,9 @@ namespace Services
     {
         private float _timerInterval;
         private int _maxComboMultiplyer;
-        private int _sliceCountToIncreaseCombo;
 
         private int _currentSlices;
-        private int _curentCombo = 1;
+        private int _curentCombo = 0;
 
         private float _currentTime;
 
@@ -19,8 +18,7 @@ namespace Services
         {
             _timerInterval = timerConfig.TimerInterval;
             _maxComboMultiplyer = timerConfig.MaxCombo;
-            _sliceCountToIncreaseCombo = timerConfig.SliceCountToIncreaseCombo;
-            
+
             _currentTime = Time.time;
         }
 
@@ -29,20 +27,19 @@ namespace Services
         public int GetCombo()
         {
             CheckTime();
-            
             _currentSlices++;
-
             UpdateCurrentCombo();
             return _curentCombo;
         }
 
         private void UpdateCurrentCombo()
         {
-            if (_currentSlices >= _sliceCountToIncreaseCombo && _curentCombo < _maxComboMultiplyer)
+            if (_curentCombo < _maxComboMultiplyer && _currentSlices > 0)
             {
-                _curentCombo++;
-                OnComboIncrease?.Invoke(_curentCombo, _currentSlices);
-                _currentSlices = 0;
+                _curentCombo++;                
+                _currentSlices++;
+                if(_curentCombo > 1)
+                    OnComboIncrease?.Invoke(_curentCombo, _currentSlices);
             }
         }
 
@@ -51,7 +48,7 @@ namespace Services
             if (_currentTime + _timerInterval <= Time.time)
             {
                 _currentTime = Time.time;
-                _curentCombo = 1;
+                _curentCombo = 0;
                 _currentSlices = 0;
             }
             else

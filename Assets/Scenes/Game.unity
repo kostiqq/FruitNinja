@@ -3265,6 +3265,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1217843472, guid: 397a540c490845247b91b2b05de66741, type: 3}
+      propertyPath: fruitText
+      value: "\u0444\u0440\u0443\u043A\u0442"
+      objectReference: {fileID: 0}
     - target: {fileID: 4704696896394920596, guid: 397a540c490845247b91b2b05de66741, type: 3}
       propertyPath: m_Colors.m_PressedColor.b
       value: 1

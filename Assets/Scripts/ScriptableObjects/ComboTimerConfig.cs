@@ -8,7 +8,7 @@ namespace ScriptableObjects
         [Range(1,4)]
         public int MaxCombo;
         
-        [Range(1, 10)]
+        [Range(0f, 1f)]
         public float TimerInterval;
         
         [Range(1, 10)]
