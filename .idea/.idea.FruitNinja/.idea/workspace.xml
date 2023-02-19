@@ -20,12 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="24b67b54-75fa-4580-865a-237b9a2d8147" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FruitNinja/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/ComboTimerConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/ComboTimerConfig.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ComboTimerConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ComboTimerConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/ComboTimer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/ComboTimer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/GameView/ComboText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/GameView/ComboText.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,10 +168,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Effects/GameTextMeshPro.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/BlastWave.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Utils/BackgroundScaler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ComboTimerConfig.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/ComboTimer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActors/InteractableObjects/Components/Physic.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/GameView/ComboText.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ComboTimerConfig.cs" />
       </list>
     </option>
   </component>
@@ -239,7 +234,7 @@
       <workItem from="1676373918879" duration="11628000" />
       <workItem from="1676392191881" duration="10786000" />
       <workItem from="1676483943603" duration="8114000" />
-      <workItem from="1676804979112" duration="3044000" />
+      <workItem from="1676804979112" duration="3179000" />
     </task>
     <servers />
   </component>

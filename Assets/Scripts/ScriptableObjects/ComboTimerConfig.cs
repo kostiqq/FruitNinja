@@ -10,8 +10,5 @@ namespace ScriptableObjects
         
         [Range(0f, 1f)]
         public float TimerInterval;
-        
-        [Range(1, 10)]
-        public int SliceCountToIncreaseCombo;
     }
 }
