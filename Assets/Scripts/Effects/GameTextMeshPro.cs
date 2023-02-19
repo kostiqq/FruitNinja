@@ -2,7 +2,7 @@ using DG.Tweening;
 using TMPro;
 using UnityEngine;
 
-public class FruitScore : MonoBehaviour
+public class GameTextMeshPro : MonoBehaviour
 {
     [SerializeField] private TextMeshPro textLabel;
     [SerializeField] private float flySpeed = 5f;

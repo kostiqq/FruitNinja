@@ -4,7 +4,7 @@ public class BackgroundScaler : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer _background;
     [SerializeField] private Camera _mainCamera;
-    
+
     private void Awake()
     {
         ScaleBgWithCameraSize();

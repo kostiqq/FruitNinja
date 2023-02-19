@@ -10,8 +10,13 @@ namespace Services.Factory.GameActors
     {
         [SerializeField] private ObjectContainer container;
         [SerializeField] private Camera gameCamera;
-        [SerializeField] private GameObject boomTextPrefab;
+        [SerializeField] private GameTextMeshPro boomTextPrefab;
         [SerializeField] private BlastConfig config;
+
+        [Header("Camera shaking params")] 
+        [SerializeField] private float duration;
+        [SerializeField] private float strength;
+        [SerializeField] private int vibrato;
         
         private float _blastStrength;
         private float _blastRadius;
@@ -30,8 +35,9 @@ namespace Services.Factory.GameActors
 
         private void PlayBlastAnimation(Vector3 initPosition)
         {
-            gameCamera.DOShakePosition(0.1f,0.1f, 10);
-            Instantiate(boomTextPrefab, initPosition, Quaternion.identity);
+            gameCamera.DOShakePosition(duration,strength, vibrato);
+            var boomText = Instantiate(boomTextPrefab, initPosition, Quaternion.identity).GetComponent<GameTextMeshPro>();
+            boomText.StartAnimation();
         }
 
         private void AddBlast(InteractableObject fruit, Vector3 initPosition)

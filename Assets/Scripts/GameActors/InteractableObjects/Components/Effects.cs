@@ -5,7 +5,7 @@ namespace GameActors.InteractableObjects
     public class Effects : MonoBehaviour
     {
         [SerializeField] private ParticleSystem cutEffectPrefab;
-        [SerializeField] private FruitScore pointsViewPrefab;
+        [SerializeField] private GameTextMeshPro pointsViewPrefab;
         [SerializeField] private ParticleSystem sliceEffectPrefab;
         
         private ParticleSystem _cutParticle;

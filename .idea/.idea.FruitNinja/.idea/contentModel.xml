@@ -1063,7 +1063,7 @@
             <e p="Score.cs" t="Include" />
           </e>
           <e p="Effects" t="Include">
-            <e p="FruitScore.cs" t="Include" />
+            <e p="GameTextMeshPro.cs" t="Include" />
           </e>
           <e p="GameActors" t="Include">
             <e p="BlastWave.cs" t="Include" />
