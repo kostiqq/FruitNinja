@@ -210,6 +210,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7245608385768639220, guid: eff6a304f0d21a04da31ce61b31588b6, type: 3}
   m_PrefabInstance: {fileID: 2769237084848051300}
   m_PrefabAsset: {fileID: 0}
+--- !u!96 &1398790887 stripped
+TrailRenderer:
+  m_CorrespondingSourceObject: {fileID: 7245608385768639218, guid: eff6a304f0d21a04da31ce61b31588b6, type: 3}
+  m_PrefabInstance: {fileID: 2769237084848051300}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1486832413 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7586939479691276681, guid: 225d3786675b849c6b8b110f1fb183ea, type: 3}
@@ -1138,8 +1143,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fb3ea8e3a38aea4da4fa2a72cf7bcf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bladeLength: 0.2
   _gameCamera: {fileID: 2769237084137359118}
   configsHandlerInputConfig: {fileID: 11400000, guid: abde895b5bf784946a21a01205acff24, type: 2}
+  trail: {fileID: 1398790887}
+  speed: 0
 --- !u!4 &2769237084392508538
 Transform:
   m_ObjectHideFlags: 0

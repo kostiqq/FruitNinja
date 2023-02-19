@@ -27,17 +27,18 @@ namespace Services.CutterService
 
             Vector2 normalizedBlade = normalized;
             
-            leftPart.AddForce(Rotate(normalizedBlade, -90f) + fruit.GetVelocity.normalized);
-            rightPart.AddForce(Rotate(normalizedBlade, 90f) + fruit.GetVelocity.normalized);
+            leftPart.AddForce(Rotate(normalizedBlade, 90f) + fruit.GetVelocity.normalized);
+            rightPart.AddForce(Rotate(normalizedBlade, -90f) + fruit.GetVelocity.normalized);
         }
 
         private Slice CreatePart(InteractableObject block, Rect textureRect, Vector2 texturePivot)
         {
             var part = _gameFactory.CreateSlice(null);
             part.transform.position = block.transform.position;
+            part.transform.rotation = block.transform.rotation;
             part.transform.localScale = block.transform.localScale;
 
-            part.SetSprite(Sprite.Create(block.GetSprite.texture, textureRect, texturePivot));
+            part.SetSprite(Sprite.Create(block.GetSprite.texture, textureRect, texturePivot, block.GetSprite.pixelsPerUnit));
 
             return part;
         }

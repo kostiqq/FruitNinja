@@ -15,18 +15,20 @@ public class InputTrail : MonoBehaviour
     {
         _trail.transform.SetParent(transform);
         HideTrail();
-        _inputHandler.OnSwipe += MoveTrail;
         _inputHandler.OnGetTouch += ShowTrail;
         _inputHandler.OnTouchFinish += HideTrail;
     }
 
     private void OnDestroy()
     {
-        _inputHandler.OnSwipe -= MoveTrail;
         _inputHandler.OnGetTouch -= ShowTrail;
         _inputHandler.OnTouchFinish -= HideTrail;
     }
-    
+
+    public void Update()
+    {
+        _trail.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+    }
 
     private void ShowTrail(Vector3 startPosition)
     {
