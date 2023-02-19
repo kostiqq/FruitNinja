@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Zenject;
 using System.Collections;
+using UnityEngine.EventSystems;
 
 public class LoseView : MonoBehaviour
 {
@@ -13,13 +14,15 @@ public class LoseView : MonoBehaviour
     [SerializeField] private ScoreText bestScore;
     [SerializeField] private ScoreText sessionScore;
     [SerializeField] private CanvasGroup aspectRaito;
-    
+    [SerializeField] private EventSystem eventSystem;
+
     [Inject] private ProgressService _progress;
 
     public Action OnRestart;
     
     private void OnEnable()
     {
+        eventSystem.enabled = true;
         bestScore.Initialize(_progress.Score.HighScore);
         sessionScore.Initialize(_progress.Score.CurrentScore);
         RestartButton.OnTouchPerformed += Restart;

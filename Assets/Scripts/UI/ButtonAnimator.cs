@@ -9,6 +9,7 @@ public class ButtonAnimator : MonoBehaviour, IPointerDownHandler, IPointerUpHand
     [SerializeField] private Image btnImage;
     [SerializeField] private Sprite buttonSprite;
     [SerializeField] private Sprite pressedSprite;
+    [SerializeField] private EventSystem eventSystem;
 
     public Action OnTouchPerformed;
     
@@ -23,5 +24,6 @@ public class ButtonAnimator : MonoBehaviour, IPointerDownHandler, IPointerUpHand
         btnImage.sprite = buttonSprite;
         transform.DOScale(Vector3.one, 0.2f);
         OnTouchPerformed?.Invoke();
+        eventSystem.enabled = false;
     }
 }

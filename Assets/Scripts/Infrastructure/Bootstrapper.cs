@@ -11,6 +11,12 @@ namespace Infrastructure
         private ServiceLocator<IService> _serviceLocator;
 
         private Game _game;
-        
+
+
+        public void Start()
+        {
+            Input.multiTouchEnabled = false;
+            Application.targetFrameRate = 60;
+        }
     }
 }
