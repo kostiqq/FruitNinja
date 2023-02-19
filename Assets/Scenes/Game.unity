@@ -510,6 +510,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _background: {fileID: 2769237083280838224}
   _mainCamera: {fileID: 2769237084137359118}
+  multiply: {x: 0.2, y: 0.2}
 --- !u!4 &2769237083280838227
 Transform:
   m_ObjectHideFlags: 0
@@ -1021,8 +1022,8 @@ MonoBehaviour:
   gameCamera: {fileID: 2769237084137359118}
   boomTextPrefab: {fileID: 1131262146, guid: 49236bf701700474d857b092827158b2, type: 3}
   config: {fileID: 11400000, guid: 55371ac666aa04daf9cffc1d3ff91063, type: 2}
-  duration: 0.2
-  strength: 1
+  duration: 0.3
+  strength: 0.3
   vibrato: 20
 --- !u!4 &2769237083936243201
 Transform:

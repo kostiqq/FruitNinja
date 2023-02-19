@@ -4,6 +4,7 @@ public class BackgroundScaler : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer _background;
     [SerializeField] private Camera _mainCamera;
+    [SerializeField] private Vector2 multiply;
 
     private void Awake()
     {
@@ -21,6 +22,8 @@ public class BackgroundScaler : MonoBehaviour
         
         scale.x *= cameraSize.x / spriteSize.x;
         scale.y *= cameraSize.y / spriteSize.y;
+        
+        scale += multiply;
         
         backgroundTransform.position = _mainCamera.transform.position;
         backgroundTransform.localScale = scale;
