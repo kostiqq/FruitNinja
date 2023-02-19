@@ -3,25 +3,31 @@ using System.Collections;
 
 namespace Services
 {
-    public class TimeScaler : MonoBehaviour, ITimeScaler
+    public class TimeScaler : MonoBehaviour
     {
-        public float TimeScale { get; private set; }
-        private float _freezeCoef;
-        private float _freezeLength;
+        public float TimeScale;
+        [SerializeField] private float _freezeCoef;
+        [SerializeField] private float _freezeLength;
         private bool _isFreeze;
-        
-        public TimeScaler(float freezeCoef, float freezeLength)
+
+        public static TimeScaler Instance;
+
+        public void Awake()
         {
-            _freezeCoef = freezeCoef;
-            _freezeLength = freezeLength;
+            if(Instance == null)
+                Instance = this;
+            else 
+                Destroy(gameObject);
+
             TimeScale = Time.deltaTime;
         }
-        
+
         public void FreezeBoard()
         {
             if (_isFreeze)
                 return;
-            
+
+            _isFreeze = true;
             TimeScale *= _freezeCoef;
             StartCoroutine(FreezeTimer());
         }

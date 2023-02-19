@@ -8,6 +8,7 @@ public class InteractableObjectConfigInstaller : MonoInstaller
     [SerializeField] private List<InteractableObjectConfig> fruitConfigs;
     [SerializeField] private InteractableObjectConfig bombConfig;
     [SerializeField] private InteractableObjectConfig bonusLifeConfig;
+    [SerializeField] private InteractableObjectConfig iceBlockConfig;
     
     public override void InstallBindings()
     {
@@ -15,6 +16,6 @@ public class InteractableObjectConfigInstaller : MonoInstaller
             Bind<InteractableObjectConfigHandler>().
             FromNew().
             AsSingle().
-            WithArguments(fruitConfigs.ToArray(), bombConfig, bonusLifeConfig);
+            WithArguments(fruitConfigs.ToArray(), bombConfig, bonusLifeConfig, iceBlockConfig);
     }
 }

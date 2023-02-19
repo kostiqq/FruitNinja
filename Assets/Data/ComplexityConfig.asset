@@ -20,4 +20,5 @@ MonoBehaviour:
   MaxFruitsCount: 3
   fruitComplexityGrowthTime: 20
   BombsPerWavePerc: 0.2
-  HeartPerWavePerc: 1
+  HeartPerWavePerc: 0.1
+  IceBlockProb: 0.1

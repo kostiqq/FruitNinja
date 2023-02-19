@@ -15,5 +15,7 @@ namespace Services.Factory
         public Bomb CreateBomb(Transform container);
 
         public BonusLife CreateBonusLife(Transform container);
+
+        public IceBlock CreateIceBlock(Transform container);
     }
 }

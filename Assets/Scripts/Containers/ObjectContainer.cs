@@ -14,6 +14,7 @@ public class ObjectContainer : MonoBehaviour
     public FruitPool FruitPool;
     public BombsPool BombsPool;
     public BonusLifePool BonusLifePool;
+    public IceBlockPool IceBloockPool;
 
     public int getObjectsCount => _objects.Count;
 
@@ -63,5 +64,19 @@ public class ObjectContainer : MonoBehaviour
         _objects.Remove(bonusLife);
         BonusLifePool.Return(bonusLife as BonusLife);
         bonusLife.OnObjectHide -= RemoveBonusLife;
+    }
+
+    public void AddIceBlock(IceBlock ice)
+    {
+        _objects.Add(ice);
+        _collisionTracker.AddColliderObject(ice);
+        ice.OnObjectHide += RemoveIce;
+    }
+
+    private void RemoveIce(InteractableObject ice)
+    {
+        ice.OnObjectHide -= RemoveIce;
+        IceBloockPool.Return(ice as IceBlock);
+        _objects.Remove(ice);
     }
 }

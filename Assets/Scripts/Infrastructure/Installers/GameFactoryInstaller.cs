@@ -9,6 +9,7 @@ public class GameFactoryInstaller : MonoInstaller<GameFactoryInstaller>
     [SerializeField] private Slice slicePrefab;
     [SerializeField] private Bomb bomb;
     [SerializeField] private BonusLife bonusLife;
+    [SerializeField] private IceBlock iceBlock;
     
     public override void InstallBindings()
     {
@@ -16,6 +17,6 @@ public class GameFactoryInstaller : MonoInstaller<GameFactoryInstaller>
             Bind<IGameFactory>().
             To<GameFactory>().
             AsSingle().
-            WithArguments(fruitPrefab, slicePrefab, bomb, bonusLife).NonLazy();
+            WithArguments(fruitPrefab, slicePrefab, bomb, bonusLife, iceBlock).NonLazy();
     }
 }

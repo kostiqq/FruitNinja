@@ -1,3 +1,4 @@
+using Services;
 using UnityEngine;
 
 namespace GameActors.InteractableObjects.Components
@@ -7,6 +8,13 @@ namespace GameActors.InteractableObjects.Components
         [SerializeField] private float speed = 1.1f;
         private float Gravity = -9.81f;
         private Vector3 _direction;
+
+        private TimeScaler gameTime;
+        
+        private void Start()
+        {
+            gameTime = TimeScaler.Instance;
+        }
 
         public Vector3 Velocity => _direction;
 
@@ -22,10 +30,10 @@ namespace GameActors.InteractableObjects.Components
         private void Update()
         {
             UseGravity();
-            transform.position += _direction * (Time.deltaTime * speed);
+            transform.position += _direction * (gameTime.TimeScale * speed);
         }
 
         private void UseGravity()=>
-            _direction += Vector3.up * (Gravity * Time.deltaTime * speed);
+            _direction += Vector3.up * (Gravity * gameTime.TimeScale * speed);
     }
 }

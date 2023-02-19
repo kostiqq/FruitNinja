@@ -17,16 +17,18 @@ namespace Services.Factory
         private Slice _slicePrefab;
         private Bomb _bombPrefab;
         private BonusLife _bonusLifePrefab;
+        private IceBlock _iceBlock;
         
         [Inject] private ProgressService _progressService;
         [Inject] private IComboTimer _comboTimer;
 
-        public GameFactory(Fruit fruitPrefab, Slice slicePrefab, Bomb bomb, BonusLife bonusLife)
+        public GameFactory(Fruit fruitPrefab, Slice slicePrefab, Bomb bomb, BonusLife bonusLife, IceBlock iceBlock)
         {
             _fruitPrefab = fruitPrefab;
             _slicePrefab = slicePrefab;
             _bombPrefab = bomb;
             _bonusLifePrefab = bonusLife;
+            _iceBlock = iceBlock;
         }
         
         public Action<Fruit> OnInteractableObjectCreate { get; set; }
@@ -47,7 +49,6 @@ namespace Services.Factory
             var bomb = Object.Instantiate(_bombPrefab, container);
             bomb.Construct(_progressService);
             return bomb;
-            //OnInteractableObjectCreate?.Invoke(bomb);
         }
 
         public BonusLife CreateBonusLife(Transform container)
@@ -56,6 +57,11 @@ namespace Services.Factory
             bonusLife.Construct(_progressService);
             return bonusLife;
         }
-            
+
+        public IceBlock CreateIceBlock(Transform container)
+        {
+            var ice = Object.Instantiate(_iceBlock, container);
+            return ice;
+        }
     }
 }

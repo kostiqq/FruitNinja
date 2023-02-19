@@ -23,5 +23,7 @@ namespace StaticData
         public float BombsPerWavePerc;
         [Range(0,1)]
         public float HeartPerWavePerc;
+        [Range(0,1)]
+        public float IceBlockProb;
     }
 }

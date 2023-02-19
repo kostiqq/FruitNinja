@@ -14,6 +14,7 @@ public class GameComplicator : MonoBehaviour
 
     private float _timeSinceWaveComplexityGrowth;
     private float _timeSinceObjectComplexityGrowth;
+    public float GetIceBlockProb { get; private set; }
     public float GetBonusLifeProb { get; private set; }
     public float GetBombProb { get; private set; }
 
@@ -25,6 +26,7 @@ public class GameComplicator : MonoBehaviour
         _timeBetweenObjectComplexityGrowth = complexityConfig.fruitComplexityGrowthTime;
         GetBombProb = complexityConfig.BombsPerWavePerc;
         GetBonusLifeProb = complexityConfig.HeartPerWavePerc;
+        GetIceBlockProb = complexityConfig.IceBlockProb;
     }
     
     public void Reset()
