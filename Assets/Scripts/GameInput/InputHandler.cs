@@ -50,8 +50,8 @@ namespace GameInput
 
             Vector3[] inputPositions = new Vector3[trail.positionCount];
             trail.GetPositions(inputPositions);
-            var actualPosition = inputPositions[^1];
-            inputVector = actualPosition - inputPositions[^2];
+            var actualPosition = inputPositions[inputPositions.Length-1];
+            inputVector = actualPosition - inputPositions[inputPositions.Length-2];
 
             _inputState = inputVector.magnitude >= bladeLength ? InputState.Swipe : InputState.Touch;
             var speed = InputVector().magnitude / Time.deltaTime;

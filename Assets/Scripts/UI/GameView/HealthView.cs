@@ -76,5 +76,6 @@ public class HealthView : MonoBehaviour
     }
 
     private Vector2 GetHeartMovePoint()=>
-        new Vector2(_currentHearts[^1].transform.position.x - _currentHearts[^1].sizeX() - _spaceBetweenHearts, transform.position.y);
+        new Vector2(_currentHearts[_currentHearts.Count-1].transform.position.x - 
+                    _currentHearts[_currentHearts.Count-1].sizeX() - _spaceBetweenHearts, transform.position.y);
 }
