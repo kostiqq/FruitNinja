@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1a9c90710be4b28b24eb5ce0e92b56f, type: 3}
   m_Name: InputConfig
   m_EditorClassIdentifier: 
-  minDistance: 10
+  minDistance: 0
   MouseButtonIndex: 0

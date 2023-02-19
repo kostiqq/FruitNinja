@@ -1,7 +1,9 @@
+using System;
 using GameActors.InteractableObjects.Components;
 using Services.Progress;
 using StaticData;
 using UnityEngine;
+using Zenject;
 
 namespace GameActors.InteractableObjects
 {
@@ -18,6 +20,7 @@ namespace GameActors.InteractableObjects
         [SerializeField] private float forceMultiplyer = 1.5f;
 
         private int _points;
+        public Action<BonusLife, Vector3> OnLifeEarned;
         
         public void Construct(ProgressService progress)
         {
@@ -33,6 +36,7 @@ namespace GameActors.InteractableObjects
         
         protected override void Interact()
         {
+            OnLifeEarned?.Invoke(this, transform.position);
             healthAffector.UpdateHealth();
             effects.PlayEffects(_points);
             ClearState();

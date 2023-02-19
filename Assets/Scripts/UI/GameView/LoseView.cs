@@ -4,7 +4,6 @@ using Services.Progress;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Zenject;
-using System.Collections;
 using UnityEngine.EventSystems;
 
 public class LoseView : MonoBehaviour
@@ -68,6 +67,4 @@ public class LoseView : MonoBehaviour
 
         transform.DOScale(Vector3.one, 1f);
     }
-    
-    
 }

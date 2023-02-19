@@ -7,7 +7,7 @@ using UnityEngine;
 public class ObjectContainer : MonoBehaviour
 {
     [SerializeField] private CollisionTracker _collisionTracker;
-    
+
     private List<InteractableObject> _objects = new List<InteractableObject>();
     public List<InteractableObject> Fruits = new List<InteractableObject>();
 
@@ -53,6 +53,7 @@ public class ObjectContainer : MonoBehaviour
     public void AddBonusLife(InteractableObject bonusLife)
     {
         _objects.Add(bonusLife);
+        
         _collisionTracker.AddColliderObject(bonusLife);
         bonusLife.OnObjectHide += RemoveBonusLife;
     }
@@ -61,6 +62,6 @@ public class ObjectContainer : MonoBehaviour
     {
         _objects.Remove(bonusLife);
         BonusLifePool.Return(bonusLife as BonusLife);
-        bonusLife.OnObjectHide -= RemoveBomb;
+        bonusLife.OnObjectHide -= RemoveBonusLife;
     }
 }

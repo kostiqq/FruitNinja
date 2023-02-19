@@ -16,7 +16,8 @@ namespace GameActors.Spawner
         [SerializeField] private GameComplicator _complicator;
         [SerializeField] private ObjectContainer activeObjects;
         [SerializeField] private BlastWave blast;
-        
+        [SerializeField] private HealthView healthView;
+
         private FruitPool _fruitsPool;
         private BombsPool _bombsPool;
         private BonusLifePool _bonusLifePool;
@@ -48,7 +49,7 @@ namespace GameActors.Spawner
             activeObjects.FruitPool = _fruitsPool;
             activeObjects.BombsPool = _bombsPool;
             activeObjects.BonusLifePool = _bonusLifePool;
-            
+
             InitializeSpawnersPosition();
             InitializeComplexitySettings();
             StartCoroutine(SpawnCycle());
@@ -115,8 +116,8 @@ namespace GameActors.Spawner
                 Vector2 spawnPoint = selectedSpawnZone.GetPointAtSegment();
 
                 BonusLife spawnedObject = _bonusLifePool.GetFreeElement();
+                spawnedObject.OnLifeEarned += healthView.EarnAnimation;
                 activeObjects.AddBonusLife(spawnedObject);
-                
                 spawnedObject.Initialize(_objectConfigs.GetBonusLifeConfig());
                 spawnedObject.transform.position = spawnPoint;
                 spawnedObject.StartMoving(selectedSpawnZone.NormalWithRandomAngleOffset, selectedSpawnZone.GetRandomForce());

@@ -1058,6 +1058,10 @@
         <e p="Resources" t="Include" />
         <e p="Scenes" t="Include" />
         <e p="Scripts" t="Include">
+          <e p="Containers" t="Include">
+            <e p="HeartsContainer.cs" t="Include" />
+            <e p="ObjectContainer.cs" t="Include" />
+          </e>
           <e p="Data" t="Include">
             <e p="Player.cs" t="Include" />
             <e p="Score.cs" t="Include" />
@@ -1105,6 +1109,7 @@
               <e p="ComboTimerInstaller.cs" t="Include" />
               <e p="GameFactoryInstaller.cs" t="Include" />
               <e p="GameInstaller.cs" t="Include" />
+              <e p="HealthViewInstaller.cs" t="Include" />
               <e p="InteractableObjectConfigInstaller.cs" t="Include" />
             </e>
             <e p="ProjectConfig.cs" t="Include" />
@@ -1119,7 +1124,6 @@
             </e>
           </e>
           <e p="InteractableObjectConfigHandler.cs" t="Include" />
-          <e p="ObjectContainer.cs" t="Include" />
           <e p="Pool" t="Include">
             <e p="BombsPool.cs" t="Include" />
             <e p="BonusLifePool.cs" t="Include" />
@@ -1138,8 +1142,10 @@
           <e p="Services" t="Include">
             <e p="AllServices.cs" t="Include" />
             <e p="CollisionTracker.cs" t="Include" />
-            <e p="ComboTimer" t="Include" />
-            <e p="ComboTimer.cs" t="Include" />
+            <e p="ComboTimer" t="Include">
+              <e p="ComboTimer.cs" t="Include" />
+              <e p="IComboTimer.cs" t="Include" />
+            </e>
             <e p="CutterService" t="Include">
               <e p="CutterService.cs" t="Include" />
               <e p="ICutterService.cs" t="Include" />
@@ -1148,7 +1154,6 @@
               <e p="GameFactory.cs" t="Include" />
               <e p="IGameFactory.cs" t="Include" />
             </e>
-            <e p="IComboTimer.cs" t="Include" />
             <e p="IService.cs" t="Include" />
             <e p="ITimeScaler.cs" t="Include" />
             <e p="Progress" t="Include">

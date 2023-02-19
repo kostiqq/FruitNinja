@@ -8,6 +8,9 @@ public class Heart : MonoBehaviour
     [SerializeField] private Image leftPart;
     [SerializeField] private Image rightPart;
     [SerializeField] private Animator animator;
+
+    public float sizeX() =>
+        leftPart.sprite.rect.width * 2;
     
     public void DestroyAnimation()=>
         animator.SetTrigger(Die);
