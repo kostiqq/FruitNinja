@@ -737,7 +737,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2769237084490252096}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2769237083700003569
 GameObject:
@@ -1040,7 +1040,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2769237084490252096}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2769237083936243230
 GameObject:
@@ -1194,7 +1194,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2769237084490252096}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2769237084392508539
 GameObject:
@@ -1242,7 +1242,6 @@ Transform:
   m_Children:
   - {fileID: 2769237083309584034}
   - {fileID: 2769237084225891522}
-  - {fileID: 2769237084689875070}
   - {fileID: 2769237084768650686}
   - {fileID: 2769237084951596580}
   - {fileID: 2769237083700003568}
@@ -1404,12 +1403,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2769237084689875069}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -683, y: -384, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2769237084490252096}
-  m_RootOrder: 2
+  m_Father: {fileID: 8468498211071480570}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2769237084689875071
 MonoBehaviour:
@@ -1454,7 +1453,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2769237084490252096}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2769237084768650687
 GameObject:
@@ -1684,7 +1683,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2769237084490252096}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2769237084951596581
 GameObject:
@@ -3464,8 +3463,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6220372736902286912}
     - target: {fileID: 6046197080384365443, guid: 397a540c490845247b91b2b05de66741, type: 3}
+      propertyPath: eventSystem
+      value: 
+      objectReference: {fileID: 2769237084689875071}
+    - target: {fileID: 6046197080384365443, guid: 397a540c490845247b91b2b05de66741, type: 3}
       propertyPath: RestartButton
       value: 
       objectReference: {fileID: 2053234688}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 397a540c490845247b91b2b05de66741, type: 3}
+--- !u!224 &8468498211071480570 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5466298264988349958, guid: 397a540c490845247b91b2b05de66741, type: 3}
+  m_PrefabInstance: {fileID: 8468498211071480569}
+  m_PrefabAsset: {fileID: 0}
