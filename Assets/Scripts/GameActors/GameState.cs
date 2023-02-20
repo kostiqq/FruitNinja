@@ -30,6 +30,7 @@ public class GameState : MonoBehaviour
     private void OnPlayerLose()
     {
         SpawnerController.Instance.StopSpawn();
+        input.DisableInput();
         input.enabled = false;
         StartCoroutine(EndGame());
     }
@@ -44,8 +45,7 @@ public class GameState : MonoBehaviour
 
     private void RestartGame()
     {
-        input.DisableInput();
-        input.enabled = false;
+        input.enabled = true;
         SpawnerController.Instance.Restart();
         _gameView.ReInit();
     }
